@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const SuisseIntlRegular = localFont({
+  src: "../../public/fonts/SuisseIntlRegular.otf",
+  variable: "--SuisseIntlRegular",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const SuisseIntlMedium = localFont({
+  src: "../../public/fonts/SuisseIntlMedium.woff2",
+  variable: "--SuisseIntlMedium",
+  display: "swap",
+});
+
+const SuisseIntlCondBold = localFont({
+  src: "../../public/fonts/SuisseIntlCondBold.woff2",
+  variable: "--SuisseIntlCondBold",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,8 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang='en'>
+      <body
+        className={`${SuisseIntlCondBold.variable} ${SuisseIntlMedium.variable} ${SuisseIntlRegular.variable}`}
+      >
         {children}
       </body>
     </html>

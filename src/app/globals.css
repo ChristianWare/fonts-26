@@ -1,33 +1,53 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --black: #2c2c2c;
+  --blackii: #4e4c4c;
+  --gray: #818588;
+  --grayii: #6e7072;
+  --lightGray: #dedcdc;
+  --grey: #e4e4e4;
+  --grey400: #808080;
+  --greyii: #c8c8c8;
+  --yellow: #d9fb06;
+  --yellow2: #eff77e;
+  --yellow3: #c4d03e;
+  --pink: #ff2df1;
+  --pink2: rgba(255, 45, 241, 0.3);
+  --pink3: rgba(207, 205, 207, 0.6);
+  --tan: #e9e4dd;
+  --tanii: #d5d1b9;
+  --taniii: #a39f88;
+  --white: #f5f5f5;
+  --text: #625f5f;
+  --blue: #2563eb;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* line-height: 90%; */
+  /* scroll-behavior: smooth;
+  scroll-margin-top: 40px;
+  */
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--SuisseIntlMedium);
+  overscroll-behavior: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+body {
+  font-size: 1.6rem;
 }
 
 a {
@@ -35,8 +55,187 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: var(--black);
+  font-family: var(--DoumbarPlateMedium);
+  hyphens: auto;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 8vw;
+  line-height: 0.9;
+  letter-spacing: -4.8px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 7rem;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+h3,
+h4 {
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+p,
+input,
+textarea {
+  hyphens: auto;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  font-family: var(--SuisseIntlMedium);
+  text-transform: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* .toastFont {
+  font-family: var(--ABCSocialLight);
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+::selection {
+  background: var(--secondary);
+}
+::-moz-selection {
+  background: var(--secondary);
+} */
+
+::selection {
+  background: var(--yellow);
+  color: var(--black);
+}
+::-moz-selection {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+@media screen and (max-width: 968px) {
   html {
-    color-scheme: dark;
+    font-size: 55%;
+  }
+
+  /* h1 {
+    font-size: 4.8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  } */
+
+  /* h1 {
+    font-size: 9vw;
+  } */
+
+  /* h2 {
+    font-size: 6rem;
+  } */
+
+  p {
+    font-size: 113.7%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  /* h1 {
+    font-size: 14vw;
+  } */
+}
+
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 50%;
+  }
+
+  h1,
+  h2 {
+    letter-spacing: -1.4px;
+    font-size: 13vw;
+  }
+}
+
+/* .toastFont {
+} */
+
+/* Only use in production */
+@media screen and (max-width: 480px) {
+  h1 {
+    letter-spacing: -2px;
+  }
+  h2 {
+    letter-spacing: -2px;
+    line-height: 110%;
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none !important;
+}
+
+::view-transition-group(root) {
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+  will-change: transform, opacity, clip-path;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 10000;
+  animation: none !important;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none !important;
+}
+/* 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: url("/images/noise.gif") repeat;
+  opacity: 0.03;
+} */
