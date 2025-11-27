@@ -1,0 +1,265 @@
+.container {
+  background-color: var(--tan);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: 175px;
+  height: 175px;
+}
+
+.img {
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+
+.topLeft,
+.topRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.copy {
+  max-width: 500px;
+  color: var(--lighterBlack);
+  font-size: 2rem;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.one {
+  background-color: var(--black);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.mapDataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+
+.card {
+  border-bottom: 1px solid var(--darkGray);
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.arrow {
+  transform: rotate(90deg);
+  color: var(--lime);
+}
+
+.title {
+  color: var(--tan);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.copyii {
+  color: var(--darkGray);
+}
+
+.twoThree {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.featureCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  background-color: var(--darkTan);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: all 160ms ease;
+}
+
+.featureCard:focus-visible {
+  outline: none;
+  border-color: var(--black);
+}
+
+/* .featureCard:hover {
+  transform: translateY(-2px);
+  background-color: var(--lime);
+} */
+
+.icon {
+  font-size: 3rem;
+}
+
+.featureTitle {
+  /* font-family: var(--DotSansBold); */
+  font-size: 2rem;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.modalContent {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 100%;
+}
+
+.modalText {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  /* overflow: auto; */
+  padding-right: 0.5rem;
+}
+
+.modalTitle {
+  font-family: var(--DotSansMedium);
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.modalCopy {
+  margin-top: 0.25rem;
+  line-height: 1.7;
+  color: var(--darkGrayii);
+}
+
+.modalList {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  /* padding-left: 1.25rem; */
+}
+
+.modalListItem {
+  list-style: none;
+  line-height: 1.6;
+  color: var(--grayii);
+  border-bottom: 1px solid var(--grayiii);
+  padding-bottom: 1rem;
+}
+
+.modalCta {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modalImage {
+  position: relative;
+  width: 50%;
+  max-height: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modalImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1068px) {
+  .top,
+  .btnContainer,
+  .topLeft,
+  .topRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .twoThree {
+    grid-column: span 1;
+  }
+
+  .imgContainer {
+    margin-left: 8rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .modalContent {
+    flex-direction: column;
+  }
+  .modalText,
+  .modalImage {
+    width: 100%;
+  }
+  .modalImage {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    max-height: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bottom {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .twoThree {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .featureCard {
+    padding: 3rem;
+  }
+
+  .imgContainer {
+    width: 200px;
+    height: 200px;
+  }
+}

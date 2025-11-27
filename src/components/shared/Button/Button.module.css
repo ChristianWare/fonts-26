@@ -1,0 +1,183 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.5rem 2rem;
+  padding-right: 0.5rem;
+  font-family: var(--BDOGroteskDemiBold);
+  letter-spacing: 0.2px;
+  /* text-transform: uppercase; */
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:link,
+.btn:visited {
+  color: inherit;
+}
+
+.arrow {
+  transform: rotate(45deg);
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.7rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.lime,
+.lime:link,
+.lime:visited {
+  background-color: var(--lime);
+  color: var(--black);
+  border: 1px solid var(--lime);
+}
+
+.lime:hover .arrow {
+  background-color: var(--black);
+  color: var(--white);
+
+}
+
+.limeOutline,
+.limeOutline:link,
+.limeOutline:visited {
+  background-color: transparent;
+  color: var(--lime);
+  border: 1px solid var(--lime);
+}
+
+.limeOutline:hover {
+  background-color: var(--lime);
+  color: var(--black);
+}
+
+.navLime {
+  background-color: var(--lime);
+  color: var(--black);
+  border: 1px solid var(--lime);
+  padding: 0.3rem 2rem;
+  padding-right: 0.3rem;
+  border-radius: 100px;
+}
+
+.navLime .arrow {
+  background-color: var(--black);
+  color: var(--white);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.7rem;
+}
+
+.navLime:hover .arrow {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.black,
+.black:link,
+.black:visited {
+  background-color: var(--black);
+  color: var(--tan);
+  border: 1px solid var(--black);
+}
+
+.black:hover .arrow {
+  background-color: var(--lime);
+  color: var(--black);
+}
+
+.olive,
+.olive:link,
+.olive:visited {
+  background-color: var(--olive);
+  color: var(--black);
+}
+
+.olive:hover .arrow {
+  background-color: var(--lime);
+  color: var(--black);
+}
+
+.grayOutline {
+  background-color: var(--white);
+  border: 1px solid var(--grayiii);
+}
+
+.grayOutline .arrow {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.grayOutline:hover .arrow {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.grayOutlineii {
+  background-color: transparent;
+  border: 1px solid var(--tan);
+  color: var(--tan);
+}
+
+.imgContainer {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+.img {
+  border: 1px solid var(--black);
+  padding: 3px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.noBackgroundBlueText {
+  border: 1px solid var(--black);
+  padding: 0.4rem 0.5rem;
+  padding-right: 1rem;
+}
+
+.blackOutline {
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+.greenOutline {
+  border: 1px solid var(--lime);
+  background-color: transparent;
+  color: var(--lime) !important;
+}
+
+.tanOutline {
+  border: 1px solid var(--tan);
+  background-color: transparent;
+  color: var(--tan) !important;
+}
+
+.tanOutline:hover {
+  background-color: var(--tan);
+  color: var(--black) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .container:hover .arrow {
+    transform: rotate(90deg) translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .noBackgroundBlueText {
+    border: 1px solid var(--lightBlue);
+  }
+}

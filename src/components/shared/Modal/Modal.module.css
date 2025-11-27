@@ -1,0 +1,75 @@
+/* Modal.module.css */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.backdrop.open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.dialog {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+  width: min(1100px, 90vw);
+  /* height: clamp(420px, 85vh, 900px); */
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.98);
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dialog.open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.closeBtn {
+  cursor: pointer;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 999;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  color: var(--tan);
+}
+
+.body {
+  height: 100%;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .dialog {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .closeBtn {
+    top: 20px;
+    right: 20px;
+  }
+}

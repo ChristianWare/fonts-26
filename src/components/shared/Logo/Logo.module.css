@@ -1,0 +1,65 @@
+.logo {
+  cursor: pointer;
+  z-index: 999;
+  background-color: var(--black);
+  border: 1px solid var(--adminGray);
+  padding: .7rem 2rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: fit-content;
+      /* mix-blend-mode: difference; */
+}
+
+.text1 {
+  font-family: var(--Merriweather);
+  color: var(--black);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.imgContainer {
+  position: relative;
+  width: 40px;
+  height: 20px;
+}
+
+.img {
+  /* width: 100%; */
+  object-fit: contain;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: fit-content;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--lime);
+}
+
+.text {
+  font-family: var(--BDOGroteskDemiBold);
+  color: var(--tan);
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 568px) {
+  .logo {
+    padding: 1.2rem 2rem;
+  }
+}

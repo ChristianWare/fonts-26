@@ -1,0 +1,31 @@
+.container {
+  background-color: var(--darkTan);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.text {
+   font-family: var(--DotSansRegular);
+  color: var(--black);
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.icon {
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 0.3rem;
+  font-size: 2rem;
+  transform-origin: center center;
+}
+
+.borderColorBlack {
+  border: 1px solid var(--gray);
+}

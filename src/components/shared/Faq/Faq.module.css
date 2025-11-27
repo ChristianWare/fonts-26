@@ -1,0 +1,167 @@
+.container {
+  padding: 5rem 0rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.span {
+  color: var(--blue);
+  font-family: inherit;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 1rem;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qaContainer {
+  padding: 3rem;
+  background-color: var(--tan);
+  border: 1px solid var(--textii);
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.answerContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.answerContainer.show {
+  max-height: 350px;
+}
+
+.headingArrowContainer {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.h3Container {
+  display: flex;
+  gap: 1rem;
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.iconFlip {
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.index {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.question {
+  font-size: 2rem;
+  font-family: var(--PPNeueMontrealMediumThick);
+  text-transform: none;
+}
+
+.answer {
+  margin-top: 2rem;
+  color: var(--text);
+}
+
+.titleHeading {
+  letter-spacing: -5px;
+  font-size: 15rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  will-change: transform;
+}
+
+.card1 .cardInner {
+  background-color: var(--black);
+}
+.card2 .cardInner {
+  background-color: var(--lightGray);
+}
+.card3 .cardInner {
+  background-color: var(--yellow);
+}
+.card4 .cardInner {
+  background-color: var(--tan);
+}
+
+.card1 .cardInner .titleHeading {
+  color: var(--tan);
+}
+
+.card2 .cardInner .titleHeading {
+  color: var(--black);
+}
+
+.card4 .cardInner .titleHeading {
+  color: var(--gray);
+}
+
+@media screen and (max-width: 1268px) {
+  .bottom {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bottom {
+    width: 100%;
+  }
+}

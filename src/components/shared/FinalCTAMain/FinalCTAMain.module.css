@@ -1,0 +1,254 @@
+.container {
+  position: relative;
+}
+
+.imgOverlay {
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(10, 7, 27, 0.5), rgba(10, 7, 27, 0.7));
+}
+
+.img {
+  object-fit: cover;
+  /* border-radius: 15px; */
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15rem;
+  padding: 20rem 3rem;
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+.left {
+  flex: 2;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  border-top: 1px solid var(--gray);
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.heading {
+  color: var(--tan);
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footerContainer {
+  z-index: 3;
+  background-color: var(--tan);
+  padding: 3rem;
+  padding-top: 4rem;
+  border-radius: 10px;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+.copy {
+  color: var(--lighterBlack);
+  font-family: var(--inter);
+  font-size: 1.4rem;
+  width: 50%;
+  font-weight: 600;
+}
+
+.footerRight {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 2rem;
+}
+
+.title {
+  text-transform: uppercase;
+  color: var(--lightBlack);
+  font-size: 1.4rem;
+  font-family: var(--inter);
+  font-weight: 700;
+}
+
+.optionList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: .5rem;
+  margin-top: 3rem;
+}
+
+.option {
+  font-size: 1.6rem;
+  font-family: var(--DotSansRegular);
+  color: var(--black);
+  font-weight: 300;
+}
+
+.footerBottom {
+  padding: 2rem 0rem;
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.small {
+  color: var(--lightBlack);
+}
+
+.footerBottomRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footerSocials {
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.socialIconContainer {
+  background-color: var(--lightBlack);
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* padding: 1rem; */
+}
+
+.socialIcon {
+  font-size: 2rem;
+  color: var(--tan);
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .copy {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .footerTop {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footerRight {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .copy {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* .parent {
+    margin: 1rem;
+  } */
+
+  .content {
+    padding: 10rem 5rem;
+  }
+
+  .copy {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    padding: 10rem 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .footerTop {
+    gap: 5rem;
+  }
+
+  .footerLeft {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .copy,
+  .small {
+    text-align: center;
+  }
+
+  .optionSection:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: block;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+  }
+
+  .footerSocials {
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* .footerBottomRight {
+    align-items: flex-start;
+    justify-content: flex-start;
+  } */
+}
