@@ -31,8 +31,9 @@
   scroll-margin-top: 40px;
   */
   -webkit-tap-highlight-color: transparent;
-  font-family: var(--SuisseIntlMedium);
+  font-family: var(--SuisseIntlRegular);
   overscroll-behavior: none;
+  line-height: 120%;
 }
 
 html {
@@ -62,8 +63,8 @@ h4,
 h5,
 h6,
 span {
+  font-family: var(--SuisseIntlCondBold);
   color: var(--black);
-  font-family: var(--DoumbarPlateMedium);
   hyphens: auto;
   text-transform: uppercase;
 }
@@ -76,25 +77,31 @@ h1 {
 }
 
 h2 {
-  font-size: 7rem;
-  line-height: 1;
-  letter-spacing: -2px;
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  text-transform: uppercase;
 }
 
 h3,
 h4 {
-  font-size: 2rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: 4.8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
 }
 
 h5 {
-  font-size: 1.8rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
 }
 
 h6 {
-  font-size: 1.6rem;
-  letter-spacing: -0.04em;
+  font-size: 2.8rem;
+  letter-spacing: -0.02em;
 }
 
 button {
@@ -107,9 +114,9 @@ p,
 input,
 textarea {
   hyphens: auto;
-  font-size: 1.4rem;
-  line-height: 1.3;
-  font-family: var(--SuisseIntlMedium);
+  font-size: 2rem;
+  /* line-height: 1.3; */
+  font-family: var(--SuisseIntlRegular);
   text-transform: none;
 }
 
