@@ -1,5 +1,13 @@
 .parent {
   padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+  background-color: var(--white);
+  padding: 1rem;
 }
 
 .container {
@@ -8,6 +16,16 @@
   z-index: 0;
   padding-bottom: 10rem;
   border-radius: 20px;
+  height: 98vh;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--black);
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .silkBg {
@@ -17,12 +35,22 @@
   pointer-events: none;
 }
 
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+  min-height: 90vh;
+}
+
 .top {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-top: 15rem;
 }
 
 .heading {

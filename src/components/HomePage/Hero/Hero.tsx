@@ -22,9 +22,26 @@ const Silk = dynamic(() => import("../../shared/Silk"), {
 export default function Hero() {
   const refs = {
     heading: useRef<HTMLHeadingElement>(null),
+    overlay: useRef<HTMLDivElement>(null),
   };
 
   useGSAP(() => {
+    if (refs.overlay.current) {
+      gsap.fromTo(
+        refs.overlay.current,
+        { opacity: 0 },
+        {
+          opacity: 0.7,
+          scrollTrigger: {
+            trigger: refs.overlay.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+    }
+
     const animateText = (el: HTMLElement | null) => {
       if (!el) return;
       gsap.set(el, { visibility: "visible" });
@@ -61,6 +78,7 @@ export default function Hero() {
             rotation={0}
           />
         </div>
+        <div className={styles.overlay} ref={refs.overlay} />
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.top}>

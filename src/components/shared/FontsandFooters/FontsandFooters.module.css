@@ -1,0 +1,68 @@
+.card {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardInner {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  will-change: transform;
+}
+
+.card1 .cardInner {
+  background-color: var(--black);
+}
+.card2 .cardInner {
+  background-color: var(--lightGray);
+}
+.card3 .cardInner {
+  background-color: var(--accent);
+}
+.card4 .cardInner {
+  background-color: var(--primary);
+}
+
+.titleHeading {
+  font-size: 15rem;
+  z-index: 2;
+  letter-spacing: -5px;
+}
+
+.card1 .cardInner .titleHeading {
+  color: var(--primary);
+}
+
+.card2 .cardInner .titleHeading {
+  color: var(--black);
+}
+
+.card4 .cardInner .titleHeading {
+  color: var(--gray);
+}
+
+.card1 .cardInner .blackDot {
+  background-color: var(--primary);
+}
+
+.card4 .cardInner .blackDot {
+  background-color: var(--gray);
+}
+
+@media screen and (max-width: 1268px) {
+  .card {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .titleHeading {
+    font-size: 25vw;
+    letter-spacing: -5px;
+  }
+}
