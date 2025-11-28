@@ -6,14 +6,12 @@
   width: 75%;
   margin: 0 auto;
   z-index: 9999;
-  background-color: var(--lighterTan);
   border-radius: 100px;
   opacity: 1;
   transition: transform 0.35s ease-in-out, opacity 0.25s ease-in-out,
     box-shadow 0.25s ease-in-out;
   will-change: transform, opacity;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  border: 1px solid var(--darkTan);
 }
 
 .header.hide {
@@ -47,16 +45,14 @@
   justify-content: center;
   gap: 0.5rem;
   list-style: none;
-  /* color: var(--lightBlack) !important; */
 }
 
 .navItem {
-  font-family: var(--DotSansBold);
-  /* letter-spacing: -0.5px; */
+  font-family: var(--SuisseIntlMedium);
   text-transform: uppercase;
   font-size: 1.2rem;
   line-height: 1;
-  color: var(--accent) !important;
+  color: var(--primary) !important;
   z-index: 999;
   white-space: nowrap;
   padding: 0.5rem 1rem;

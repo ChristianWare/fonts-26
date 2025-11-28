@@ -5,7 +5,7 @@ import Link from "next/link";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
 import { useEffect, useState, MouseEvent, useRef } from "react";
-import { createPortal } from "react-dom"; // ← add this
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import Img1 from "../../../../public/images/whydb.jpg";
 import SectionIntroii from "../SectionIntroii/SectionIntroii";

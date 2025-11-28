@@ -130,11 +130,11 @@ textarea:focus {
 } */
 
 ::selection {
-  background: var(--yellow);
+  background: var(--accent);
   color: var(--black);
 }
 ::-moz-selection {
-  background: var(--yellow);
+  background: var(--accent);
   color: var(--black);
 }
 
