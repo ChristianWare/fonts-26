@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import styles from "./Nav.module.css";
+import Link from "next/link";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
 import { useEffect, useState, MouseEvent, useRef } from "react";
@@ -104,7 +104,9 @@ export default function Nav({
 
   return (
     <header
-      className={`${styles.header} ${showNav || isOpen ? styles.show : styles.hide} ${isOpen ? styles.open : ""}`}
+      className={`${styles.header} ${
+        showNav || isOpen ? styles.show : styles.hide
+      } ${isOpen ? styles.open : ""}`}
       ref={navRef}
     >
       <nav className={styles.navbar}>
@@ -164,7 +166,7 @@ export default function Nav({
             href='https://calendly.com/chris-ware-dev/discovery-call'
             target='_blank'
             text='Book your discovery call'
-            btnType='navLime'
+            btnType='navaccent'
           />
         </div>
 

@@ -12,7 +12,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--lime);
+  background-color: var(--accent);
 }
 
 .text {
@@ -26,4 +26,8 @@
 
 .tan {
   color: var(--tan);
+}
+
+.yellow {
+  color: var(--accent);
 }

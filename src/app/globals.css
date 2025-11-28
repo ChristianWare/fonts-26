@@ -1,24 +1,8 @@
 :root {
-  --black: #2c2c2c;
-  --blackii: #4e4c4c;
-  --gray: #818588;
-  --grayii: #6e7072;
-  --lightGray: #dedcdc;
-  --grey: #e4e4e4;
-  --grey400: #808080;
-  --greyii: #c8c8c8;
-  --yellow: #d9fb06;
-  --yellow2: #eff77e;
-  --yellow3: #c4d03e;
-  --pink: #ff2df1;
-  --pink2: rgba(255, 45, 241, 0.3);
-  --pink3: rgba(207, 205, 207, 0.6);
-  --tan: #e9e4dd;
-  --tanii: #d5d1b9;
-  --taniii: #a39f88;
-  --white: #f5f5f5;
-  --text: #625f5f;
-  --blue: #2563eb;
+  --black: #242422;
+  --white: #ffffff;
+  --primary: #efe4d4;
+  --accent: #ffc809;
 }
 
 * {
@@ -33,7 +17,6 @@
   -webkit-tap-highlight-color: transparent;
   font-family: var(--SuisseIntlRegular);
   overscroll-behavior: none;
-  line-height: 120%;
 }
 
 html {
@@ -67,12 +50,13 @@ span {
   color: var(--black);
   hyphens: auto;
   text-transform: uppercase;
+  /* line-height: 0.9; */
 }
 
 h1 {
-  font-size: 8vw;
-  line-height: 0.9;
-  letter-spacing: -4.8px;
+  font-size: 7vw;
+  line-height: 95%;
+  letter-spacing: -3.5px;
   font-weight: 500;
 }
 

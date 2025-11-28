@@ -1,0 +1,95 @@
+.parent {
+  padding: 1rem;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  padding-bottom: 10rem;
+  border-radius: 20px;
+}
+
+.silkBg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 15rem;
+}
+
+.heading {
+  text-align: right;
+}
+
+.headingClip {
+  line-height: 0.9;
+  font-family: var(--SuisseIntlCondBold);
+}
+
+.headingClip * {
+  font-family: inherit;
+}
+
+.heading {
+  will-change: transform, opacity, filter;
+  overflow: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+  font-family: var(--SuisseIntlCondBold);
+  color: var(--white);
+}
+
+.heading :global(.word),
+.heading :global(.line) {
+  font-family: inherit;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--primary);
+  padding-top: 2rem;
+  margin-top: 1rem;
+}
+
+.copy {
+  z-index: 2;
+  font-size: 2rem;
+  letter-spacing: -0.3px;
+  width: 40%;
+  color: var(--primary);
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+@media (max-width: 1068px) {
+  .copy {
+    width: 65%;
+  }
+}
+
+@media (max-width: 568px) {
+  .copy {
+    width: 100%;
+  }
+
+  .br {
+    display: none;
+  }
+}
