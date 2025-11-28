@@ -1,5 +1,5 @@
 import styles from "./SectionIntro.module.css";
-import Star from "@/components/icons/Star/Star";
+import Star from "../icons/Star/Star";
 
 interface Props {
   title: string;

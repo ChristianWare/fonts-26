@@ -44,7 +44,6 @@
 .accent:hover .arrow {
   background-color: var(--black);
   color: var(--white);
-
 }
 
 .accentOutline,
@@ -105,6 +104,28 @@
   color: var(--accent);
 }
 
+.lightGray,
+.lightGray:link,
+.lightGray:visited {
+  background-color: var(--lightGray);
+  color: var(--black);
+  border: 1px solid var(--lightGray);
+}
+
+.lightGray .arrow {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.lightGray:hover {
+  background-color: var(--accent);
+  color: var(--black);
+}
+
+.lightGray:hover .arrow {
+  background-color: var(--black);
+  color: var(--accent);
+}
 
 @media (hover: hover) and (pointer: fine) {
   .container:hover .arrow {

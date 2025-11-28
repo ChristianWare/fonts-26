@@ -1,22 +1,7 @@
 .slider {
   width: 100%;
   overflow: hidden;
-  background-color: var(--tan);
   cursor: pointer;
-  /* mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    var(--tan) 10%,
-    var(--tan) 90%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    var(--tan) 10%,
-    var(--tan) 90%,
-    transparent 100%
-  ); */
 }
 
 .title {
@@ -32,42 +17,63 @@
   width: max-content;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+  flex: 0 0 400px;
+}
+
 .imgContainer {
   position: relative;
-  width: 300px;
-  height: 450px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  overflow: hidden;
+  width: 100%;
+  height: 200px;
 }
 
 .img {
   object-fit: cover;
-}
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.28);
-  pointer-events: none;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
-/* centered white title */
+.cardBottom {
+  background-color: var(--white);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 2.4rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .label {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 0 1rem;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.4rem;
-  font-family: var(--inter);
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-transform: none;
-  pointer-events: none;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  font-family: var(--SuisseIntlMedium);
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.desc {
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: var(--lightText);
+  white-space: normal;
+}
+
+.btnContainer {
+  margin-top: 10rem;
 }
 
 @keyframes scroll {
@@ -88,12 +94,20 @@
     gap: 1rem;
   }
 
+  .card {
+    flex: 0 0 250px;
+  }
+
   .imgContainer {
-    width: 250px;
+    width: 100%;
     height: 250px;
   }
 
   .label {
     font-size: 1.05rem;
+  }
+
+  .desc {
+    font-size: 1.2rem;
   }
 }
