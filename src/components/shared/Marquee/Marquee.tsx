@@ -46,7 +46,7 @@ export default function Marquee() {
                 <Button
                   href='/contact'
                   btnType='lightGray'
-                  text='Book your discovery call'
+                  text='More Details'
                 />
               </div>
             </div>

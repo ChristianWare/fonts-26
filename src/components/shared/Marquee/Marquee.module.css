@@ -12,7 +12,7 @@
 
 .track {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   animation: scroll 40s linear infinite;
   width: max-content;
 }
