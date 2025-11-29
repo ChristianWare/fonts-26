@@ -209,7 +209,7 @@
     gap: 3rem;
     padding: 2rem;
     padding-top: 3rem;
-    background: var(--darkerTan);
+    background: var(--primary);
     height: auto;
     max-height: 90vh;
     overflow-y: auto;

@@ -11,6 +11,7 @@ import dynamic from "next/dynamic";
 import { useRef } from "react";
 import Nav from "@/components/shared/Nav/Nav";
 import ImageCluster from "@/components/shared/ImageCluster/ImageCluster";
+import Button from "@/components/shared/Button/Button";
 // import Button from "@/components/shared/Button/Button";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -94,6 +95,11 @@ export default function Hero() {
                 without endless calls and DMs.
               </p>
               <div className={styles.btnContainer}>
+                <Button
+                  href='/contact'
+                  btnType='accent'
+                  text='Book your discovery call'
+                />
                 <ImageCluster
                   size='small'
                   orientation='horizontal'

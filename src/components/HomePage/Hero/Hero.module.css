@@ -87,6 +87,7 @@
   border-top: 1px solid var(--primary);
   padding-top: 2rem;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .copy {
@@ -107,8 +108,23 @@
 }
 
 @media (max-width: 1068px) {
+  .content,
+  .top,
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .copy {
-    width: 65%;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .heading {
+    text-align: center;
   }
 }
 
@@ -117,7 +133,8 @@
     width: 100%;
   }
 
-  .br {
-    display: none;
+  .btnContainer {
+    flex-direction: column;
+    gap: 3rem;
   }
 }

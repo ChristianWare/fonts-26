@@ -142,26 +142,19 @@ textarea:focus {
   color: var(--black);
 }
 
+@media screen and (max-width: 1068px) {
+  h1 {
+    font-size: 9vw;
+    line-height: 100%;
+    letter-spacing: -3px;
+    font-weight: 500;
+  }
+}
+
 @media screen and (max-width: 968px) {
   html {
     font-size: 55%;
   }
-
-  /* h1 {
-    font-size: 4.8rem;
-  }
-
-  h2 {
-    font-size: 4rem;
-  } */
-
-  /* h1 {
-    font-size: 9vw;
-  } */
-
-  /* h2 {
-    font-size: 6rem;
-  } */
 
   p {
     font-size: 113.7%;
@@ -179,10 +172,11 @@ textarea:focus {
     font-size: 50%;
   }
 
-  h1,
-  h2 {
-    letter-spacing: -1.4px;
-    font-size: 13vw;
+  h1 {
+    font-size: 5.4rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    /* line-height: 0.85; */
   }
 }
 
@@ -190,7 +184,7 @@ textarea:focus {
 } */
 
 /* Only use in production */
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   h1 {
     letter-spacing: -2px;
   }
@@ -198,7 +192,7 @@ textarea:focus {
     letter-spacing: -2px;
     line-height: 110%;
   }
-}
+} */
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
