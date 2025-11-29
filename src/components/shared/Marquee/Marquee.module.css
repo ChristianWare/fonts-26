@@ -95,7 +95,7 @@
   }
 
   .card {
-    flex: 0 0 250px;
+    flex: 0 0 300px;
   }
 
   .imgContainer {
@@ -109,5 +109,9 @@
 
   .desc {
     font-size: 1.2rem;
+  }
+
+  .btnContainer {
+    margin-top: 5rem;
   }
 }

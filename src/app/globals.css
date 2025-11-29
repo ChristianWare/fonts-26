@@ -2,6 +2,7 @@
   --black: #242422;
   --white: #ffffff;
   --gray: #818588;
+  --darkGray: #5a5d61;
   --lightGray: #e5e5e5;
   --lightText: #979797;
   --primary: #efe4d4;
@@ -162,9 +163,9 @@ textarea:focus {
 }
 
 @media screen and (max-width: 768px) {
-  /* h1 {
-    font-size: 14vw;
-  } */
+  h2 {
+    font-size: 10vw;
+  }
 }
 
 @media screen and (max-width: 568px) {
