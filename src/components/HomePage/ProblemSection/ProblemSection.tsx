@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./ProblemSection.module.css";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
@@ -15,7 +18,7 @@ const data = [
     title: "Clients get lost trying to book",
     desc: "Your booking link is hidden in a menu, buried in your bio, or split across three different pages.",
     src: Img2,
-    color: "white",
+    color: "",
   },
   {
     id: 2,
@@ -26,7 +29,6 @@ const data = [
   },
   {
     id: 3,
-    // title: "You're renting space on someone else's app",
     title: "You're using someone else's app",
     desc: "You're building reviews and traffic for a platform—not for your own brand.",
     src: Img4,
@@ -49,6 +51,10 @@ const data = [
 ];
 
 export default function ProblemSection() {
+  const [activeId, setActiveId] = useState(data[0].id);
+
+  const activeItem = data.find((item) => item.id === activeId) || data[0];
+
   return (
     <section className={styles.parent}>
       <div className={styles.container}>
@@ -72,36 +78,59 @@ export default function ProblemSection() {
             <div className={styles.bottom}>
               <div className={styles.left}>
                 <div className={styles.mapDataContainer}>
-                  {data.map((item) => (
-                    <div key={item.id} className={styles.card}>
-                      <div className={styles.cardLeft}>
-                        {/* <h3 className={styles.title}>{item.title}</h3> */}
-                        <SectionIntroii title={item.title} color={item.color} />
+                  {data.map((item) => {
+                    const isActive = activeId === item.id;
+                    return (
+                      <div
+                        key={item.id}
+                        className={`${styles.card} ${
+                          isActive ? styles.activeCard : ""
+                        }`}
+                        onClick={() => setActiveId(item.id)}
+                      >
+                        <div className={styles.cardLeft}>
+                          <div className={styles.sectionIntro1}>
+                            <SectionIntroii
+                              title={item.title}
+                              color={
+                                activeId === item.id ? "white" : item.color
+                              }
+                            />
+                          </div>
+                          <div className={styles.sectionIntro2}>
+                            <SectionIntroii title={item.title} />
+                          </div>
 
-                        <p className={styles.dataItemDesc}>{item.desc}</p>
-                      </div>
-                      <div className={styles.cardRight}>
-                        <div className={styles.imgContainer}>
-                          <Image
-                            src={item.src}
-                            alt='Problem Illustration'
-                            fill
-                            className={styles.imgii}
-                          />
+                          <p className={styles.dataItemDesc}>{item.desc}</p>
+                        </div>
+                        <div className={styles.cardRight}>
+                          <div className={styles.imgContainer}>
+                            <Image
+                              src={item.src}
+                              alt='Problem Illustration'
+                              fill
+                              className={styles.imgii}
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
               <div className={styles.right}>
-                <div className={styles.imgContainer}>
+                <div key={activeId} className={styles.imgContainer}>
                   <Image
-                    src={Img1}
+                    src={activeItem.src || Img1}
                     alt='Problem Illustration'
                     fill
-                    className={styles.img}
+                    className={`${styles.img} ${styles.fadeIn}`}
                   />
+                  <div className={styles.rightOverlay}>
+                    <p className={`${styles.dataItemDesc} ${styles.rightDesc}`}>
+                      {activeItem.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
