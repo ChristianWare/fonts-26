@@ -60,7 +60,7 @@ export default function ProblemSection() {
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.top}>
-              <h2 className={styles.heading}>
+              <h2 className={`${styles.heading} h2ii`}>
                 If your website feels embarrassing, it’s costing you bookings
               </h2>
               <p className={styles.copy}>
@@ -78,7 +78,7 @@ export default function ProblemSection() {
                         {/* <h3 className={styles.title}>{item.title}</h3> */}
                         <SectionIntroii title={item.title} color={item.color} />
 
-                        {/* <p className={styles.dataItemDesc}>{item.desc}</p> */}
+                        <p className={styles.dataItemDesc}>{item.desc}</p>
                       </div>
                       <div className={styles.cardRight}>
                         <div className={styles.imgContainer}>

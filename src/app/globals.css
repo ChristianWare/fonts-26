@@ -4,7 +4,7 @@
   --gray: #818588;
   --darkGray: #5a5d61;
   --lightGray: #e5e5e5;
-  --lighterGray: #D2D2D3;
+  --lighterGray: #d2d2d3;
   --lightText: #979797;
   --primary: #efe4d4;
   --accent: #ffc809;
@@ -61,7 +61,7 @@ span {
 h1 {
   font-size: 6vw;
   line-height: 95%;
-  letter-spacing: -.08vw;
+  letter-spacing: -0.08vw;
   font-weight: 500;
 }
 
@@ -71,6 +71,11 @@ h2 {
   letter-spacing: -0.03em;
   line-height: 1;
   text-transform: uppercase;
+}
+
+.h2ii {
+  font-size: 5rem;
+  letter-spacing: -0.02em;
 }
 
 h3,
@@ -179,6 +184,12 @@ textarea:focus {
     font-weight: 700;
     letter-spacing: -0.01em;
     /* line-height: 0.85; */
+  }
+
+  .h2ii {
+    /* font-size: 4rem;
+    letter-spacing: -0.01em; */
+    font-size: 7vw;
   }
 }
 
