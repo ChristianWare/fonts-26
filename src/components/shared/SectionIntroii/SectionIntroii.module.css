@@ -6,28 +6,34 @@
   justify-content: space-between;
   gap: 2rem;
   width: fit-content;
+  padding-right: 1rem;
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: var(--accent);
+  border: 1px solid var(--black);
 }
 
 .text {
-  font-family: var(--DotSansRegular);
+  font-family: var(--SuisseIntlCondBold);
   color: var(--black);
-  font-size: 1.2rem;
-  text-align: center;
+  font-size: 2rem;
+  /* text-align: center; */
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.4px;
 }
 
 .tan {
-  color: var(--tan);
+  color: var(--primary);
 }
 
 .yellow {
   color: var(--accent);
+}
+
+.white {
+  color: var(--white);
 }

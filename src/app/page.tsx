@@ -2,6 +2,7 @@ import FontsandFooters from "@/components/shared/FontsandFooters/FontsandFooters
 import styles from "./page.module.css";
 import Hero from "@/components/HomePage/Hero/Hero";
 import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
+import ProblemSection from "@/components/HomePage/ProblemSection/ProblemSection";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
         <Hero />
         <FontsandFooters />
         <AboutUs />
+        <ProblemSection />
       </div>
     </main>
   );

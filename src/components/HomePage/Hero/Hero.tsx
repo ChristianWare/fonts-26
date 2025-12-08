@@ -92,8 +92,7 @@ export default function Hero() {
             </div>
             <div className={styles.bottom}>
               <p className={styles.copy}>
-                Fonts & Footers builds fast, beautiful booking sites for salons
-                & studios so clients can find you, choose a service, and book in
+                Fonts & Footers builds fast, beautiful booking sites for service businesses so clients can find you, choose a service, and book in
                 under 60 seconds—without fighting a clunky app.
               </p>
               <div className={styles.btnContainer}>
