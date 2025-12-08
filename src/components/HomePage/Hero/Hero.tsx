@@ -84,15 +84,17 @@ export default function Hero() {
           <div className={styles.content}>
             <div className={styles.top}>
               <h1 ref={refs.heading} className={styles.heading}>
-                Direct-booking <br /> websites that fill
-                <br /> your calendar
+                {/* Direct-booking <br /> websites that fill
+                <br /> your calendar */}
+                Own A booking website
+                <br /> your clients can’t <br /> wait to use
               </h1>
             </div>
             <div className={styles.bottom}>
               <p className={styles.copy}>
-                Fonts & Footers turns your website into a 24/7 front desk that
-                reduces no-shows, collects deposits, and fills your calendar
-                without endless calls and DMs.
+                Fonts & Footers builds fast, beautiful booking sites for salons
+                & studios so clients can find you, choose a service, and book in
+                under 60 seconds—without fighting a clunky app.
               </p>
               <div className={styles.btnContainer}>
                 <Button
