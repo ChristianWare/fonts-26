@@ -58,6 +58,10 @@
   transform: rotate(0deg);
 }
 
+.content {
+  padding-bottom: 10rem;
+}
+
 .top {
   display: grid;
   grid-template-columns: 1fr;
