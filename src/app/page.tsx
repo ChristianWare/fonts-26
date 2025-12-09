@@ -6,6 +6,8 @@ import ProblemSection from "@/components/HomePage/ProblemSection/ProblemSection"
 import ValueProp from "@/components/HomePage/ValueProp/ValueProp";
 import HowItWorks from "@/components/HomePage/HowItWorks/HowItWorks";
 import WhoIsThisFor from "@/components/HomePage/WhoIsThisFor/WhoIsThisFor";
+import ScrollVelocity from "@/components/shared/ScrollVelocity/ScrollVelocity";
+import ParallaxArea from "@/components/HomePage/ParallaxArea/ParallaxArea";
 
 export default function HomePage() {
   return (
@@ -16,7 +18,13 @@ export default function HomePage() {
         <AboutUs />
         <ProblemSection />
         <ValueProp />
+        <ScrollVelocity
+          texts={["End to end support •", "End to end support •"]}
+          className='End to end support •'
+        />
+
         <HowItWorks />
+        <ParallaxArea />
         <WhoIsThisFor />
       </div>
     </main>

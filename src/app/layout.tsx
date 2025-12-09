@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import SmoothScroll from "../components/shared/SmoothScroll/SmoothScroll";
 
 const SuisseIntlRegular = localFont({
   src: "../../public/fonts/SuisseIntlRegular.otf",
@@ -35,7 +36,7 @@ export default function RootLayout({
       <body
         className={`${SuisseIntlCondBold.variable} ${SuisseIntlMedium.variable} ${SuisseIntlRegular.variable}`}
       >
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
