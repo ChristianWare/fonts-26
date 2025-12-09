@@ -2,7 +2,6 @@ import styles from "./BaseFeatures.module.css";
 import Arrow from "../icons/Arrow/Arrow";
 import Button from "../Button/Button";
 import SectionIntro from "../SectionIntro/SectionIntro";
-import SectionIntroii from "../SectionIntroii/SectionIntroii";
 import Design from "../icons/Design/Design";
 import Payment from "../icons/Payment/Payment";
 import Clock from "../icons/Clock/Clock";
@@ -83,7 +82,7 @@ export default function BaseFeatures() {
             <div className={styles.imgContainer}>
               <Image src={Img2} alt='' fill className={styles.img} />
             </div>
-            <SectionIntroii title='Modular blocks' />
+            {/* <SectionIntroii title='Modular blocks' /> */}
             <h2 className={styles.heading}>
               What&apos;s <span className='span1'>included</span> <br /> in{" "}
               <span className='span2'>every</span> website we build
