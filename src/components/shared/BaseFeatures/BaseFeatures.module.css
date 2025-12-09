@@ -75,7 +75,7 @@
 }
 
 .title {
-  color: var(--tan);
+  color: var(--lightGray);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -83,7 +83,7 @@
 }
 
 .copyii {
-  color: var(--darkGray);
+  color: var(--accent);
 }
 
 .twoThree {
