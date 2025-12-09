@@ -2,7 +2,7 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./AboutUs.module.css";
 import Marquee from "@/components/shared/Marquee/Marquee";
 import Image from "next/image";
-import Img1 from "../../../../public/images/thinking.png";
+import Img1 from "../../../../public/images/calendarii.png";
 
 export default function AboutUs() {
   return (
