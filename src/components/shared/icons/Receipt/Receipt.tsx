@@ -9,7 +9,7 @@ export default function Receipt(props: SVGProps<SVGSVGElement>) {
       height='1em'
       fill='none'
       stroke='currentColor'
-      strokeWidth={.5}
+      strokeWidth={2}
       strokeLinecap='round'
       strokeLinejoin='round'
       className='lucide lucide-receipt-text-icon'

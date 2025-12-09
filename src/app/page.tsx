@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Hero from "@/components/HomePage/Hero/Hero";
 import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
 import ProblemSection from "@/components/HomePage/ProblemSection/ProblemSection";
+import ValueProp from "@/components/HomePage/ValueProp/ValueProp";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
         <FontsandFooters />
         <AboutUs />
         <ProblemSection />
+        <ValueProp />
       </div>
     </main>
   );
