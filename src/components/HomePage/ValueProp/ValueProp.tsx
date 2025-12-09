@@ -5,6 +5,7 @@ import Bell from "@/components/shared/icons/Bell/Bell";
 import Receipt from "@/components/shared/icons/Receipt/Receipt";
 import Clock from "@/components/shared/icons/Clock/Clock";
 import Seo from "@/components/shared/icons/Seo/Seo";
+import BaseFeatures from "@/components/shared/BaseFeatures/BaseFeatures";
 
 const data = [
   {
@@ -70,6 +71,7 @@ export default function ValueProp() {
               </div>
             </div>
           </div>
+          <BaseFeatures />
         </LayoutWrapper>
       </div>
     </section>

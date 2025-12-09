@@ -5,7 +5,7 @@
   right: 0;
   width: 75%;
   margin: 0 auto;
-  z-index: 9999;
+  z-index: 99999999;
   border-radius: 100px;
   opacity: 1;
   transition: transform 0.35s ease-in-out, opacity 0.25s ease-in-out,

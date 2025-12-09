@@ -1,5 +1,6 @@
 .container {
   background-color: var(--tan);
+  padding-top: 15rem;
 }
 
 .top {
@@ -44,7 +45,7 @@
 
 .one {
   background-color: var(--black);
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -97,9 +98,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-  background-color: var(--darkTan);
+  background-color: var(--white);
+  /* border: 1px solid var(--black); */
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid transparent;
   transition: all 160ms ease;
 }
@@ -120,7 +122,7 @@
 
 .featureTitle {
   /* font-family: var(--DotSansBold); */
-  font-size: 2rem;
+  font-size: 2.5rem;
   letter-spacing: normal;
   text-align: left;
 }
