@@ -1,11 +1,11 @@
 .container {
-  background-color: var(--qwhite);
-  padding: 10rem 0rem;
+  background-color: var(--white);
+  padding: 20rem 0rem;
 }
 
 .content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
   gap: 5rem;
 }
 
@@ -28,33 +28,12 @@
 
 .copy {
   color: var(--darkGray);
-  width: 80%;
-}
-
-.imgContainer,
-.imgContainerii {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.imgContainerii {
-  display: none;
 }
 
 .imgContainer {
-  margin-top: 1rem;
-}
-
-.imgLayer {
-  /* position: absolute; */
-  inset: 0;
-  width: 100%;
-  height: 275px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  width: 250px;
+  height: 250px;
 }
 
 .img {
@@ -63,135 +42,75 @@
 
 .right {
   position: relative;
-  padding-left: 5rem;
-}
-
-.progressTrack {
-  position: absolute;
-  left: 1rem;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  background-color: var(--lightBlack);
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.progressBar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 0px;
-  background: linear-gradient(
-    to top,
-    var(--accent) 0%,
-    var(--accent) 85%,
-    transparent 100%
-  );
-  border-radius: 999px;
-  /* border: 1px solid var(--black); */
-  will-change: height, opacity;
+  padding: 3rem;
+  background-color: var(--lightGray);
+  border-radius: 20px;
 }
 
 .mapDataBox {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30rem;
+  /* gap: 3rem; */
 }
 
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  padding: 2rem;
-  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-gap: 5rem;
+  padding: 0rem 2rem;
+  padding-bottom: 0rem;
   transition: all 0.3s ease-in;
-  background-color: var(--lightBlack);
-  /* border: 2px solid var(--tan); */
-}
-
-.isPast::before {
-  background: var(--accent);
-  border-color: var(--accent);
-}
-
-.cardHeader {
-  display: flex;
-  align-items: baseline;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.stepIndex {
-  font-size: 2rem;
-  font-variant-numeric: tabular-nums;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease-in;
-  box-shadow: 0 0 0 2px var(--tan), 0 0 0 4px var(--gray);
-}
-
-.isActive .stepIndex {
-  box-shadow: 0 0 0 2px var(--tan), 0 0 0 4px var(--accent);
-}
-.isActive::before {
-  transform: scale(1.1);
-}
-
-.isActive .stepIndex {
-  background-color: var(--accent);
-  border: 1px solid var(--black);
-  transition: all 0.3s ease-in;
-}
-
-.isActive {
-  background-color: var(--darkTan);
-  transition: all 0.3s ease-in;
+  /* background-color: var(--lightestGray); */
+  /* border-radius: 15px; */
 }
 
 .title {
-  font-size: 3.2rem;
-  font-family: var(--SwitzerMedium);
+  font-size: 2rem;
+  font-family: var(--SuisseIntlMedium);
   color: var(--black);
 }
 
 .desc {
-  border-top: 1px solid var(--gray);
-  padding-top: 2rem;
-  color: var(--lighterBlack);
-  font-size: 2rem;
-  /* line-height: 140%; */
+  font-size: 1.6rem;
+  color: var(--darkGray);
+  border-left: 1px solid var(--lightText);
+  padding-left: 4rem;
+  padding-bottom: 7rem;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .progressBar {
-    transition: none;
-  }
-  .card::before {
-    transition: none;
-  }
-  .stepIndex {
-    transition: none;
-  }
+.desc::before {
+  content: "";
+  position: absolute;
+  left: -6.5px;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--accent);
+  border-radius: 50%;
+  border: 1px solid var(--lightText);
 }
 
 @media screen and (max-width: 1268px) {
   .content {
-    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .leftContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .copy {
+    max-width: 550px;
   }
 }
 
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: 1fr;
-    gap: 7rem;
+    gap: 3rem;
   }
 
   .leftContent {
@@ -201,52 +120,52 @@
     justify-content: center;
   }
 
-  .heading {
-    text-align: center;
-  }
-
-  .cardHeader {
-    justify-content: center;
-  }
-
-  .desc {
-    text-align: center;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .imgContainer {
-    display: none;
-  }
-
-  .imgContainerii {
-    display: block;
-    height: 275px;
+  .copy {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .right {
-    padding-left: 5rem;
-  }
-
-  .mapDataBox {
-    gap: 8rem;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .progressTrack {
-    width: 10px;
+  .card {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .title {
+    position: relative;
+  }
+
+  .title::before {
+    content: "";
+    position: absolute;
+    left: -2.7rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--accent);
+    border-radius: 50%;
+    border: 1px solid var(--lightText);
+  }
+
+  .desc {
+    padding-left: 0rem;
+    border-left: none;
   }
 
   .right {
-    padding-left: 5rem;
+    padding: 3rem 2rem;
   }
 
-  .imgContainerii {
-    margin-top: 3rem;
+  .card {
+    border-left: 1px solid var(--lightText);
+  }
+
+  .desc::before {
+    display: none;
+  }
+
+  .imgContainer1 {
+    width: 200px;
+    height: 200px;
   }
 }
