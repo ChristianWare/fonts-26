@@ -5,6 +5,7 @@ import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
 import ProblemSection from "@/components/HomePage/ProblemSection/ProblemSection";
 import ValueProp from "@/components/HomePage/ValueProp/ValueProp";
 import HowItWorks from "@/components/HomePage/HowItWorks/HowItWorks";
+import WhoIsThisFor from "@/components/HomePage/WhoIsThisFor/WhoIsThisFor";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
         <ProblemSection />
         <ValueProp />
         <HowItWorks />
+        <WhoIsThisFor />
       </div>
     </main>
   );
