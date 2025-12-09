@@ -70,17 +70,17 @@ h1 {
 }
 
 h2 {
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   line-height: 1;
   text-transform: uppercase;
 }
 
-.h2ii {
+/* .h2ii {
   font-size: 5rem;
   letter-spacing: -0.02em;
-}
+} */
 
 h3,
 h4 {

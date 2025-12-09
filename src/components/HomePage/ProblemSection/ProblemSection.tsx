@@ -89,7 +89,7 @@ export default function ProblemSection() {
                         onClick={() => setActiveId(item.id)}
                       >
                         <div className={styles.cardLeft}>
-                          <div className={styles.sectionIntro1}>
+                          {/* <div className={styles.sectionIntro1}>
                             <SectionIntroii
                               title={item.title}
                               color={
@@ -99,7 +99,10 @@ export default function ProblemSection() {
                           </div>
                           <div className={styles.sectionIntro2}>
                             <SectionIntroii title={item.title} />
-                          </div>
+                          </div> */}
+                          <h3 className={styles.title}>
+                            {item.title}
+                          </h3>
 
                           <p className={styles.dataItemDesc}>{item.desc}</p>
                         </div>
@@ -126,11 +129,11 @@ export default function ProblemSection() {
                     fill
                     className={`${styles.img} ${styles.fadeIn}`}
                   />
-                  <div className={styles.rightOverlay}>
+                  {/* <div className={styles.rightOverlay}>
                     <p className={`${styles.dataItemDesc} ${styles.rightDesc}`}>
                       {activeItem.desc}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

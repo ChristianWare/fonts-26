@@ -125,9 +125,15 @@
 }
 
 .title {
-  font-size: 2.4rem;
+  /* font-size: 2.4rem;
   line-height: 1.2;
+  transition: color 0.3s ease-in; */
+  font-size: 2rem;
+  font-family: var(--SuisseIntlMedium);
+  color: var(--black);
+  text-transform: none;
   transition: color 0.3s ease-in;
+  letter-spacing: normal;
 }
 
 .sectionIntro2 {
@@ -199,12 +205,12 @@
 .card:hover .cardLeft,
 .activeCard,
 .activeCard .cardLeft {
-  background-color: var(--darkGray);
+  background-color: var(--black);
 }
 
 .card:hover .title,
 .activeCard .title {
-  color: var(--white);
+  color: var(--accent);
 }
 
 .card:hover .imgii,
