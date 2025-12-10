@@ -119,7 +119,7 @@ export default function ProblemSectionii() {
               <div className={styles.q3}>
                 <div className={styles.imgContainer}>
                   <Image
-                    src={activeItem.src ?? Img1}
+                    src={activeItem.src}
                     alt='Problem Image'
                     fill
                     className={styles.img}
