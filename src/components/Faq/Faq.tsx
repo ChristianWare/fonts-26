@@ -134,7 +134,7 @@ export default function Faq() {
                 return (
                   <div
                     key={q.id}
-                    className={styles.qaContainer}
+                    className={open ? `${styles.qaContainer} ${styles.show}` : styles.qaContainer}
                     onClick={() => toggle(k)}
                   >
                     <div className={styles.headingArrowContainer}>
