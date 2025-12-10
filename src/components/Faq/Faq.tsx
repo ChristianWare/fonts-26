@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import  { useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./Faq.module.css";
-// import LayoutWrapper from "../shared/LayoutWrapper";
+import LayoutWrapper from "../shared/LayoutWrapper";
 import SectionIntroii from "../shared/SectionIntroii/SectionIntroii";
 import Button from "../shared/Button/Button";
 import Arrow from "../shared/icons/Arrow/Arrow";
@@ -11,7 +11,6 @@ import { questions, type SectionKey, type QuestionItem } from "@/lib/data";
 import Image from "next/image";
 import ServiceIllustration from "../../../public/illustrations/ponderIllustration.png";
 
-/** Resolve current section from the pathname */
 function sectionFromPath(pathname: string): SectionKey {
   if (pathname.startsWith("/pricing")) return "pricing";
   if (pathname.startsWith("/about")) return "about";
@@ -21,7 +20,6 @@ function sectionFromPath(pathname: string): SectionKey {
   return "home";
 }
 
-/** UI copy per section (titles + headings) */
 const SECTION_META: Record<
   SectionKey,
   { title: string; headingSpan: string; headingRest: string }
@@ -100,7 +98,7 @@ export default function Faq() {
   if (!isAllFaqPage) {
     return (
       <section className={styles.container}>
-        {/* <LayoutWrapper> */}
+        <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.left}>
               {/* <SectionIntroii title={meta.title} /> */}
@@ -134,7 +132,11 @@ export default function Faq() {
                 return (
                   <div
                     key={q.id}
-                    className={open ? `${styles.qaContainer} ${styles.show}` : styles.qaContainer}
+                    className={
+                      open
+                        ? `${styles.qaContainer} ${styles.show}`
+                        : styles.qaContainer
+                    }
                     onClick={() => toggle(k)}
                   >
                     <div className={styles.headingArrowContainer}>
@@ -166,7 +168,7 @@ export default function Faq() {
               })}
             </div>
           </div>
-        {/* </LayoutWrapper> */}
+        </LayoutWrapper>
       </section>
     );
   }
@@ -174,7 +176,7 @@ export default function Faq() {
   // /faqs: show every section group with in-page anchors
   return (
     <section className={styles.container}>
-      {/* <LayoutWrapper> */}
+      <LayoutWrapper>
         {grouped.map((group) => (
           <div
             key={group.key}
@@ -241,7 +243,7 @@ export default function Faq() {
             {/* <hr className={styles.groupDivider} /> */}
           </div>
         ))}
-      {/* </LayoutWrapper> */}
+      </LayoutWrapper>
     </section>
   );
 }

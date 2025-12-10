@@ -25,7 +25,7 @@
   background-color: var(--accent);
 }
 .card4 .cardInner {
-  background-color: var(--primary);
+  background-color: var(--lightGray);
 }
 
 .titleHeading {
@@ -35,7 +35,7 @@
 }
 
 .card1 .cardInner .titleHeading {
-  color: var(--primary);
+  color: var(--lightGray);
 }
 
 .card2 .cardInner .titleHeading {
@@ -47,7 +47,7 @@
 }
 
 .card1 .cardInner .blackDot {
-  background-color: var(--primary);
+  background-color: var(--lightGray);
 }
 
 .card4 .cardInner .blackDot {
@@ -62,7 +62,7 @@
 
 @media screen and (max-width: 568px) {
   .titleHeading {
-    font-size: 25vw;
-    letter-spacing: -5px;
+    font-size: 20vw;
+    letter-spacing: -1vw;
   }
 }

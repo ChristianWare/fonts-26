@@ -3,7 +3,6 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 import ServiceDetails from "@/components/PricingPage/ServiceDetails/ServiceDetails";
 import Button from "@/components/shared/Button/Button";
-import Faq from "@/components/Faq/Faq";
 
 export default function PricingPreview() {
   return (
@@ -11,7 +10,7 @@ export default function PricingPreview() {
       <div className={styles.container}>
         <div className={styles.cornerContainer}>
           <div className={styles.corner}>
-            <SectionIntroii title="Pricing + Faq's" />
+            <SectionIntroii title='Pricing' />
           </div>
         </div>{" "}
         <LayoutWrapper>
@@ -30,7 +29,6 @@ export default function PricingPreview() {
               />
             </div>
           </div>
-        <Faq />
         </LayoutWrapper>
       </div>
     </section>

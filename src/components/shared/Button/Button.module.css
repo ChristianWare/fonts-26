@@ -104,6 +104,29 @@
   color: var(--accent);
 }
 
+.gray,
+.gray:link,
+.gray:visited {
+  background-color: var(--lightGray);
+  color: var(--black);
+  border: 1px solid var(--lightGray);
+}
+
+.gray .arrow {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.gray:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.gray:hover .arrow {
+  background-color: var(--lightGray);
+  color: var(--black);
+}
+
 .lightGray,
 .lightGray:link,
 .lightGray:visited {

@@ -10,13 +10,15 @@ import CaseStudies from "@/components/HomePage/CaseStudies/CaseStudies";
 import ProblemSectionii from "@/components/HomePage/ProblemSectionii/ProblemSectionii";
 import Benefits from "@/components/shared/Benefits/Benefits";
 import PricingPreview from "@/components/HomePage/PricingPreview/PricingPreview";
+import Faq from "@/components/Faq/Faq";
+import FinalCTAMain from "@/components/shared/FinalCTAMain/FinalCTAMain";
 
 export default function HomePage() {
   return (
     <main>
       <div className={styles.scrollContainer}>
         <Hero />
-        <FontsandFooters />
+        <FontsandFooters text1='Fonts' text2='&' text3='Footers' />
         <AboutUs />
         <ProblemSectionii />
         <ValueProp />
@@ -29,6 +31,9 @@ export default function HomePage() {
         <CaseStudies />
         <Benefits />
         <PricingPreview />
+        <FontsandFooters text1='Frequently' text2='Asked' text3='Questions' />
+        <Faq />
+        <FinalCTAMain />
       </div>
     </main>
   );

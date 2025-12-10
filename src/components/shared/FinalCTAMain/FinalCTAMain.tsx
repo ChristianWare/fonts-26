@@ -1,15 +1,20 @@
 "use client";
 
 import styles from "./FinalCTAMain.module.css";
-import Image from "next/image";
-import Img1 from "../../../../public/images/whydb.jpg";
 import Button from "../Button/Button";
-import LinkedIn from "@/components/icons/LinkedIn/LinkedIn";
-import Instagram from "@/components/icons/Instagram/Instagram";
-import Facebook from "@/components/icons/Facebook/Facebook";
+import LinkedIn from "../icons/LinkedIn/LinkedIn";
+import Instagram from "../icons/Instagram/Instagram";
+import Facebook from "../icons/Facebook/Facebook";
 import { footerData } from "@/lib/data";
 import Link from "next/link";
-import Logo from "../Logo/Logo";
+// import Logo from "../Logo/Logo";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import Img1 from "../../../../public/images/thinkingWhite.png";
+
+const Silk = dynamic(() => import("../../shared/Silk"), {
+  ssr: false,
+});
 
 const data3 = [
   {
@@ -33,25 +38,34 @@ export default function FinalCTAMain() {
   return (
     <section className={styles.parent}>
       <div className={styles.container}>
+        <div className={styles.silkBg}>
+          <Silk
+            speed={4}
+            scale={1.4}
+            color='#7B7481'
+            noiseIntensity={1.2}
+            rotation={0}
+          />
+        </div>
         <div className={styles.imgOverlay} />
-        <Image src={Img1} alt='Hero Image' fill className={styles.img} />
         <div className={styles.content}>
           <div className={styles.left}>
-            <Logo />
+            <div className={styles.imgContainer}>
+              <Image src={Img1} alt='' fill className={styles.img} />
+            </div>
+            {/* <Logo /> */}
             <h2 className={styles.heading}>
-              Ready to turn <br /> <span className='span1'>browsers</span> {" "}
-               into{" "}
-              <span className='span2'>bookings?</span>
+              Ready to turn <br /> browsers into bookings?
             </h2>
 
             <div className={styles.btnContainer}>
               <Button
                 href='https://calendly.com/chris-ware-dev/discovery-call'
                 target='_blank'
-                btnType='lime'
+                btnType='accent'
                 text='Book your discovery call'
               />
-              <Button href='/contact' btnType='grayOutline' text='Contact us' />
+              <Button href='/contact' btnType='gray' text='Contact us' />
             </div>
           </div>
           <footer className={styles.footerContainer}>
@@ -99,11 +113,6 @@ export default function FinalCTAMain() {
                 <small className={styles.small}>© 2025 Fonts & Footers</small>
               </div>
               <div className={styles.footerBottomRight}>
-                {/* {footerData2.map((x) => (
-                  <small key={x.id} className={styles.small}>
-                    {x.title}
-                  </small>
-                ))} */}
                 <small className={styles.small}>
                   This site was designed and developed by Fonts & Footers
                 </small>
@@ -111,7 +120,6 @@ export default function FinalCTAMain() {
             </div>
           </footer>
         </div>
-        {/* </LayoutWrapper> */}
       </div>
     </section>
   );

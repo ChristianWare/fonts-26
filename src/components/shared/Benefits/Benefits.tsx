@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./Benefits.module.css";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
@@ -31,45 +28,6 @@ const data = [
 ];
 
 export default function Benefits() {
-  const [activeCount, setActiveCount] = useState(1);
-  const bottomRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    function handleScroll() {
-      const bottomEl = bottomRef.current;
-      if (!bottomEl) return;
-
-      const rect = bottomEl.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const totalCards = data.length;
-      const totalScrollable = bottomEl.offsetHeight - viewportHeight;
-
-      if (totalScrollable <= 0) {
-        setActiveCount(totalCards);
-        return;
-      }
-
-      const scrolledInside = Math.min(Math.max(-rect.top, 0), totalScrollable);
-      const progress = scrolledInside / totalScrollable;
-      const stepSize = 1 / totalCards;
-      const count = Math.max(
-        1,
-        Math.min(totalCards, 1 + Math.floor(progress / stepSize))
-      );
-
-      setActiveCount(count);
-    }
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
-    };
-  }, []);
-
   return (
     <section className={styles.parent}>
       <div className={styles.container}>
@@ -97,28 +55,16 @@ export default function Benefits() {
               </p>
             </div>
 
-            <div
-              ref={bottomRef}
-              className={styles.bottom}
-              style={{ height: `${100 * data.length}vh` }}
-            >
+            <div className={styles.bottom}>
               <div className={styles.mapBox}>
-                {data.map((item, index) => {
-                  const isVisible = index < activeCount;
-                  return (
-                    <div
-                      key={item.id}
-                      className={`${styles.card} ${
-                        isVisible ? styles.cardVisible : styles.cardHidden
-                      }`}
-                    >
-                      <div className={styles.cardContent}>
-                        <h3 className={styles.title}>{item.title}</h3>
-                        <p className={styles.desc}>{item.Description}</p>
-                      </div>
+                {data.map((item) => (
+                  <div key={item.id} className={styles.card}>
+                    <div className={styles.cardContent}>
+                      <h3 className={styles.title}>{item.title}</h3>
+                      <p className={styles.desc}>{item.Description}</p>
                     </div>
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
