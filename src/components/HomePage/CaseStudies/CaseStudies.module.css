@@ -207,32 +207,31 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.4rem;
-  height: 3.4rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+  width: 6rem;
+  height: 6rem;
+  color: var(--white);
+  border-radius: 50%;
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-}
-
-.projectLink:hover {
-  background: var(--white);
+  background: var(--accent);
   border-color: var(--white);
   transform: translateY(-2px);
 }
 
 .cardArrow {
-  width: 1.8rem;
-  height: 1.8rem;
-  transform: rotate(0deg);
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(45deg);
   color: var(--black);
 }
 
-@media screen and (max-width: 768px) {
-.bottom {
-  grid-template-columns: .5fr 5fr;
+.projectLink:hover {
+  background-color: var(--white);
 }
+
+@media screen and (max-width: 768px) {
+  .bottom {
+    grid-template-columns: 0.5fr 5fr;
+  }
 
   .bottomRight {
     height: 360px;
