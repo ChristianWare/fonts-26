@@ -4,27 +4,26 @@
 import styles from "./ParallaxArea.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Img1 from "../../../../public/images/WhyWeExist.jpg";
+import Img2 from "../../../../public/images/happy.png";
 import ParallaxImageLarge from "@/components/shared/ParallaxImageLarge/ParallaxImageLarge";
+import Image from "next/image";
+
 const data = [
   {
     id: 1,
-    title: "High Quality Products",
+    title: "You want for a site you’re proud of",
   },
   {
     id: 2,
-    title: "Individual Advice",
+    title: "You're ready to attract more local clients",
   },
   {
     id: 3,
-    title: "Professional Assembly",
+    title: "You're ready to move away from clunky booking apps",
   },
   {
     id: 4,
-    title: "Uncomplicated Shipping",
-  },
-  {
-    id: 5,
-    title: "Persoanl Service",
+    title: "You want a website that clearly communicates you",
   },
 ];
 
@@ -37,16 +36,19 @@ export default function ParallaxArea() {
         <div className={styles.content}>
           <div className={styles.contentChildren}>
             <h2 className={styles.heading}>
-              Blazing fast <br /> online stores
+              Who We&apos;re <br /> perfect for
             </h2>
             <div className={styles.bottom}>
               <div className={styles.left}>
                 <p className={styles.copy}>
-                  With our passion and enthusiasm for cycling, we offer high
-                  quality and exceptional bikes for riders of all levels.
+                  You don’t need a giant agency. You need someone who
+                  understands booking.
                 </p>
               </div>
               <div className={styles.right}>
+            <div className={styles.imgContainer}>
+              <Image src={Img2} alt='' fill className={styles.img} />
+            </div>
                 <ul className={styles.dataBox}>
                   {data.map((x) => (
                     <li key={x.id} className={styles.title}>

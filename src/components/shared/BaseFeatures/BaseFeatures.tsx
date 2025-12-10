@@ -82,7 +82,6 @@ export default function BaseFeatures() {
             <div className={styles.imgContainer}>
               <Image src={Img2} alt='' fill className={styles.img} />
             </div>
-            {/* <SectionIntroii title='Modular blocks' /> */}
             <h2 className={styles.heading}>
               What&apos;s <span className='span1'>included</span> <br /> in{" "}
               <span className='span2'>every</span> website we build

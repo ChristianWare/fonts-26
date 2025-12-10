@@ -42,6 +42,19 @@
   font-weight: 500;
 }
 
+.imgContainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-left: auto;
+  margin-bottom: 5rem;
+}
+
+.img {
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+
 .bottom {
   display: grid;
   grid-template-columns: 1.5fr 2fr;
@@ -50,7 +63,7 @@
 
 .copy {
   color: var(--white);
-  max-width: 245px;
+  max-width: 400px;
 }
 
 .dataBox {
@@ -64,6 +77,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
+  text-align: right;
   padding: 1rem 0rem;
 }
 
@@ -73,46 +88,55 @@
 }
 
 @media screen and (max-width: 1268px) {
-  .heading {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 1068px) {
   .contentChildren {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: fit-content;
-  }
-
-  .contentChildren,
-  .bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .left,
-  .right {
-    width: 100%;
+    grid-gap: 2rem;
   }
 
   .heading,
   .copy {
-    text-align: left;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .imgContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+
+  .dataBox {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .dataBox {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 768px) {
   .heading {
     font-size: 15vw;
+    letter-spacing: -0.5vw;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .copy {
-    max-width: fit-content;
+  .contentChildren {
+    padding: 1rem;
+  }
+  
+  .imgContainer {
+    width: 200px;
+    height: 200px;
   }
 }

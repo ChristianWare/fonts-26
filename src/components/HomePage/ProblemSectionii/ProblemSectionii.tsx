@@ -77,7 +77,7 @@ export default function ProblemSectionii() {
               <p className={styles.copy}>
                 You’re great at what you do. Your chair should be full, your
                 books should be calm and predictable. But instead, your online
-                experience is… a little messy.
+                experience is… a little messy. Does this sound familiar?
               </p>
             </div>
             <div className={styles.bottom}>
