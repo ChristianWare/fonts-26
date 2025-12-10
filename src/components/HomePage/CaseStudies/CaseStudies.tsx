@@ -43,7 +43,7 @@ export default function CaseStudies() {
       <div className={styles.container}>
         <div className={styles.cornerContainer}>
           <div className={styles.corner}>
-            <SectionIntroii title='Projects' color='white' />
+            <SectionIntroii title='Projects' />
           </div>
         </div>
         <LayoutWrapper>
