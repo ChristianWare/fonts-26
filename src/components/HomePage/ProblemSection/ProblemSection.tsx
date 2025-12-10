@@ -89,20 +89,7 @@ export default function ProblemSection() {
                         onClick={() => setActiveId(item.id)}
                       >
                         <div className={styles.cardLeft}>
-                          {/* <div className={styles.sectionIntro1}>
-                            <SectionIntroii
-                              title={item.title}
-                              color={
-                                activeId === item.id ? "white" : item.color
-                              }
-                            />
-                          </div>
-                          <div className={styles.sectionIntro2}>
-                            <SectionIntroii title={item.title} />
-                          </div> */}
-                          <h3 className={styles.title}>
-                            {item.title}
-                          </h3>
+                          <h3 className={styles.title}>{item.title}</h3>
 
                           <p className={styles.dataItemDesc}>{item.desc}</p>
                         </div>

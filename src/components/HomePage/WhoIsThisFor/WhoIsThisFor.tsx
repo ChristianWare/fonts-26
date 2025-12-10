@@ -4,6 +4,7 @@ import Image from "next/image";
 import Img1 from "../../../../public/images/whydb.jpg";
 import Button from "@/components/shared/Button/Button";
 import Check from "@/components/shared/icons/Check/Check";
+import Close from "@/components/shared/icons/Close/Close";
 
 const data1 = [
   {
@@ -27,22 +28,19 @@ const data1 = [
 const data2 = [
   {
     id: 5,
-    title: "You want a $200 one-off site and never plan to touch it again",
+    title: "You want a cheap site",
   },
   {
     id: 6,
-    title:
-      "You’re looking for a giant agency with 10 different departments and weekly boardroom meetings",
+    title: "You're looking for a big agency",
   },
   {
     id: 7,
-    title:
-      "You don’t care about attracting local clients through search engines",
+    title: "You don't care about local SEO",
   },
   {
     id: 8,
-    title:
-      "You don’t actually want more clarity around your services, pricing, or policies",
+    title: "You don't want clear pricing",
   },
 ];
 
@@ -103,7 +101,7 @@ export default function WhoIsThisFor() {
                   <ul className={styles.mapDataContainer}>
                     {data2.map((x) => (
                       <li key={x.id} className={styles.item}>
-                        <Check className={styles.icon} />
+                        <Close className={styles.closeIcon} />
                         {x.title}
                       </li>
                     ))}

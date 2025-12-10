@@ -113,18 +113,33 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  letter-spacing: normal;
+  /* font-size: 2.5rem;
+  letter-spacing: normal; */
+  font-family: var(--SuisseIntlMedium);
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    text-transform: none;
 }
 
 .desc {
-  font-size: 1.4rem;
-  color: var(--darkGray);
+  /* font-size: 1.4rem;
+  color: var(--darkGray); */
+  letter-spacing: -.01em;
+    -webkit-font-smoothing: subpixel-antialiased;
+    width: 100%;
+    color: var(--lightText);
+    white-space: normal;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.25;
 }
 
 .icon {
-  font-size: 10rem;
+  font-size: 3rem;
   color: var(--black);
+  /* display: none; */
 }
 
 @media screen and (max-width: 1268px) {

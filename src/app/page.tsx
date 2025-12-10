@@ -8,6 +8,7 @@ import HowItWorks from "@/components/HomePage/HowItWorks/HowItWorks";
 import WhoIsThisFor from "@/components/HomePage/WhoIsThisFor/WhoIsThisFor";
 import ScrollVelocity from "@/components/shared/ScrollVelocity/ScrollVelocity";
 import ParallaxArea from "@/components/HomePage/ParallaxArea/ParallaxArea";
+import CaseStudies from "@/components/HomePage/CaseStudies/CaseStudies";
 
 export default function HomePage() {
   return (
@@ -22,9 +23,9 @@ export default function HomePage() {
           texts={["End to end support •", "End to end support •"]}
           className='End to end support •'
         />
-
         <HowItWorks />
         <ParallaxArea />
+        <CaseStudies />
         <WhoIsThisFor />
       </div>
     </main>

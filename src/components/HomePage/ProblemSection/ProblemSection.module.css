@@ -71,7 +71,8 @@
 }
 
 .copy {
-  max-width: 700px;
+  max-width: 600px;
+  text-align: right;
   color: var(--gray);
 }
 
@@ -128,7 +129,7 @@
   /* font-size: 2.4rem;
   line-height: 1.2;
   transition: color 0.3s ease-in; */
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-family: var(--SuisseIntlMedium);
   color: var(--black);
   text-transform: none;

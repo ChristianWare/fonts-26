@@ -80,10 +80,12 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
+  font-family: var(--SuisseIntlMedium);
 }
 
 .copyii {
   color: var(--accent);
+  font-size: 1.4rem;
 }
 
 .twoThree {
@@ -111,20 +113,20 @@
   border-color: var(--black);
 }
 
-/* .featureCard:hover {
-  transform: translateY(-2px);
-  background-color: var(--lime);
-} */
-
 .icon {
   font-size: 3rem;
 }
 
 .featureTitle {
-  /* font-family: var(--DotSansBold); */
-  font-size: 2.5rem;
+  /* font-size: 2.5rem;
   letter-spacing: normal;
-  text-align: left;
+  text-align: left; */
+  font-family: var(--SuisseIntlMedium);
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-transform: none;
+  font-size: 1.6rem;
+  line-height: 1.25;
 }
 
 .modalContent {
