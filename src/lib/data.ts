@@ -790,7 +790,7 @@ export const questions: readonly QuestionItem[] = [
   {
     id: 3,
     question:
-      "How do your plans differ (Solo vs Team vs Multi-Location vs Rental/Fleet vs Custom)?",
+      "How do your plans differ?",
     answer:
       "Solo: one bookable calendar and simple upsells. Team: multiple staff calendars, role-based access, Google/365 sync. Multi-Location: location routing, hours/policies per site. Rental/Fleet: inventory, blackout dates, holds/returns. Custom: bespoke features and integrations.",
     sections: ["work", "pricing", "home"],

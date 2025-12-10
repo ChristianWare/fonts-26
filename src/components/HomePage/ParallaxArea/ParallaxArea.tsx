@@ -24,7 +24,7 @@ const data = [
   },
   {
     id: 4,
-    title: "You want a website that clearly communicates you",
+    title: "You want a website that clearly communicates your brand",
   },
 ];
 

@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./Faq.module.css";
-import LayoutWrapper from "../shared/LayoutWrapper";
+// import LayoutWrapper from "../shared/LayoutWrapper";
 import SectionIntroii from "../shared/SectionIntroii/SectionIntroii";
 import Button from "../shared/Button/Button";
 import Arrow from "../shared/icons/Arrow/Arrow";
@@ -100,7 +100,7 @@ export default function Faq() {
   if (!isAllFaqPage) {
     return (
       <section className={styles.container}>
-        <LayoutWrapper>
+        {/* <LayoutWrapper> */}
           <div className={styles.content}>
             <div className={styles.left}>
               {/* <SectionIntroii title={meta.title} /> */}
@@ -166,7 +166,7 @@ export default function Faq() {
               })}
             </div>
           </div>
-        </LayoutWrapper>
+        {/* </LayoutWrapper> */}
       </section>
     );
   }
@@ -174,7 +174,7 @@ export default function Faq() {
   // /faqs: show every section group with in-page anchors
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
+      {/* <LayoutWrapper> */}
         {grouped.map((group) => (
           <div
             key={group.key}
@@ -241,7 +241,7 @@ export default function Faq() {
             {/* <hr className={styles.groupDivider} /> */}
           </div>
         ))}
-      </LayoutWrapper>
+      {/* </LayoutWrapper> */}
     </section>
   );
 }

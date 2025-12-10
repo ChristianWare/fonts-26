@@ -1,13 +1,12 @@
 .container {
-  background-color: var(--tan);
-  padding-top: 10rem;
+  background-color: var(--white);
+  padding-top: 15rem;
 }
 
 .content {
   display: grid;
   grid-template-columns: 1.5fr 2fr;
-  grid-gap: 1rem;
-  border-top: 1px solid var(--gray);
+  grid-gap: 5rem;
   padding-top: 2rem;
   margin-bottom: 15rem;
 }
@@ -18,9 +17,6 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  background-color: var(--lighterTan);
-  padding: 3rem;
-  border-radius: 2rem;
 }
 
 .heading {
@@ -28,9 +24,8 @@
 }
 
 .copy {
-  width: 80%;
   text-align: center;
-  color: var(--lighterBlack);
+  color: var(--darkGray);
 }
 
 .imgContainer1 {
@@ -55,8 +50,7 @@
 
 .qaContainer {
   padding: 2rem;
-  background-color: var(--darkerTan);
-  border: 1px solid var(--textii);
+  background-color: var(--lightGray);
   border-radius: 10px;
   width: 100%;
   cursor: pointer;
@@ -93,8 +87,9 @@
   height: 3.5rem;
   border-radius: 50%;
   margin-left: auto;
-  background-color: var(--accent);
+  background-color: var(--white);
   transition: all 0.3s ease-in-out;
+  border: 1px solid var(--lighterGray);
 }
 
 .icon {
@@ -122,15 +117,22 @@
 } */
 
 .question {
-  font-size: 1.8rem;
-  font-family: var(--DotSansMedium);
+  font-size: 1.6rem;
+  font-family: var(--SuisseIntlMedium);
   letter-spacing: normal;
+  text-transform: none;
+  font-weight: normal;
+  line-height: 1.5;
 }
 
 .answer {
   margin-top: 2rem;
-  color: var(--grayii);
-  /* width: 90%; */
+  color: var(--darkGray);
+  font-size: 1.4rem;
+  line-height: 1.4;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 7px;
 }
 
 .titleHeading {

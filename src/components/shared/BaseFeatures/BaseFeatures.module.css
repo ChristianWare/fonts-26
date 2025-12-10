@@ -103,7 +103,7 @@
   background-color: var(--white);
   /* border: 1px solid var(--black); */
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid transparent;
   transition: all 160ms ease;
 }
