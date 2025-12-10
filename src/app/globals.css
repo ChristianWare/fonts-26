@@ -84,10 +84,12 @@ h2 {
   letter-spacing: normal;
   text-transform: none;
   font-weight: normal;
+  letter-spacing: -0.5px;
 }
 
 .subheadingii {
   font-size: 2.5rem;
+  letter-spacing: -0.5px;
   font-family: var(--SuisseIntlMedium);
   color: var(--black);
   letter-spacing: normal;

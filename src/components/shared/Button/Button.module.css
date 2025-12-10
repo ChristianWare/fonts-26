@@ -86,7 +86,7 @@
 .black:visited {
   background-color: var(--black);
   color: var(--accent);
-  border: 1px solid var(--accent);
+  border: 1px solid var(--black);
 }
 
 .black .arrow {
@@ -110,6 +110,7 @@
   background-color: var(--lightGray);
   color: var(--black);
   border: 1px solid var(--lightGray);
+  border: 1px solid var(--gray);
 }
 
 .lightGray .arrow {

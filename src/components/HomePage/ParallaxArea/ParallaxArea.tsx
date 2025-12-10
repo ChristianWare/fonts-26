@@ -7,6 +7,7 @@ import Img1 from "../../../../public/images/WhyWeExist.jpg";
 import Img2 from "../../../../public/images/happy.png";
 import ParallaxImageLarge from "@/components/shared/ParallaxImageLarge/ParallaxImageLarge";
 import Image from "next/image";
+import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 
 const data = [
   {
@@ -46,9 +47,16 @@ export default function ParallaxArea() {
                 </p>
               </div>
               <div className={styles.right}>
-            <div className={styles.imgContainer}>
-              <Image src={Img2} alt='' fill className={styles.img} />
-            </div>
+                <div className={styles.imgContainer}>
+                  <Image src={Img2} alt='' fill className={styles.img} />
+                </div>
+                <div className={styles.sectionIntroContainer}>
+                  <SectionIntroii
+                    title="We're a good fit if..."
+                    color='white'
+                  />
+                </div>
+
                 <ul className={styles.dataBox}>
                   {data.map((x) => (
                     <li key={x.id} className={styles.title}>

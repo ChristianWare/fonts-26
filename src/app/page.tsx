@@ -2,14 +2,14 @@ import FontsandFooters from "@/components/shared/FontsandFooters/FontsandFooters
 import styles from "./page.module.css";
 import Hero from "@/components/HomePage/Hero/Hero";
 import AboutUs from "@/components/HomePage/AboutUs/AboutUs";
-// import ProblemSection from "@/components/HomePage/ProblemSection/ProblemSection";
-// import WhoIsThisFor from "@/components/HomePage/WhoIsThisFor/WhoIsThisFor";
 import ValueProp from "@/components/HomePage/ValueProp/ValueProp";
 import HowItWorks from "@/components/HomePage/HowItWorks/HowItWorks";
 import ScrollVelocity from "@/components/shared/ScrollVelocity/ScrollVelocity";
 import ParallaxArea from "@/components/HomePage/ParallaxArea/ParallaxArea";
 import CaseStudies from "@/components/HomePage/CaseStudies/CaseStudies";
 import ProblemSectionii from "@/components/HomePage/ProblemSectionii/ProblemSectionii";
+import Benefits from "@/components/shared/Benefits/Benefits";
+import PricingPreview from "@/components/HomePage/PricingPreview/PricingPreview";
 
 export default function HomePage() {
   return (
@@ -18,7 +18,6 @@ export default function HomePage() {
         <Hero />
         <FontsandFooters />
         <AboutUs />
-        {/* <ProblemSection /> */}
         <ProblemSectionii />
         <ValueProp />
         <ScrollVelocity
@@ -28,7 +27,8 @@ export default function HomePage() {
         <HowItWorks />
         <ParallaxArea />
         <CaseStudies />
-        {/* <WhoIsThisFor /> */}
+        <Benefits />
+        <PricingPreview />
       </div>
     </main>
   );
