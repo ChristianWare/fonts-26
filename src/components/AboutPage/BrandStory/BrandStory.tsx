@@ -14,62 +14,66 @@ import Lightning from "@/components/shared/icons/Lightning/Lightning";
 const data = [
   {
     id: 1,
-    title: "Simplicity beats persuasion",
-    desc: "Your clients aren't reading—they're trying to finish a task on their phone.",
+    title: "Clarity beats clever",
+    desc: "A visitor should land on your site and know who you are, what you offer, and how to book in seconds—especially on mobile.",
     icon: <Clock className={styles.icon} />,
   },
   {
     id: 2,
     title: "Friction is expensive",
-    desc: "Every extra field, page, or surprise fee lowers completion rates.",
+    desc: "We design booking flows that work beautifully on a cracked phone with spotty service, because that’s how real people book rides, workouts, and appointments.",
     icon: <Lightning className={styles.icon} />,
   },
   {
     id: 3,
-    title: "Own your platform",
-    desc: "Your Stripe, your data, your domain. No lock-in.",
+    title: "Own your booking, don’t rent it",
+    desc: "We help you build a website and booking experience that you own—your domain, your content, your story—with your tools and integrations sitting behind the scenes instead of in control.",
     icon: <Listing className={styles.icon} />,
   },
   {
     id: 4,
-    title: "Clarity wins",
-    desc: "Plain-English policies near the button reduce cancellations and support.",
+    title: "Policies protect everyone",
+    desc: "We believe deposits, cancellation rules, and expectations should be woven into the booking experience, not hidden in fine print no one reads.",
     icon: <Design className={styles.icon} />,
   },
   {
     id: 5,
-    title: "Outcomes over aesthetics",
-    desc: "Beautiful is required; bookings are the goal.",
+    title: "Data > vibes",
+    desc: "We design and iterate based on real user behavior and feedback, not gut feelings or trendy design fads.",
     icon: <Design className={styles.icon} />,
   },
 ];
 
 export default function BrandStory() {
   return (
-    <section className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.top}>
-          <SectionIntroii title='Our Ethos' />
-          <h2 className={styles.heading}>
-            <span className={`${styles.span1} span1`}>The solution:</span> a
-            site that sells the appointment{" "}
-            <span className={`${styles.span2} span2`}> for you.</span>
-          </h2>
-        </div>
-        <div className={styles.content}>
-          <div className={styles.left}>
-            <div className={styles.imgContainer}>
-              <Image
-                src={Img1}
-                fill
-                alt='Client reviewing a full calendar of confirmed bookings'
-                title='High-value bookings without the busywork'
-                className={styles.img}
-              />
-            </div>
+    <section className={styles.parent}>
+      <div className={styles.container}>
+        <div className={styles.cornerContainer}>
+          <div className={styles.corner}>
+            <SectionIntroii title='What We Believe' />
           </div>
-          <div className={styles.middle}>
-            {/* <div className={styles.middleTop}>
+        </div>{" "}
+        <LayoutWrapper>
+          <div className={styles.top}>
+            <h2 className={styles.heading}>
+              These principles <br /> shape everything we <br /> design and
+              build.
+            </h2>
+          </div>
+          <div className={styles.content}>
+            <div className={styles.left}>
+              <div className={styles.imgContainer}>
+                <Image
+                  src={Img1}
+                  fill
+                  alt='Client reviewing a full calendar of confirmed bookings'
+                  title='High-value bookings without the busywork'
+                  className={styles.img}
+                />
+              </div>
+            </div>
+            <div className={styles.middle}>
+              {/* <div className={styles.middleTop}>
               <h3 className={styles.subHeadingii}>
                 What we do, <br /> in one line
               </h3>
@@ -90,38 +94,39 @@ export default function BrandStory() {
                 />
               </div>
             </div> */}
-            <div className={styles.imgContainer}>
-              <Image
-                src={Img2}
-                fill
-                alt='Client reviewing a full calendar of confirmed bookings'
-                title='High-value bookings without the busywork'
-                className={styles.img}
-              />
+              <div className={styles.imgContainer}>
+                <Image
+                  src={Img2}
+                  fill
+                  alt='Client reviewing a full calendar of confirmed bookings'
+                  title='High-value bookings without the busywork'
+                  className={styles.img}
+                />
+              </div>
             </div>
-          </div>
-          <div className={styles.right}>
-            <div className={styles.mapDataBox}>
-              {data.map((item) => (
-                <div key={item.id} className={styles.card}>
-                  <div className={styles.iconBox}>{item.icon}</div>
-                  <div className={styles.mapDataContent}>
-                    <div className={styles.title}>{item.title}</div>
-                    <p className={styles.desc}>{item.desc}</p>
+            <div className={styles.right}>
+              <div className={styles.mapDataBox}>
+                {data.map((item) => (
+                  <div key={item.id} className={styles.card}>
+                    <div className={styles.iconBox}>{item.icon}</div>
+                    <div className={styles.mapDataContent}>
+                      <div className={styles.title}>{item.title}</div>
+                      <p className={styles.desc}>{item.desc}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        {/* <OurTeam
+          {/* <OurTeam
           text='Most service businesses don’t have a marketing problem—they have a
             booking problem. Clunky forms, mixed-up calendars, and payment
             chases leak revenue every day. We started Fonts & Footers to fix
             that single point of failure: the moment a customer decides to book.'
           src={Img1}
         /> */}
-      </LayoutWrapper>
+        </LayoutWrapper>
+      </div>
     </section>
   );
 }

@@ -1,6 +1,5 @@
 import AboutDetailsIntro from "@/components/AboutPage/AboutDetailsIntro/AboutDetailsIntro";
 import AboutHero from "@/components/AboutPage/AboutHero/AboutHero";
-import Approach from "@/components/AboutPage/Approach/Approach";
 import Believe from "@/components/AboutPage/Believe/Believe";
 import BrandStory from "@/components/AboutPage/BrandStory/BrandStory";
 import Chris from "@/components/AboutPage/Chris/Chris";
@@ -14,7 +13,6 @@ export default function AboutPage() {
     <main>
       <AboutHero />
       <AboutDetailsIntro />
-      {/* <Approach /> */}
       <WhyWeExist />
       <BrandStory />
       <Believe />
