@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 50vh;
   overflow: hidden;
+  background-color: var(--lightGray);
 }
 
 .content {
@@ -22,6 +23,7 @@
   left: 0;
   height: 100%;
   z-index: 5;
+  border-radius: 20px;
 }
 
 .contentChildren {
