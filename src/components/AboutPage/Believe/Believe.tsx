@@ -4,6 +4,37 @@ import Img1 from "../../../../public/images/whydb.jpg";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 
+const data = [
+  {
+    id: 1,
+    title: "Experience building fast, conversion-focused websites",
+  },
+  {
+    id: 2,
+    title: "A tight focus on service businesses and booking flows",
+  },
+  {
+    id: 3,
+    title: "A genuine desire to understand how your specific business runs",
+  },
+];
+
+const dataii = [
+  {
+    id: 4,
+    title: "You get extra attention, not a cookie-cutter template",
+  },
+  {
+    id: 5,
+    title: "We explain things in plain language",
+  },
+  {
+    id: 6,
+    title:
+      "We're hungry to prove ourselves in your space—and we do that by making your booking experience tangibly better",
+  },
+];
+
 export default function Believe() {
   return (
     <section className={styles.parent}>
@@ -18,18 +49,36 @@ export default function Believe() {
             quality={100}
           />
           <div className={styles.content}>
-            <SectionIntroii title='What we believe' color='tan' />
-            <h2 className={styles.heading}>What we believe</h2>
+            <SectionIntroii title='Positioning' color='tan' />
+            <h2 className={styles.heading}>
+              New to Some Industries, Not New to Building Online
+            </h2>
             <p className={styles.copy}>
-              Simplicity beats persuasion. Your clients aren&apos;t
-              reading—they&apos;re finishing a task on their phone. Friction is
-              expensive. Every extra field or surprise fee lowers completion.
-              Own your platform. Your Stripe, your Twilio, your CMS, your data.
-              Clarity wins. Policies near the button prevent support tickets.
-              Outcomes over aesthetics. Beauty is required; bookings are the
-              goal. Quality over quantity. Five warm leads beat eighty cold
-              business cards—online or off.
+              Here’s the honest part: Fonts & Footers is still early in some of
+              these niches. Our first official client is{" "}
+              <b>Nier Transportation</b>, a black-car service that needed a
+              direct-booking site their clients could actually use. That project
+              helped shape the way we think about:
             </p>
+            <div className={styles.mapDataContainer}>
+              {data.map((item) => (
+                <div key={item.id} className={styles.card}>
+                  <span className={styles.bulletPoint} />
+                  <p className={styles.title}>{item.title}</p>
+                </div>
+              ))}
+            </div>
+            <br />
+            <br />
+            <SectionIntroii title='That means:' color='tan' />
+            <div className={styles.mapDataContainer}>
+              {dataii.map((item) => (
+                <div key={item.id} className={styles.card}>
+                  <span className={styles.bulletPoint} />
+                  <p className={styles.title}>{item.title}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </LayoutWrapper>

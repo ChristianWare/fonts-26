@@ -9,7 +9,7 @@
   --lightText: #979797;
   --primary: #efe4d4;
   --accent: #ffc809;
-  --accentii: #EBBA0D;
+  --accentii: #ebba0d;
   --accent400: #ffe16b;
   --accent600: #7b5d02;
   --accent700: #624802;
@@ -27,7 +27,6 @@
   -webkit-tap-highlight-color: transparent;
   font-family: var(--SuisseIntlRegular);
   overscroll-behavior: none;
-
 }
 
 html {
@@ -48,6 +47,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+b {
+  /* font-weight: 600; */
+  font-family: var(--SuisseIntlCondBold);
+  text-transform: uppercase;
+  font-size: 2rem;
 }
 
 h1,
