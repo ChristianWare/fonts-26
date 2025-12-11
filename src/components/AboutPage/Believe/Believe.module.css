@@ -1,5 +1,5 @@
 .parent {
-  background-color: var(--tan);
+  padding-top: 15rem;
 }
 
 .container {
@@ -27,7 +27,7 @@
   z-index: 3;
   margin: 5rem;
   margin-left: auto;
-  width: 45%;
+  width: 60%;
   flex: 2;
   background-color: var(--darkTan);
   border-top-left-radius: 15px;

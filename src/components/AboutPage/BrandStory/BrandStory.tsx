@@ -8,6 +8,7 @@ import Clock from "@/components/shared/icons/Clock/Clock";
 import Design from "@/components/shared/icons/Design/Design";
 import Listing from "@/components/shared/icons/Listing/Listing";
 import Lightning from "@/components/shared/icons/Lightning/Lightning";
+import Believe from "../Believe/Believe";
 // import ServiceIllustration from "../../../../public/images/specialize.png";
 // import OurTeam from "../OurTeam/OurTeam";
 
@@ -125,6 +126,7 @@ export default function BrandStory() {
             that single point of failure: the moment a customer decides to book.'
           src={Img1}
         /> */}
+          <Believe />
         </LayoutWrapper>
       </div>
     </section>

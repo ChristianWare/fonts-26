@@ -3,26 +3,27 @@ import styles from "./Fit.module.css";
 import Image from "next/image";
 import Img1 from "../../../../public/images/vacation.jpg";
 import Check from "@/components/shared/icons/Check/Check";
+// import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 
 const process = [
   {
     id: 1,
-    title: "Project Discovery",
-    desc: "Focused conversations and light research to understand your services, audience, and goals—then define simple success metrics to guide the build.",
+    title: "Listen first",
+    desc: "We start with a quick call to understand how your business runs, which services matter most, and where the pain points are.",
     src: "",
     icon: <Check className={styles.icon} />,
     btn: true,
   },
   {
     id: 2,
-    title: "Strategy & Creative Direction",
-    desc: "We turn insights into a clear plan: refine your offer, name straightforward options, and outline the few easy steps clients take to book.",
+    title: "Design the booking experience",
+    desc: "We map out a clear path from discovery to booking that fits your business, and you'll see a preview before anything goes live.",
     src: "",
     icon: <Check className={styles.icon} />,
     btn: true,
   },
   {
-    id: 3,
+    id: 2.1,
     title: "",
     desc: "",
     src: Img1,
@@ -30,25 +31,25 @@ const process = [
     btn: false,
   },
   {
-    id: 4,
+    id: "",
     title: "",
-    desc: "Prefer proof first? Start with a 14-Day Pilot Page—one high-intent flow running alongside your current system. If you continue, 100% of the pilot fee credits to your build.",
+    desc: "",
     src: "",
     icon: "",
     btn: false,
   },
   {
-    id: 5,
-    title: "Design & Project Build",
-    desc: "We craft an on-brand website and a smooth one-screen booking flow (service → pro → time → pay), built with precision, accessibility, and attention to detail.",
+    id: 3,
+    title: "Build, connect, and launch",
+    desc: "We build your site on a modern stack, connect your booking and payment tools, set up local SEO, and deliver on a concrete launch date.",
     src: "",
     icon: <Check className={styles.icon} />,
     btn: true,
   },
   {
-    id: 6,
-    title: "Launch & Handoff",
-    desc: "We go live with a calm, confidence-building experience and show your team exactly how to manage bookings day-to-day.",
+    id: 4,
+    title: "Support and refine",
+    desc: "After launch, we offer a monthly plan so you can update services, adjust policies, and make improvements as your business evolves.",
     src: "",
     icon: <Check className={styles.icon} />,
     btn: true,
@@ -57,42 +58,46 @@ const process = [
 
 export default function Fit() {
   return (
-    <section className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.content}>
-          <div className={styles.top}>
-            <h2 className={styles.heading}>
-              How we’ll <br /> work together
-            </h2>
-          </div>
-          <div className={styles.bottom}>
-            <div className={styles.mapDataContainer}>
-              {process.map((item, index) => (
-                <div key={index} className={styles.card}>
-                  {item.icon}
-                  {item.title && <h3 className={styles.title}>{item.title}</h3>}
-                  {item.desc && <p className={styles.desc}>{item.desc}</p>}
-                  {item.src && (
-                    <div className={styles.imgContainer}>
+    <section className={styles.parent}>
+      <div className={styles.container}>
+        <LayoutWrapper>
+          <div className={styles.content}>
+            <div className={styles.top}>
+              {/* <SectionIntroii title='Process' /> */}
+              <h2 className={styles.heading}>
+                How we’ll <br /> work together
+              </h2>
+              <p className={styles.copy}>
+                We keep the process simple and human.
+              </p>
+            </div>
+            <div className={styles.bottom}>
+              <div className={styles.mapDataContainer}>
+                {process.map((item, index) => (
+                    <div key={index} className={styles.card}>
+                    {item.id && !item.src && <span className={styles.id}>{item.id}</span>}
+                    {item.title && (
+                      <h3 className={`${styles.title}`}>{item.title}</h3>
+                    )}
+                    {item.desc && <p className={styles.desc}>{item.desc}</p>}
+                    {item.src && (
+                      <div className={styles.imgContainer}>
                       <Image
                         src={item.src}
                         alt='Process Image'
                         fill
                         className={styles.img}
                       />
+                      </div>
+                    )}
+                     
                     </div>
-                  )}
-                  {item.btn && (
-                    <div className={styles.btnContainer}>
-                      <strong className={styles.strong}>Learn More ＞</strong>
-                    </div>
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </LayoutWrapper>
+        </LayoutWrapper>
+      </div>
     </section>
   );
 }
