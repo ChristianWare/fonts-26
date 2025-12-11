@@ -12,6 +12,7 @@ import Benefits from "@/components/shared/Benefits/Benefits";
 import PricingPreview from "@/components/HomePage/PricingPreview/PricingPreview";
 import Faq from "@/components/Faq/Faq";
 import FinalCTAMain from "@/components/shared/FinalCTAMain/FinalCTAMain";
+import Values from "@/components/AboutPage/Values/Values";
 
 export default function HomePage() {
   return (
@@ -33,6 +34,7 @@ export default function HomePage() {
         <PricingPreview />
         <FontsandFooters text1='Frequently' text2='Asked' text3='Questions' />
         <Faq />
+        <Values />
         <FinalCTAMain />
       </div>
     </main>
