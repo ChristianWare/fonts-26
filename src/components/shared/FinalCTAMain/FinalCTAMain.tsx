@@ -9,8 +9,8 @@ import { footerData } from "@/lib/data";
 import Link from "next/link";
 // import Logo from "../Logo/Logo";
 import dynamic from "next/dynamic";
-import Image from "next/image";
-import Img1 from "../../../../public/images/thinkingWhite.png";
+// import Image from "next/image";
+// import Img1 from "../../../../public/images/thinkingWhite.png";
 
 const Silk = dynamic(() => import("../../shared/Silk"), {
   ssr: false,
@@ -50,9 +50,9 @@ export default function FinalCTAMain() {
         <div className={styles.imgOverlay} />
         <div className={styles.content}>
           <div className={styles.left}>
-            <div className={styles.imgContainer}>
+            {/* <div className={styles.imgContainer}>
               <Image src={Img1} alt='' fill className={styles.img} />
-            </div>
+            </div> */}
             {/* <Logo /> */}
             <h2 className={styles.heading}>
               Ready to turn <br /> browsers into bookings?

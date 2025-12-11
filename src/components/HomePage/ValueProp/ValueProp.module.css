@@ -6,7 +6,7 @@
 
 .container {
   border-radius: 20px;
-  background-color: var(--accent);
+  background-color: var(--lightGray);
   padding: 10rem 0rem;
   position: relative;
 }
@@ -116,29 +116,33 @@
   /* font-size: 2.5rem;
   letter-spacing: normal; */
   font-family: var(--SuisseIntlMedium);
-    letter-spacing: -0.02em;
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-size: 1.6rem;
-    line-height: 1.25;
-    text-transform: none;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  text-transform: none;
 }
 
 .desc {
   /* font-size: 1.4rem;
   color: var(--darkGray); */
-  letter-spacing: -.01em;
-    -webkit-font-smoothing: subpixel-antialiased;
-    width: 100%;
-    color: var(--lightText);
-    white-space: normal;
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1.25;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: subpixel-antialiased;
+  width: 100%;
+  color: var(--lightText);
+  white-space: normal;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.25;
 }
 
 .icon {
-  font-size: 3rem;
+  background-color: var(--accent);
+  border-radius: 50%;
+  font-size: 5rem;
+  padding: 1.2rem;
   color: var(--black);
+  border: 1px solid var(--lighterGray);
   /* display: none; */
 }
 
