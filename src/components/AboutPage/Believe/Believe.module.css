@@ -1,0 +1,79 @@
+.parent {
+  background-color: var(--tan);
+}
+
+.container {
+  position: relative;
+  min-height: 60rem;
+  border-radius: 15px;
+}
+
+.imgOverlay {
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(10, 7, 27, 0.7), rgba(10, 7, 27, 0.7));
+  border-radius: 15px;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  padding: 5rem;
+  width: 45%;
+  z-index: 3;
+  flex: 2;
+  background-color: var(--darkTan);
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.heading {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  color: var(--white);
+}
+
+.copy {
+  color: var(--lighterGray);
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .container {
+    min-height: 65rem;
+  }
+
+  .content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    border-radius: 15px;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    min-height: 50rem;
+  }
+
+  .content {
+    width: 96%;
+    height: 94%;
+  }
+}

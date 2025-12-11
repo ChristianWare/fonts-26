@@ -40,6 +40,30 @@
   color: var(--white);
 }
 
+
+.headingClip {
+  line-height: 0.9;
+  font-family: var(--SuisseIntlCondBold);
+}
+
+.headingClip * {
+  font-family: inherit;
+}
+
+.heading {
+  will-change: transform, opacity, filter;
+  overflow: hidden;
+  backface-visibility: hidden;
+  visibility: hidden;
+  font-family: var(--SuisseIntlCondBold);
+  color: var(--white);
+}
+
+.heading :global(.word),
+.heading :global(.line) {
+  font-family: inherit;
+}
+
 .copy {
   color: var(--white);
   max-width: 400px;

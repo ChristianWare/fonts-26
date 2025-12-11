@@ -1,0 +1,257 @@
+.container {
+  background-color: var(--tan);
+  padding-bottom: 10rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1rem;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgContainer1 {
+  position: relative;
+  width: 175px;
+  height: 175px;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.heading {
+  text-align: right;
+  max-width: 750px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-gap: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  height: 100%;
+}
+
+.middleTop,
+.middleBottom {
+  background-color: var(--lightBlack);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7rem;
+  height: 100%;
+}
+
+.subHeadingii {
+  font-family: var(--DotSansBold);
+  font-size: 1.6rem;
+  letter-spacing: -0.05px;
+  color: var(--tan);
+}
+
+.copyii {
+  color: var(--whiteii);
+  font-size: 1.4rem;
+}
+
+.middleBottom {
+  background-color: var(--accent);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  background-image: linear-gradient(0deg, transparent 50%, var(--black) 50%);
+  background-size: 5px 5px;
+  width: 7rem;
+  height: 7rem;
+  opacity: 0.5;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.right .subHeadingii,
+.middleBottom .copyii {
+  color: var(--black);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  /* gap: 2rem; */
+}
+
+.mapDataBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: var(--darkTan);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.card:last-child {
+  border-bottom: none;
+}
+
+.iconBox {
+  background-color: var(--accent);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.mapDataContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--DotSansBold);
+  font-size: 1.4rem;
+  letter-spacing: 0.08px;
+  /* text-transform: capitalize; */
+}
+
+.desc {
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
+  .top {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 2rem;
+  }
+
+  .imgContainer {
+    height: 550px;
+    object-position: top;
+  }
+
+  .right {
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  .mapDataBox {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content,
+  .mapDataBox {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .middle {
+    gap: 2rem;
+  }
+
+  .right {
+    grid-column: span 1;
+  }
+
+  .imgContainer {
+    height: 300px;
+    object-position: top;
+    border-radius: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+    letter-spacing: 0px;
+  }
+
+  .imgContainer1 {
+    width: 200px;
+    height: 200px;
+  }
+}

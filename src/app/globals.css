@@ -26,6 +26,8 @@
   -webkit-tap-highlight-color: transparent;
   font-family: var(--SuisseIntlRegular);
   overscroll-behavior: none;
+    overflow-x: hidden;
+
 }
 
 html {

@@ -92,7 +92,7 @@ export default function ScrollHorizontalText({
               {text}
               {text2 && (
                 <>
-                  <span className={styles.span}>•</span>
+                  <span className={styles.span} />
                   {text2}
                 </>
               )}

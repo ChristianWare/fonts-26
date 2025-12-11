@@ -1,0 +1,144 @@
+.container {
+  background-color: var(--tan);
+  padding: 5rem 0rem;
+}
+
+.imgContainerii,
+.imgContaineriii {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-left: auto;
+}
+
+.imgContaineriii {
+  display: none;
+}
+
+.img {
+  object-fit: contain;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bottom {
+  border-top: 1px solid var(--gray);
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 5rem;
+}
+
+.mapDataContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--darkerTan);
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.iconBox {
+  background-color: var(--accent);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  display: flex;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.desc {
+  color: var(--lightBlack);
+  font-size: 1.4rem;
+}
+
+.bottomRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1068px) {
+  .top {
+    align-items: center;
+    text-align: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5rem;
+  }
+
+  .imgContaineriii {
+    display: block;
+  }
+
+  .mapDataContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imgContainerii {
+    display: none;
+  }
+
+  .imgContaineriii {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .top {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .imgContaineriii {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .bottom {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .mapDataContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/refs */
 "use client";
 
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
@@ -9,8 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dynamic from "next/dynamic";
 import { useRef } from "react";
 import Nav from "@/components/shared/Nav/Nav";
-import ParallaxImageLarge from "@/components/shared/ParallaxImageLarge/ParallaxImageLarge";
-import Img1 from "../../../../public/images/WhyWeExist.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,7 +79,7 @@ export default function AboutHero() {
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.top}>
-              <h1 className={styles.heading}>
+              <h1 ref={refs.heading} className={styles.heading}>
                 About us: <br /> Fonts & Footers
               </h1>
               <p className={styles.copy}>
@@ -92,9 +91,6 @@ export default function AboutHero() {
           </div>
         </LayoutWrapper>
       </div>
-        <div className={styles.parallaxAreaContainer}>
-          <ParallaxImageLarge src={Img1} alt='Parallax background' />
-        </div>
     </section>
   );
 }

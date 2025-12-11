@@ -1,25 +1,14 @@
 .slider {
-  width: 100%;
+  width: 100%; 
+  max-width: 100%;     
   position: relative;
   user-select: none;
   padding: 1rem 0;
-  overflow: hidden;
-  border-top: 2px solid var(--gray);
-  border-bottom: 2px solid var(--gray);
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    var(--tan) 10%,
-    var(--tan) 90%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    var(--tan) 10%,
-    var(--tan) 90%,
-    transparent 100%
-  );
+  overflow: hidden;     
+  box-sizing: border-box;
+  border-top: 2px solid var(--lightGray);
+  border-bottom: 2px solid var(--lightGray);
+
 }
 
 .track {
@@ -30,6 +19,7 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: var(--marquee-duration, 45s);
+  will-change: transform;         
 }
 
 .row {
@@ -39,17 +29,22 @@
 }
 
 .text {
-  color: var(--lightBlack);
+  color: var(--black);
   display: flex;
   align-items: center;
   gap: 2rem;
-  white-space: nowrap;
+  white-space: nowrap;                 
   padding-top: 0.2rem;
 }
 
 .span {
-  color: var(--lime);
+  color: var(--accent);
   display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--accent);
+  border-radius: 50%;
+  border: 1px solid var(--black);
 }
 
 .icon2 {
@@ -64,7 +59,8 @@
   transform: rotate(35deg);
 }
 
-/* Seamless loop: track is two rows wide; move by exactly one row (50%) */
+
+
 @keyframes marquee {
   from {
     transform: translateX(0);
