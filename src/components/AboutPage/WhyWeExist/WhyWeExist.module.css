@@ -1,7 +1,17 @@
 .container {
   background-color: var(--tan);
-  padding-top: 10rem;
+  padding: 10rem 0rem;
 }
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
 .content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -14,9 +24,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 10rem;
-  background-color: var(--darkTan);
-  padding: 2rem;
-  border-radius: 15px;
+  /* padding: 2rem; */
 }
 
 .leftTop {
@@ -28,19 +36,14 @@
   width: 100%;
 }
 
-.heading {
-  font-size: 2rem;
-  font-family: var(--DotSansBold);
-  letter-spacing: -0.5px;
+.copy {
+  color: var(--darkGray);
+  max-width: 550px;
+  text-align: center;
 }
 
 .subHeadingii {
-  font-size: 2rem;
-  font-family: var(--DotSansBold);
-  letter-spacing: -0.5px;
-  font-family: var(--DotSansBold);
-  color: var(--darkaccent);
-  letter-spacing: -0.5px;
+  font-size: 1.6rem;
 }
 
 .leftBottom {
@@ -78,7 +81,8 @@
 
 /* squareCircle.svg */
 
-.rightTwo {
+.rightTwo,
+.rightTwoii {
   background-color: var(--accent);
   padding: 3rem;
   border-radius: 15px;
@@ -86,7 +90,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 15rem;
+  gap: 5rem;
+  height: 100%;
+}
+
+.rightTwoii {
+  background-color: var(--lightGray);
 }
 
 .rightTwoA {
@@ -95,6 +104,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;
+  width: 100%;
 }
 
 .SectionIntroContainer {
@@ -109,7 +119,6 @@
 .icon {
   font-size: 10rem;
   width: 100%;
-  /* opacity: 0.2; */
   color: rgba(36, 36, 34, 0.1);
 
   margin-top: 3rem;
@@ -127,32 +136,23 @@
 
 .card {
   padding: 1rem 0rem;
-  border-bottom: 1px solid var(--darkaccent);
+  border-bottom: 1px solid var(--accent600);
   font-size: 1.6rem;
-  font-family: var(--DotSansBold);
-  color: var(--darkaccent);
+  /* color: var(--accent600); */
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  display: grid;
+  grid-gap: 1rem;
 }
 
-.arrow {
-  color: var(--darkaccent);
-  transform: rotate(45deg);
+.rightTwoii .card {
+  border-bottom: 1px solid var(--darkGray);
+  color: var(--darkGray);
 }
-
-/* @media screen and (max-width: 1468px) {
-  .content {
-    width: 100%;
-    grid-template-columns: 1fr 2fr;
-  }
-} */
 
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 
   .left {

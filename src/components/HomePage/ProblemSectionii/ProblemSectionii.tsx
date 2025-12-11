@@ -1,8 +1,8 @@
 "use client";
 
+import styles from "./ProblemSectionii.module.css";
 import { useState } from "react";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import styles from "./ProblemSectionii.module.css";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 import Image from "next/image";
 import Img1 from "../../../../public/images/whydb.jpg";
