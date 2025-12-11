@@ -18,7 +18,7 @@ export default function AboutUs() {
                 We build custom booking websites that allow you to have full
                 control over your bookings, reduce reliance on third-party
                 platforms, and improve your profit margins. Here are the
-                industries we work work with:
+                owner-led service businesses we work work with:
                 {/* Our mission is to
               empower service-based businesses to thrive online by providing
               tailored solutions that meet their unique needs. */}
