@@ -12,6 +12,26 @@ import { useRef } from "react";
 import Nav from "@/components/shared/Nav/Nav";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 
+const data = [
+  {
+    id: 1,
+    title: "A clean, fast client-facing booking flow",
+  },
+  {
+    id: 2,
+    title: "An owner dashboard where you can actually see what’s happening",
+  },
+  {
+    id: 3,
+    title: "Team tools for staff and drivers/trainers",
+  },
+  {
+    id: 4,
+    title:
+      "Optional client accounts so your best people can rebook in a few taps",
+  },
+];
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Silk = dynamic(() => import("../../shared/Silk"), {
@@ -78,7 +98,7 @@ export default function FeaturesHero() {
         </div>{" "}
         <LayoutWrapper>
           <div className={styles.content}>
-            <div className={styles.top}>
+            <div className={styles.left}>
               <SectionIntroii title='Features' color='tan' />
               <h1 ref={refs.heading} className={styles.heading}>
                 What you get with a <br /> direct-booking <br />
@@ -89,7 +109,21 @@ export default function FeaturesHero() {
                 how your business actually runs.
               </p>
             </div>
-            <div className={styles.bottom}></div>
+            <div className={styles.right}>
+              <p className={styles.subheading}>
+                When we say “direct-booking website,” we don’t mean a
+                nice-looking brochure with a button that sends people to a
+                clunky app. We mean a full stack:
+              </p>
+              <div className={styles.mapDataContainer}>
+                {data.map((item) => (
+                  <div key={item.id} className={styles.card}>
+                    <span className={styles.bulletPoint} />
+                    <p className={styles.title}>{item.title}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </LayoutWrapper>
       </div>

@@ -21,7 +21,6 @@ const data = [
 export default function Believe() {
   return (
     <section className={styles.parent}>
-      {/* <LayoutWrapper> */}
       <div className={styles.container}>
         <div className={styles.imgOverlay} />
         <Image
@@ -34,7 +33,7 @@ export default function Believe() {
         <div className={styles.content}>
           <SectionIntroii title='Positioning' color='tan' />
           <h2 className={styles.heading}>
-            We&apos;re New to Some Industries, But Not New to Building Online. 
+            We&apos;re New to Some Industries, But Not New to Building Online.
           </h2>
           <p className={styles.copy}>
             Here’s the honest part: Fonts & Footers is still early in some of
@@ -64,7 +63,6 @@ export default function Believe() {
           </div>
         </div>
       </div>
-      {/* </LayoutWrapper> */}
     </section>
   );
 }
