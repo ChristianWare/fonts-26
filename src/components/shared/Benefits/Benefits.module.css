@@ -53,14 +53,14 @@
 .mapBox {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-left: 6rem;
+  /* margin-left: 6rem; */
 }
 
 .card {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: 1px solid var(--darkGray);
+  /* border: 1px solid var(--darkGray); */
   background-color: var(--white);
   position: relative;
   overflow: hidden;
@@ -70,7 +70,7 @@
   justify-content: center;
 }
 
-.card:nth-child(2) {
+/* .card:nth-child(2) {
   margin-left: -2rem;
 }
 .card:nth-child(3) {
@@ -78,7 +78,7 @@
 }
 .card:nth-child(4) {
   margin-left: -6rem;
-}
+} */
 
 .cardContent {
   width: 85%;

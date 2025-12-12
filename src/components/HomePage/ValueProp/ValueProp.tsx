@@ -38,14 +38,10 @@ export default function ValueProp() {
   return (
     <section className={styles.parent}>
       <div className={styles.container}>
-        <div className={styles.cornerContainer}>
-          <div className={styles.corner}>
-            <SectionIntroii title='What we do' />
-          </div>
-        </div>
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.top}>
+              <SectionIntroii title='What we do' />
               <h2 className={styles.heading}>
                 We turn confused clickers into confident booked clients
               </h2>
