@@ -1,7 +1,7 @@
 .container {
-  padding: 15rem 0rem;
+  padding: 10rem 0rem;
   padding-bottom: 5rem;
-  background-color: var(--darkTan);
+  background-color: var(--white);
 }
 
 .content {

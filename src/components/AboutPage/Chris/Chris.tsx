@@ -23,9 +23,16 @@ export default function Chris() {
               from the owner
             </h2>
             <p className={styles.copy}>
-            I&apos;m Chris, the person behind Fonts & Footers. I built this because I kept seeing talented local businesses—trainers, stylists, drivers, small teams—whose online presence didn&apos;t match the quality of their actual work, not because they didn&apos;t care, but because they were too busy doing the job. My goal is simple: give you a website and booking system that feels as professional as the service you deliver in person, so the right people can find you and book you directly without the chaos.
+              I&apos;m Chris, the person behind Fonts & Footers. I built this
+              because I kept seeing talented local businesses—trainers,
+              stylists, drivers, small teams—whose online presence didn&apos;t
+              match the quality of their actual work, not because they
+              didn&apos;t care, but because they were too busy doing the job. My
+              goal is simple: give you a website and booking system that feels
+              as professional as the service you deliver in person, so the right
+              people can find you and book you directly without the chaos.
             </p>
-            <SectionIntroii title='Chris - Founder of Fonts & Footers' />
+            <SectionIntroii title='Chris Ware - Founder of Fonts & Footers' />
           </div>
         </div>
       </LayoutWrapper>

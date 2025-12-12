@@ -6,6 +6,7 @@ import Fit from "@/components/AboutPage/Fit/Fit";
 import Values from "@/components/AboutPage/Values/Values";
 import WhyWeExist from "@/components/AboutPage/WhyWeExist/WhyWeExist";
 import FinalCTAMain from "@/components/shared/FinalCTAMain/FinalCTAMain";
+import ScrollVelocity from "@/components/shared/ScrollVelocity/ScrollVelocity";
 
 export default function AboutPage() {
   return (
@@ -14,6 +15,10 @@ export default function AboutPage() {
       <AboutDetailsIntro />
       <WhyWeExist />
       <BrandStory />
+      <ScrollVelocity
+        texts={["Chris Ware •", "Chris Ware •"]}
+        className='Chris Ware •'
+      />
       <Chris />
       <Fit />
       <Values />
