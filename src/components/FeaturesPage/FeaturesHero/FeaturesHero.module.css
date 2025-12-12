@@ -1,7 +1,4 @@
 .parent {
-  position: sticky;
-  top: 0;
-  height: 100vh;
   width: 100%;
   z-index: 0;
   overflow: hidden;
@@ -15,16 +12,6 @@
   z-index: 0;
   padding-bottom: 10rem;
   border-radius: 20px;
-  height: calc(100vh - 2rem);
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: var(--black);
-  opacity: 0;
-  z-index: 3;
-  pointer-events: none;
 }
 
 .silkBg {
@@ -37,23 +24,22 @@
 .content {
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 2rem;
-  min-height: 90vh;
+  padding-top: 10rem;
+  width: 100%;
 }
 
 .top {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
 }
 
 .heading {
-  text-align: right;
+  color: var(--white);
+  /* text-align: center; */
 }
 
 .headingClip {
@@ -79,37 +65,23 @@
   font-family: inherit;
 }
 
-.bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid var(--lightGray);
-  padding-top: 2rem;
-  margin-top: 1rem;
-  width: 100%;
-}
-
 .copy {
-  z-index: 2;
-  font-size: 2rem;
-  letter-spacing: -0.3px;
-  width: 40%;
   color: var(--primary);
+  max-width: 600px;
+  /* text-align: center; */
 }
 
-.btnContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  z-index: 0;
+.parallaxAreaContainer {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  border-radius: 20px;
   margin-top: 1rem;
 }
 
 @media (max-width: 1068px) {
   .content,
-  .top,
-  .bottom {
+  .top {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -117,23 +89,12 @@
 
   .copy {
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
     text-align: center;
     margin-bottom: 2rem;
   }
 
   .heading {
     text-align: center;
-  }
-}
-
-@media (max-width: 568px) {
-  .copy {
-    width: 100%;
-  }
-
-  .btnContainer {
-    flex-direction: column;
-    gap: 3rem;
   }
 }

@@ -1,7 +1,7 @@
-/* eslint-disable react-hooks/refs */
 "use client";
 
-import styles from "./AboutHero.module.css";
+/* eslint-disable react-hooks/refs */
+import styles from "./FeaturesHero.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -10,6 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import dynamic from "next/dynamic";
 import { useRef } from "react";
 import Nav from "@/components/shared/Nav/Nav";
+import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +18,7 @@ const Silk = dynamic(() => import("../../shared/Silk"), {
   ssr: false,
 });
 
-export default function AboutHero() {
+export default function FeaturesHero() {
   const refs = {
     heading: useRef<HTMLHeadingElement>(null),
     overlay: useRef<HTMLDivElement>(null),
@@ -62,7 +63,6 @@ export default function AboutHero() {
     const cleanup = animateText(refs.heading.current);
     return () => cleanup && cleanup();
   });
-
   return (
     <section className={styles.parent}>
       <Nav />
@@ -79,12 +79,14 @@ export default function AboutHero() {
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.top}>
+              <SectionIntroii title='Features' color='tan' />
               <h1 ref={refs.heading} className={styles.heading}>
-                About us: <br /> Fonts & Footers
+                What you get with a <br /> direct-booking <br />
+                site from us
               </h1>
               <p className={styles.copy}>
-                Direct-booking websites for service businesses who are tired of
-                renting their future from platforms.
+                Not just a pretty homepage. A full booking system built around
+                how your business actually runs.
               </p>
             </div>
             <div className={styles.bottom}></div>

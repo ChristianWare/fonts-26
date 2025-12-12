@@ -1,7 +1,9 @@
+import FeaturesHero from "@/components/FeaturesPage/FeaturesHero/FeaturesHero";
+
 export default function FeaturesPage() {
   return (
-    <div>
-      <h1>Features Page</h1>
-    </div>
+    <main>
+      <FeaturesHero />
+    </main>
   );
 }

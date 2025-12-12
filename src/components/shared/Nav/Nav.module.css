@@ -15,6 +15,7 @@
   -webkit-backdrop-filter: blur(90px);
   backdrop-filter: blur(90px);
   background-color: var(--black);
+  border: 1px solid var(--gray);
 }
 
 .header.hide {
