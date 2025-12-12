@@ -13,7 +13,6 @@ import Stariii from "../icons/Stariii/Stariii";
 import Analytics from "../icons/Analytics/Analytics";
 import Edit from "../icons/Edit/Edit";
 import Image from "next/image";
-
 import Img2 from "../../../../public/images/work.png";
 
 type Feature = {

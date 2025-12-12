@@ -69,7 +69,7 @@
 
 .card:nth-child(4) {
   grid-column: span 2;
-  /* background-color: var(--lightBlack); */
+  /* background-color: var(--accent); */
   padding: 0rem;
   background-color: transparent;
   border-bottom-left-radius: 2rem;
@@ -122,6 +122,16 @@
   width: 100%;
 }
 
+.illustrationContainer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.illustration {
+  object-fit: contain;
+}
+
 @media screen and (max-width: 1268px) {
   .bottom {
     width: 100%;
@@ -136,6 +146,7 @@
   .card:nth-child(4) {
     order: 999;
     border-bottom-right-radius: 2rem;
+    display: none;
   }
 
   .imgContainer {
@@ -149,6 +160,12 @@
     transform: translate(-50%, -50%);
     width: 80%;
     text-align: center;
+  }
+
+  .illustrationContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
   }
 }
 
@@ -179,5 +196,11 @@
   .card:nth-child(1),
   .card:nth-child(5) {
     border-right: none;
+  }
+
+  .illustrationContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
   }
 }

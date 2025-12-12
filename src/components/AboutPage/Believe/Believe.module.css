@@ -70,11 +70,11 @@
   padding-bottom: 1rem;
   width: 100%;
 }
-
+/* 
 .card:last-child {
   border-bottom: none;
   padding-bottom: 0rem;
-}
+} */
 
 .bulletPoint {
   width: 1rem;

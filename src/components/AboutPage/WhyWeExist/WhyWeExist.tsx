@@ -2,6 +2,7 @@ import styles from "./WhyWeExist.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../../public/images/WhyWeExist.jpg";
+import HeroIllustration from "../../../../public/illustrations/heroIllustration.png";
 
 const data = [
   {
@@ -47,6 +48,9 @@ export default function WhyWeExist() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.top}>
+          <div className={styles.illustrationContainer}>
+            <Image src={HeroIllustration} alt='' fill className={styles.illustration} />
+          </div>
           <h2 className={styles.heading}>Why We Exist</h2>
           <p className={styles.copy}>
             Most service business owners didn’t get into business to wrestle

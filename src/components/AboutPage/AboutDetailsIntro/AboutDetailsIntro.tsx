@@ -6,6 +6,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
+import Image from "next/image";
+import Img2 from "../../../../public/illustrations/telescopeIllustration.png";
 
 export default function AboutDetailsIntro() {
   const [lettersRef, setLettersRef] = useArrayRef();
@@ -75,6 +77,24 @@ export default function AboutDetailsIntro() {
                   </span>
                 ))}
               </h2>
+            </div>
+            <div className={styles.bottom}>
+              <div className={styles.imgContainer}>
+                <Image
+                  src={Img2}
+                  alt='Telescope illustration'
+                  width={175}
+                  height={175}
+                  className={styles.img}
+                />
+              </div>
+              <p className={styles.copy}>
+                We’re not a giant agency with layers of account managers. We’re
+                a lean partner that cares about one thing: Turning confused
+                clickers into confident, booked clients. We do that by combining
+                clean design, fast tech, and a deep obsession with how real
+                people actually book appointments on their phones.
+              </p>
             </div>
           </div>
         </LayoutWrapper>

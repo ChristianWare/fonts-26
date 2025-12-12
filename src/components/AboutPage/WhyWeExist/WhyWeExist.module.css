@@ -12,6 +12,16 @@
   margin-bottom: 5rem;
 }
 
+.illustrationContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.illustration {
+  object-fit: contain;
+}
+
 .content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -187,6 +197,11 @@
 }
 
 @media screen and (max-width: 568px) {
+  .imgContainer {
+    width: 175px;
+    height: 175px;
+  }
+
   .imgContainer {
     height: 275px;
   }

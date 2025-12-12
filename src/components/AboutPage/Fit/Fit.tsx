@@ -3,6 +3,8 @@ import styles from "./Fit.module.css";
 import Image from "next/image";
 import Img1 from "../../../../public/images/vacation.jpg";
 import Check from "@/components/shared/icons/Check/Check";
+import ScaleIllustration from "../../../../public/illustrations/scaleIllustration.png";
+
 // import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 
 const process = [
@@ -74,26 +76,35 @@ export default function Fit() {
             <div className={styles.bottom}>
               <div className={styles.mapDataContainer}>
                 {process.map((item, index) => (
-                    <div key={index} className={styles.card}>
-                    {item.id && !item.src && <span className={styles.id}>{item.id}</span>}
+                  <div key={index} className={styles.card}>
+                    {item.id && !item.src && (
+                      <span className={styles.id}>{item.id}</span>
+                    )}
                     {item.title && (
                       <h3 className={`${styles.title}`}>{item.title}</h3>
                     )}
                     {item.desc && <p className={styles.desc}>{item.desc}</p>}
                     {item.src && (
                       <div className={styles.imgContainer}>
-                      <Image
-                        src={item.src}
-                        alt='Process Image'
-                        fill
-                        className={styles.img}
-                      />
+                        <Image
+                          src={item.src}
+                          alt='Process Image'
+                          fill
+                          className={styles.img}
+                        />
                       </div>
                     )}
-                     
-                    </div>
+                  </div>
                 ))}
               </div>
+            </div>
+            <div className={styles.illustrationContainer}>
+              <Image
+                src={ScaleIllustration}
+                alt=''
+                fill
+                className={styles.illustration}
+              />
             </div>
           </div>
         </LayoutWrapper>
