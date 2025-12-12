@@ -1,7 +1,6 @@
 .parent {
   background-color: var(--lightGray);
   padding: 1rem;
-  /* padding-top: 0rem; */
 }
 
 .container {

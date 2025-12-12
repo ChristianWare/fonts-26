@@ -1,32 +1,105 @@
+.parent {
+  background-color: var(--white);
+  /* padding: 1rem; */
+}
+
 .container {
   position: relative;
+  padding: 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cornerContainer {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: 3;
+  pointer-events: auto;
+  width: fit-content;
+}
+
+.corner {
+  position: relative;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.corner::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  bottom: -40px;
+  left: 0px;
+  background-color: transparent;
+  border-top-left-radius: 15px;
+  box-shadow: -1em -1rem var(--white);
+  transform: rotate(0deg);
+}
+
+.corner::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  right: -30px;
+  top: 1px;
+  background-color: transparent;
+  border-top-left-radius: 15px;
+  box-shadow: -1em -1rem var(--white);
+  transform: rotate(0deg);
 }
 
 .silkBg {
   position: absolute;
-  inset: 0;
-  z-index: -1;
-
+  inset: 1rem;
+  z-index: 0;
+  border-radius: 20px;
   pointer-events: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.silkBg :global(canvas) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: inherit; /* ✅ keep rounded corners after canvas mounts */
+}
+
+.silkBg :global(*) {
+  border-radius: inherit;
 }
 
 .imgOverlay {
-  z-index: 2;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  inset: 1rem;
+  border-radius: 20px;
+  z-index: 1;
   background: linear-gradient(rgba(10, 7, 27, 0.5), rgba(10, 7, 27, 0.7));
 }
 
-.img {
-  object-fit: cover;
+.content {
+  position: relative;
+  z-index: 2;
+  border-radius: 20px !important;
 }
 
 .content {
+  border-radius: 20px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 15rem;
-  padding: 20rem 3rem;
+  grid-gap: 5rem;
+  padding: 20rem 2rem;
   padding-top: 7rem;
   padding-bottom: 2rem;
 }
@@ -39,19 +112,8 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;
-  /* border-top: 1px solid var(--gray); */
   width: 100%;
   padding-top: 2rem;
-}
-
-.imgContainer {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.img {
-  object-fit: contain;
 }
 
 .heading {
@@ -67,10 +129,10 @@
 
 .footerContainer {
   z-index: 3;
-  background-color: var(--white);
-  padding: 3rem;
-  padding-top: 4rem;
-  border-radius: 20px;
+  /* background-color: var(--white); */
+  /* padding: 3rem; */
+  /* padding-top: 0rem; */
+  /* border-radius: 20px; */
 }
 
 .footerTop {
@@ -88,23 +150,25 @@
 }
 
 .copy {
-  color: var(--darkGray);
-  font-size: 1.6rem;
+  color: var(--lightGray);
+  font-size: 1.8rem;
   width: 50%;
+  font-family: var(--SuisseIntlMedium);
 }
 
 .footerRight {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
+  width: 80%;
   gap: 2rem;
+  margin-left: auto;
 }
 
 .title {
   text-transform: uppercase;
-  color: var(--darkGray);
-  font-family: var(--SuisseIntlMedium);
+  color: var(--lightGray);
   font-size: 1.6rem;
+  font-family: var(--SuisseIntlMedium);
 }
 
 .optionList {
@@ -120,13 +184,13 @@
 .option {
   font-size: 1.4rem;
   font-family: var(--SuisseIntlRegular);
-  color: var(--lightText);
+  color: var(--lightGray);
 }
 
 .footerBottom {
   padding: 2rem 0rem;
-  border-top: 1px solid var(--gray);
-  border-bottom: 1px solid var(--gray);
+  border-top: 1px solid var(--lighterGray);
+  border-bottom: 1px solid var(--lighterGray);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,7 +198,7 @@
 }
 
 .small {
-  color: var(--darkGray);
+  color: var(--accent);
 }
 
 .footerBottomRight {
@@ -156,7 +220,7 @@
 }
 
 .socialIconContainer {
-  background-color: var(--darkGray);
+  background-color: var(--lightGray);
   width: 4rem;
   height: 4rem;
   display: flex;
@@ -167,7 +231,7 @@
 
 .socialIcon {
   font-size: 2rem;
-  color: var(--white);
+  color: var(--black);
 }
 
 @media screen and (max-width: 1268px) {
@@ -200,21 +264,31 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .footerRight {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .copy {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
   }
+
+  .footerRight {
+    width: 100%;
+  }
+
+  .optionSection {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .content {
     padding: 10rem 5rem;
+  }
+
+  .footerRight {
+    /* grid-template-columns: repeat(1, 1fr); */
+    width: 100%;
   }
 
   .copy {
@@ -232,6 +306,10 @@
     gap: 5rem;
   }
 
+  .footerRight {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .footerLeft {
     align-items: center;
     justify-content: center;
@@ -242,12 +320,19 @@
     text-align: center;
   }
 
-  .optionSection:nth-child(2) {
+  /* .optionSection:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
     display: block;
+  } */
+
+  .optionSection {
+    /* margin-left: auto; */
+    /* background-color: red; */
+    width: 100%;
+    /* margin-right: auto; */
   }
 
   .footerBottom {

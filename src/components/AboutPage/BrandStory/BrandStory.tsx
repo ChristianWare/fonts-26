@@ -9,8 +9,6 @@ import Design from "@/components/shared/icons/Design/Design";
 import Listing from "@/components/shared/icons/Listing/Listing";
 import Lightning from "@/components/shared/icons/Lightning/Lightning";
 import Believe from "../Believe/Believe";
-// import ServiceIllustration from "../../../../public/images/specialize.png";
-// import OurTeam from "../OurTeam/OurTeam";
 
 const data = [
   {
@@ -74,27 +72,6 @@ export default function BrandStory() {
               </div>
             </div>
             <div className={styles.middle}>
-              {/* <div className={styles.middleTop}>
-              <h3 className={styles.subHeadingii}>
-                What we do, <br /> in one line
-              </h3>
-              <p className={styles.copyii}>
-                We turn your site into a direct-booking machine with a
-                one-screen, deposit-first checkout, automatic reminders,
-                calendar sync, and service pages that convert.
-              </p>
-            </div>
-            <div className={styles.middleBottom}>
-              <div className={styles.imgContainer1}>
-                <Image
-                  src={ServiceIllustration}
-                  alt='Service Illustration'
-                  fill
-                  className={styles.img}
-                  priority
-                />
-              </div>
-            </div> */}
               <div className={styles.imgContainer}>
                 <Image
                   src={Img2}
@@ -119,13 +96,7 @@ export default function BrandStory() {
               </div>
             </div>
           </div>
-          {/* <OurTeam
-          text='Most service businesses don’t have a marketing problem—they have a
-            booking problem. Clunky forms, mixed-up calendars, and payment
-            chases leak revenue every day. We started Fonts & Footers to fix
-            that single point of failure: the moment a customer decides to book.'
-          src={Img1}
-        /> */}
+
           <Believe />
         </LayoutWrapper>
       </div>

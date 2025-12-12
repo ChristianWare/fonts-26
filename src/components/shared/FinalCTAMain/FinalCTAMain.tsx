@@ -7,10 +7,8 @@ import Instagram from "../icons/Instagram/Instagram";
 import Facebook from "../icons/Facebook/Facebook";
 import { footerData } from "@/lib/data";
 import Link from "next/link";
-// import Logo from "../Logo/Logo";
 import dynamic from "next/dynamic";
-// import Image from "next/image";
-// import Img1 from "../../../../public/images/thinkingWhite.png";
+import SectionIntroii from "../SectionIntroii/SectionIntroii";
 
 const Silk = dynamic(() => import("../../shared/Silk"), {
   ssr: false,
@@ -38,6 +36,11 @@ export default function FinalCTAMain() {
   return (
     <section className={styles.parent}>
       <div className={styles.container}>
+        <div className={styles.cornerContainer}>
+          <div className={styles.corner}>
+            <SectionIntroii title='Fonts & Footers' />
+          </div>
+        </div>{" "}
         <div className={styles.silkBg}>
           <Silk
             speed={4}
