@@ -1,53 +1,53 @@
 export const featuresSections = [
-  {
-    id: 1,
-    slug: "at-a-glance",
-    title: "Everything that’s included",
-    intro:
-      "Every Fonts & Footers build comes with a complete booking stack tailored to your service business instead of a generic template.",
-    items: [
-      {
-        id: 1.1,
-        title: "Mobile-first booking website",
-        desc: "A fast, modern site that looks great on any device, with a clear path from first visit to confirmed booking.",
-      },
-      {
-        id: 1.2,
-        title: "Service, route, and session layouts",
-        desc: "Structured pages for what you offer—rides, appointments, or training sessions—so clients can understand options at a glance.",
-      },
-      {
-        id: 1.3,
-        title: "Payments and deposits",
-        desc: "Online payments and deposits via Stripe or your existing tools, so you can reduce no-shows and secure serious bookings.",
-      },
-      {
-        id: 1.4,
-        title: "Local SEO foundations",
-        desc: "Basic on-page local SEO and Google Business Profile integration so people searching for what you do can actually find you.",
-      },
-      {
-        id: 1.5,
-        title: "Owner-friendly admin dashboard",
-        desc: "A central place to see your calendar, manage bookings, and understand what’s happening in your business.",
-      },
-      {
-        id: 1.6,
-        title: "Team and staff tools",
-        desc: "Role-based access for drivers, stylists, trainers, and managers so everyone sees what they need and nothing they don’t.",
-      },
-      {
-        id: 1.7,
-        title: "Client accounts (optional)",
-        desc: "Client-facing dashboards for businesses where repeat bookings, packages, or memberships are a big part of revenue.",
-      },
-      {
-        id: 1.8,
-        title: "Automation, hosting, and support",
-        desc: "Confirmations, reminders, and ongoing care on a simple monthly plan, so you’re not stuck maintaining everything alone.",
-      },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   slug: "at-a-glance",
+  //   title: "Everything that’s included",
+  //   intro:
+  //     "Every Fonts & Footers build comes with a complete booking stack tailored to your service business instead of a generic template.",
+  //   items: [
+  //     {
+  //       id: 1.1,
+  //       title: "Mobile-first booking website",
+  //       desc: "A fast, modern site that looks great on any device, with a clear path from first visit to confirmed booking.",
+  //     },
+  //     {
+  //       id: 1.2,
+  //       title: "Service, route, and session layouts",
+  //       desc: "Structured pages for what you offer—rides, appointments, or training sessions—so clients can understand options at a glance.",
+  //     },
+  //     {
+  //       id: 1.3,
+  //       title: "Payments and deposits",
+  //       desc: "Online payments and deposits via Stripe or your existing tools, so you can reduce no-shows and secure serious bookings.",
+  //     },
+  //     {
+  //       id: 1.4,
+  //       title: "Local SEO foundations",
+  //       desc: "Basic on-page local SEO and Google Business Profile integration so people searching for what you do can actually find you.",
+  //     },
+  //     {
+  //       id: 1.5,
+  //       title: "Owner-friendly admin dashboard",
+  //       desc: "A central place to see your calendar, manage bookings, and understand what’s happening in your business.",
+  //     },
+  //     {
+  //       id: 1.6,
+  //       title: "Team and staff tools",
+  //       desc: "Role-based access for drivers, stylists, trainers, and managers so everyone sees what they need and nothing they don’t.",
+  //     },
+  //     {
+  //       id: 1.7,
+  //       title: "Client accounts (optional)",
+  //       desc: "Client-facing dashboards for businesses where repeat bookings, packages, or memberships are a big part of revenue.",
+  //     },
+  //     {
+  //       id: 1.8,
+  //       title: "Automation, hosting, and support",
+  //       desc: "Confirmations, reminders, and ongoing care on a simple monthly plan, so you’re not stuck maintaining everything alone.",
+  //     },
+  //   ],
+  // },
   {
     id: 2,
     slug: "client-booking-experience",
