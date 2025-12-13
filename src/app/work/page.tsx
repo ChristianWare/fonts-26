@@ -1,9 +1,7 @@
 import Faq from "@/components/Faq/Faq";
-import BaseFeatures from "@/components/shared/BaseFeatures/BaseFeatures";
 import FinalCTAMain from "@/components/shared/FinalCTAMain/FinalCTAMain";
-import Nav from "@/components/shared/Nav/Nav";
 import AllProjects from "@/components/WorkPage/AllProjects/AllProjects";
-import WorkPageIntro from "@/components/WorkPage/WorkPageIntro/WorkPageIntro";
+import WorkHero from "@/components/WorkPage/WorkHero/WorkHero";
 
 export const metadata = {
   title: "Work",
@@ -14,10 +12,8 @@ export const metadata = {
 export default function WorkPage() {
   return (
     <main>
-      <Nav />
-      <WorkPageIntro />
+      <WorkHero />
       <AllProjects />
-      <BaseFeatures />
       <Faq />
       <FinalCTAMain />
     </main>

@@ -15,12 +15,12 @@ export default function AboutPage() {
       <AboutDetailsIntro />
       <WhyWeExist />
       <BrandStory />
+      <Fit />
       <ScrollVelocity
         texts={["Chris Ware •", "Chris Ware •"]}
         className='Chris Ware •'
       />
       <Chris />
-      <Fit />
       <Values />
       <FinalCTAMain />
     </main>
