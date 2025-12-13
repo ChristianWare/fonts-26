@@ -1,5 +1,9 @@
+import PricingHero from "@/components/PricingPage/PricingHero/PricingHero";
+
 export default function PricingPage() {
   return (
-    <div>PricingPage</div>
-  )
+    <main>
+      <PricingHero />
+    </main>
+  );
 }
