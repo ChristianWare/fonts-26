@@ -5,8 +5,9 @@ import { useEffect, useState } from "react";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./ComparisonChart.module.css";
 import { pricingData } from "@/lib/data";
-import Check from "@/components/icons/Check/Check";
+import Check from "@/components/shared/icons/Check/Check";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
+import BaseFeatures from "@/components/shared/BaseFeatures/BaseFeatures";
 
 type Plan = (typeof pricingData)[number];
 type PlanName = Plan["service"];
@@ -84,106 +85,134 @@ export default function ComparisonChart() {
   const plansToRender = isMobile ? [plans[selected]] : plans;
 
   return (
-    <div className={styles.container} id="compare">
-      <LayoutWrapper>
-        <div className={styles.content}>
-          <div className={styles.copy}>
-            <SectionIntroii title='No contracts, cancel whenever you want.' />
+    <section className={styles.parent}>
+      <div className={styles.container}>
+        <div className={styles.cornerContainer}>
+          <div className={styles.corner}>
+            <SectionIntroii title='Compare' />
           </div>
-          <h2 className={styles.heading}>Compare Plans</h2>
-          <div className={styles.mobileTabs}>
-            {plans.map((p, i) => (
-              <button
-                key={p.id}
-                type='button'
-                onClick={() => setSelected(i)}
-                className={`${styles.tab} ${i === selected ? styles.activeTab : ""}`}
-              >
-                {p.service}
-              </button>
-            ))}
-          </div>
-
-          <div
-            className={styles.grid}
-            style={{ ["--plan-count" as any]: plansToRender.length }}
-          >
-            <div className={`${styles.row} ${styles.headerRow}`}>
-              <div
-                className={`${styles.cell} ${styles.headerCell} ${styles.featureColHead} ${styles.cornerCell}`}
-              >
-                Plan Name
-              </div>
-              {plansToRender.map((p, i) => {
-                const isFeatured = p.service.toLowerCase() === "team";
-                return (
-                  <div
-                    key={p.id}
-                    className={`${styles.cell} ${styles.headerCell} ${styles.planHead} ${isFeatured ? styles.featured : ""} ${i === plansToRender.length - 1 ? styles.lastHeaderCell : ""}`}
-                  >
-                    <div className={styles.planHeadTop}>
-                      <h3 className={styles.planName}>{p.service}</h3>
-                    </div>
-                  </div>
-                );
-              })}
+        </div>{" "}
+        <LayoutWrapper>
+          <div className={styles.content}>
+            <div className={styles.top}>
+              <h2 className={styles.heading}>Compare Plans</h2>
+              <p className={styles.copy}>
+                No contracts, cancel whenever you want.
+              </p>
             </div>
-            <div className={`${styles.row} ${styles.headerRowii}`}>
-              <div
-                className={`${styles.cell} ${styles.headerCell} ${styles.featureColHead} ${styles.cornerCell}`}
-              >
-                {/* Price */}
-                <span className={styles.featureName}>Price</span>
-              </div>
-              {plansToRender.map((p, i) => {
-                const isFeatured = p.service.toLowerCase() === "team";
-                return (
-                  <div
-                    key={p.id}
-                    className={`${styles.cell} ${styles.headerCell} ${styles.planHead} ${isFeatured ? styles.featured : ""} ${i === plansToRender.length - 1 ? styles.lastHeaderCell : ""}`}
-                  >
-                    <div className={styles.planHeadTop}>
-                      <h3 className={styles.planNameii}>{p.price}</h3>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className={styles.mobileTabs}>
+              {plans.map((p, i) => (
+                <button
+                  key={p.id}
+                  type='button'
+                  onClick={() => setSelected(i)}
+                  className={`${styles.tab} ${
+                    i === selected ? styles.activeTab : ""
+                  }`}
+                >
+                  {p.service}
+                </button>
+              ))}
             </div>
 
-            {allFeatures.map((feat) => (
-              <div key={feat} className={styles.row}>
-                <div className={`${styles.cell} ${styles.featureCol}`}>
-                  <span className={styles.featureName}>{feat}</span>
-                  {featureDesc.get(feat) && (
-                    <span className={styles.featureInfo}>
-                      {featureDesc.get(feat)}
-                    </span>
-                  )}
+            <div
+              className={styles.grid}
+              style={{ ["--plan-count" as any]: plansToRender.length }}
+            >
+              <div className={`${styles.row} ${styles.headerRow}`}>
+                <div
+                  className={`${styles.cell} ${styles.headerCell} ${styles.featureColHead} ${styles.cornerCell}`}
+                >
+                  Plan Name
                 </div>
-                {plansToRender.map((p) => {
-                  const hasIt = included(p.service, feat);
+                {plansToRender.map((p, i) => {
                   const isFeatured = p.service.toLowerCase() === "team";
                   return (
                     <div
-                      key={`${p.id}-${feat}`}
-                      className={`${styles.cell} ${styles.valueCell} ${isFeatured ? styles.featured : ""}`}
-                      aria-label={`${p.service} ${hasIt ? "includes" : "does not include"} ${feat}`}
+                      key={p.id}
+                      className={`${styles.cell} ${styles.headerCell} ${
+                        styles.planHead
+                      } ${isFeatured ? styles.featured : ""} ${
+                        i === plansToRender.length - 1
+                          ? styles.lastHeaderCell
+                          : ""
+                      }`}
                     >
-                      {hasIt ? (
-                        <span className={styles.valueYes}>
-                          <Check className={styles.icon} />
-                        </span>
-                      ) : (
-                        <span className={styles.valueNo}>—</span>
-                      )}
+                      <div className={styles.planHeadTop}>
+                        <h3 className={styles.planName}>{p.service}</h3>
+                      </div>
                     </div>
                   );
                 })}
               </div>
-            ))}
+              <div className={`${styles.row} ${styles.headerRowii}`}>
+                <div
+                  className={`${styles.cell} ${styles.headerCell} ${styles.featureColHead} ${styles.cornerCell}`}
+                >
+                  {/* Price */}
+                  <span className={styles.featureName}>Price</span>
+                </div>
+                {plansToRender.map((p, i) => {
+                  const isFeatured = p.service.toLowerCase() === "team";
+                  return (
+                    <div
+                      key={p.id}
+                      className={`${styles.cell} ${styles.headerCell} ${
+                        styles.planHead
+                      } ${isFeatured ? styles.featured : ""} ${
+                        i === plansToRender.length - 1
+                          ? styles.lastHeaderCell
+                          : ""
+                      }`}
+                    >
+                      <div className={styles.planHeadTop}>
+                        <h3 className={styles.planNameii}>{p.price}</h3>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {allFeatures.map((feat) => (
+                <div key={feat} className={styles.row}>
+                  <div className={`${styles.cell} ${styles.featureCol}`}>
+                    <span className={styles.featureName}>{feat}</span>
+                    {featureDesc.get(feat) && (
+                      <span className={styles.featureInfo}>
+                        {featureDesc.get(feat)}
+                      </span>
+                    )}
+                  </div>
+                  {plansToRender.map((p) => {
+                    const hasIt = included(p.service, feat);
+                    const isFeatured = p.service.toLowerCase() === "team";
+                    return (
+                      <div
+                        key={`${p.id}-${feat}`}
+                        className={`${styles.cell} ${styles.valueCell} ${
+                          isFeatured ? styles.featured : ""
+                        }`}
+                        aria-label={`${p.service} ${
+                          hasIt ? "includes" : "does not include"
+                        } ${feat}`}
+                      >
+                        {hasIt ? (
+                          <span className={styles.valueYes}>
+                            <Check className={styles.icon} />
+                          </span>
+                        ) : (
+                          <span className={styles.valueNo}>—</span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </LayoutWrapper>
-    </div>
+          <BaseFeatures />
+        </LayoutWrapper>
+      </div>
+    </section>
   );
 }
