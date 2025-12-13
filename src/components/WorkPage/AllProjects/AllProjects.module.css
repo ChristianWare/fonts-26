@@ -55,9 +55,10 @@
 }
 
 .feature {
-  color: var(--tan);
-  font-size: 2.5rem;
-  font-family: var(--DotSansMedium);
+  color: var(--white);
+  font-size: 3rem;
+  letter-spacing: normal;
+  /* font-family: var(--DotSansMedium); */
 }
 
 .desc {
@@ -106,7 +107,7 @@
 }
 
 .card:hover .arrowii {
-  background-color: var(--grayiii);
+  background-color: var(--white);
   transform: rotate(45deg);
 }
 
@@ -131,13 +132,13 @@
   }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   .mapDataContainer {
     grid-template-columns: 1fr;
     grid-gap: 3rem;
   }
 
   .card {
-    height: 500px;
+    height: 400px;
   }
 }
