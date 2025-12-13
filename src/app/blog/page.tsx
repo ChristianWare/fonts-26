@@ -1,3 +1,9 @@
+import BlogHero from "@/components/BlogPage/BlogHero/BlogHero";
+
 export default function BlogPage() {
-  return <div>BlogPage</div>;
+  return (
+    <main>
+      <BlogHero />
+    </main>
+  );
 }
