@@ -1,0 +1,62 @@
+.container {
+  background-color: var(--black);
+  padding: 1rem;
+  background-image: radial-gradient(var(--lightBlack) 2px, transparent 2px);
+  background-size: calc(10 * 2px) calc(10 * 2px);
+  padding: 10rem 0rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.heading {
+  color: var(--tan);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copy {
+  color: var(--tan);
+  width: 450px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgContainer {
+  position: relative;
+  width: 175px;
+  height: 175px;
+}
+
+.img {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
+    width: 90%;
+  }
+
+  .imgContainer {
+    width: 275px;
+    height: 275px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+   .copy {
+    width: 80%;
+  }
+  
+  .imgContainer {
+    width: 200px;
+    height: 200px;
+  }
+}

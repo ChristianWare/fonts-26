@@ -1,0 +1,158 @@
+.container {
+  background-color: var(--tan);
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gray);
+  margin-bottom: 3rem;
+}
+
+.topLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.scrollBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.arrowLeft,
+.arrowRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  cursor: pointer;
+  background: transparent;
+}
+
+.arrowLeft {
+  transform: rotate(-90deg);
+}
+
+.arrowRight {
+  transform: rotate(90deg);
+}
+
+.arrow {
+  color: var(--black);
+  font-size: 2rem;
+}
+
+.carouselViewport {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  overflow: hidden;
+  padding-bottom: 6rem;
+}
+
+.track {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  will-change: transform;
+}
+
+.trackAnimating {
+  transition: transform 420ms ease;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 500px;
+  height: 640px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+}
+
+.img {
+  position: absolute !important;
+  inset: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.textLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 2rem;
+  color: #fff;
+  pointer-events: none;
+}
+
+.feature {
+  color: var(--tan);
+  font-size: 2.8rem;
+  font-family: var(--DotSansMedium);
+}
+
+.desc {
+  color: var(--tan);
+}
+
+.arrowLeft[aria-disabled="true"],
+.arrowRight[aria-disabled="true"] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1068px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 0rem;
+  }
+
+  .card {
+    width: 400px;
+    height: 540px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 300px;
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .card {
+    width: 250px;
+    height: 390px;
+  }
+}
