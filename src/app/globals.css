@@ -71,7 +71,7 @@ span {
 }
 
 h1 {
-    font-size: 5vw;
+  font-size: 5vw;
   line-height: 95%;
   letter-spacing: -0.06vw;
 }
@@ -205,9 +205,12 @@ textarea:focus {
   }
 
   h1 {
-    font-size: 5.4rem;
+    font-size: 8vw;
+    letter-spacing: -0.05vw;
+
+    /* font-size: 5.4rem;
     font-weight: 700;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.01em; */
     /* line-height: 0.85; */
   }
 

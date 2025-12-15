@@ -1,0 +1,152 @@
+.container {
+  position: relative;
+  padding: 10rem 0rem;
+  background-color: var(--lightGray);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 80%;
+  gap: 2rem;
+}
+
+.copy {
+  max-width: 500px;
+  color: var(--lighterBlack);
+}
+
+.subHeading {
+  margin-top: 3rem;
+}
+
+.mapDataBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.dataItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
+  border-bottom: 1px solid var(--gray);
+  padding: 2rem 1rem;
+}
+
+.index {
+  background-color: var(--accent);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subHeadingii {
+  margin-top: 2rem;
+}
+
+.itemDesc {
+  font-size: 1.4rem;
+  opacity: 0.7;
+  /* background-color: var(--darkerTan); */
+
+  /* border-radius: 10px; */
+  width: 95%;
+}
+
+.ownerbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.imgContainer {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--gray);
+  background-color: var(--darkTan);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  padding: 0.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.ownerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  /* .left {
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .heading,
+  .copy {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .top {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .left .heading,
+  .copy {
+    width: 100%;
+    text-align: left;
+  }
+
+  .left {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .span {
+    white-space: inherit;
+  }
+}
