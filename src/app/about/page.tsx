@@ -5,6 +5,7 @@ import Chris from "@/components/AboutPage/Chris/Chris";
 import Fit from "@/components/AboutPage/Fit/Fit";
 import Values from "@/components/AboutPage/Values/Values";
 import WhyWeExist from "@/components/AboutPage/WhyWeExist/WhyWeExist";
+import BlogSection from "@/components/shared/BlogSection/BlogSection";
 import FinalCTAMain from "@/components/shared/FinalCTAMain/FinalCTAMain";
 import ScrollVelocity from "@/components/shared/ScrollVelocity/ScrollVelocity";
 
@@ -22,6 +23,7 @@ export default function AboutPage() {
       />
       <Chris />
       <Values />
+      <BlogSection />
       <FinalCTAMain />
     </main>
   );

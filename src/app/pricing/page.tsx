@@ -4,6 +4,8 @@ import ServiceDetails from "@/components/PricingPage/ServiceDetails/ServiceDetai
 import Faq from "@/components/Faq/Faq";
 import FinalCTAMain from "@/components/shared/FinalCTAMain/FinalCTAMain";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
+import BlogSection from "@/components/shared/BlogSection/BlogSection";
+import Values from "@/components/AboutPage/Values/Values";
 
 export default function PricingPage() {
   return (
@@ -16,8 +18,8 @@ export default function PricingPage() {
       </LayoutWrapper>
       <ComparisonChart />
       <Faq />
-      
-      
+      <Values />
+      <BlogSection />
       <FinalCTAMain />
     </main>
   );

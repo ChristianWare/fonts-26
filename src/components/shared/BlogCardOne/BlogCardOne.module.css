@@ -18,6 +18,23 @@
   margin-top: 2rem;
 }
 
+.title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.6rem;
+  font-family: var(--SuisseIntlMedium);
+  text-transform: none;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.3;
+  color: var(--darkGray);
+}
+
+
 .desc {
   display: -webkit-box;
   -webkit-line-clamp: 2;

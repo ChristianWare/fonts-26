@@ -1,7 +1,12 @@
+import BlogSection from "@/components/shared/BlogSection/BlogSection";
+import FinalCTAMain from "@/components/shared/FinalCTAMain/FinalCTAMain";
+
 export default function ContactPage() {
   return (
     <div>
-      <h1>ContactPage</h1>
+      
+      <BlogSection />
+      <FinalCTAMain />
     </div>
   );
 }
