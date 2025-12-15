@@ -1,11 +1,13 @@
-import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./ValueProp.module.css";
+import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 import Bell from "@/components/shared/icons/Bell/Bell";
 import Receipt from "@/components/shared/icons/Receipt/Receipt";
 import Clock from "@/components/shared/icons/Clock/Clock";
 import Seo from "@/components/shared/icons/Seo/Seo";
 import BaseFeatures from "@/components/shared/BaseFeatures/BaseFeatures";
+import Image from "next/image";
+import Img1 from "../../../../public/images/specialize.png";
 
 const data = [
   {
@@ -41,16 +43,31 @@ export default function ValueProp() {
         <LayoutWrapper>
           <div className={styles.content}>
             <div className={styles.top}>
-              <SectionIntroii title='What we do' />
-              <h2 className={styles.heading}>
-                We turn confused clickers into confident booked clients
-              </h2>
-              <p className={styles.copy}>
-                Fonts & Footers designs and builds direct-booking websites
-                tailored for salons and service studios. No templates, no
-                “one-size-fits-all” theme store vibe—just one clean path from
-                “found you” to “see you in the chair.”
-              </p>
+              <div className={styles.topLeft}>
+                <div className={styles.sectionIntroContainer}>
+                  <SectionIntroii title='What we do' />
+                </div>
+                <h2 className={styles.heading}>
+                  We turn confused clickers into confident booked clients
+                </h2>
+                <p className={styles.copy}>
+                  Fonts & Footers designs and builds direct-booking websites
+                  tailored for salons and service studios. No templates, no
+                  “one-size-fits-all” theme store vibe—just one clean path from
+                  “found you” to “see you in the chair.”
+                </p>
+              </div>
+              <div className={styles.topRight}>
+                <div className={styles.imgContainer}>
+                  <Image
+                    src={Img1}
+                    alt='thinking'
+                    fill
+                    className={styles.img}
+                    priority
+                  />
+                </div>
+              </div>
             </div>
             <div className={styles.bottom}>
               <div className={styles.mapDataContainer}>

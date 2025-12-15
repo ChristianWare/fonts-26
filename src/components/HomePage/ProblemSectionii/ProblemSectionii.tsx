@@ -56,7 +56,7 @@ const data = [
 ];
 
 export default function ProblemSectionii() {
-  const [activeId, setActiveId] = useState<number>(4);
+  const [activeId, setActiveId] = useState<number>(1);
   const activeItem = data.find((item) => item.id === activeId) ?? data[0];
 
   return (
