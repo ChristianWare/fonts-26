@@ -113,14 +113,14 @@
 }
 
 .challengeHeading {
-  color: var(--tan);
-  font-size: 2rem;
+  
+  font-size: 1.6rem;
 }
 
 .challenge {
   margin-bottom: 3rem;
-  color: var(--tan);
-  opacity: 0.7;
+  color: var(--darkGray);
+  font-size: 1.4rem;
 }
 
 .images {
