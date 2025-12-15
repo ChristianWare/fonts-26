@@ -6,7 +6,7 @@
 
 .content {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 3fr 5fr;
   grid-gap: 10rem;
 }
 
@@ -272,7 +272,7 @@
 @media screen and (max-width: 1268px) {
   .content {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 }
 
