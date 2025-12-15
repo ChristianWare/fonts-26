@@ -216,14 +216,6 @@ export default async function BlogPostPage({
   const initialCategorySlug =
     post.tags?.find((t) => t.slug?.current)?.slug?.current || "all";
 
-    // const tags = await getAllTags();
-
-    // const tagOptions = [
-    //   { _id: "all", name: "All", slug: { current: "all" } },
-    //   ...tags,
-    // ];
-
-
   return (
     <main className={styles.container}>
       <Nav />
@@ -284,7 +276,6 @@ export default async function BlogPostPage({
                   <small className={styles.small}>Search</small>
                 </div>
               </div>
-
               <div className={styles.categoriesContainer}>
                 <span className={styles.searchHeading}>Categories</span>
                 <BlogPostSidebarCategories
@@ -292,12 +283,14 @@ export default async function BlogPostPage({
                   initialSlug={initialCategorySlug}
                 />
               </div>
+              <div className={styles.categoriesContainer}>
+                <span className={styles.searchHeading}>Recent Posts</span>
+                <MoreInsights currentSlug={post.slug.current} />
+              </div>
             </div>
           </div>
         </div>
       </LayoutWrapper>
-
-      <MoreInsights currentSlug={post.slug.current} />
       <FinalCTAMain />
     </main>
   );

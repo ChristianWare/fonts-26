@@ -2,8 +2,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
-import styles from "@/app/blog/[slug]/BlogPostPage.module.css";
+import styles from "./BlogPostSidebarCategories.module.css";
+import Link from "next/link";
 
 type Tag = { _id: string; name: string; slug?: { current?: string } };
 
@@ -14,8 +14,6 @@ export default function BlogPostSidebarCategories({
   tags: Tag[];
   initialSlug?: string;
 }) {
-  const router = useRouter();
-
   const cleanTags = useMemo(() => tags.filter((t) => t.slug?.current), [tags]);
 
   const tagOptions = useMemo(
@@ -23,29 +21,12 @@ export default function BlogPostSidebarCategories({
     [cleanTags]
   );
 
-  const safeInitial =
-    initialSlug === "all" ||
-    cleanTags.some((t) => t.slug?.current === initialSlug)
-      ? initialSlug
-      : "all";
-
-  const [selectedSlug, setSelectedSlug] = useState<string>(safeInitial);
-
-//   function selectTag(slug: string) {
-//     setSelectedSlug(slug);
-//     if (slug === "all") router.push("/blog");
-//     else router.push(`/blog?tag=${encodeURIComponent(slug)}`);
-//   }
-
   return (
     <div className={styles.tagsSelectWrap}>
-      <label htmlFor='tag-select' className='sr-only'>
-        Categories
-      </label>
       <ul className={styles.tags}>
-        {tagOptions.map((t) => (
+        {tagOptions.slice(1, 6).map((t) => (
           <li key={t._id} className={styles.tagItem}>
-            <a
+            <Link
               href={
                 t.slug?.current === "all"
                   ? "/blog"
@@ -54,7 +35,7 @@ export default function BlogPostSidebarCategories({
               className={styles.tagLink}
             >
               {t.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
