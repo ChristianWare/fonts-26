@@ -704,55 +704,55 @@ export const pricingData = [
       },
     ],
   },
-  // {
-  //   id: 5,
-  //   service: "Custom",
-  //   headline: "Bespoke architecture for unique booking models",
-  //   desc: "For enterprise chains or complex use-cases—think 50+ locations, hybrid rentals, or regulated medical workflows—where off-the-shelf logic won’t cut it. Timeline and cost are scoped after a technical discovery sprint.",
-  //   descii:
-  //     "For large or regulated operations that need bespoke logic. We begin with a discovery sprint, then design custom architecture—HIPAA-ready intake, multi-tenant roles, enterprise hosting/SLAs, and deep ERP/CRM integrations. Includes monitoring and priority support; pricing is tailored to your scope.",
-  //   price: "$Custom Quote",
-  //   servicesInclude: [
-  //     {
-  //       id: 5.1,
-  //       serviceName: "Discovery sprint",
-  //       description:
-  //         "Two-week deep dive into API landscape, compliance needs, and workflow mapping.",
-  //     },
-  //     {
-  //       id: 5.2,
-  //       serviceName: "Bespoke feature engineering",
-  //       description:
-  //         "Custom modules such as insurance underwriting, multi-tenant role layers, or HIPAA-secure intake forms.",
-  //     },
-  //     {
-  //       id: 5.3,
-  //       serviceName: "Dedicated SLA & hosting",
-  //       description:
-  //         "24-7 monitoring, 99.9 % uptime, and priority support response under 2 hours.",
-  //     },
-  //     {
-  //       id: 5.4,
-  //       serviceName: "Enterprise integrations",
-  //       description:
-  //         "Real-time data bridges to ERP, CRM, PMS, or proprietary internal systems.",
-  //     },
-  //   ],
-  //   addonSectionData: [
-  //     {
-  //       id: 5.01,
-  //       expansionblock: "Compliance Tier",
-  //       details: "SOC 2, HIPAA, or GDPR audit package",
-  //       price: "POA",
-  //     },
-  //     {
-  //       id: 5.02,
-  //       expansionblock: "Scalability Tier",
-  //       details: "Horizontal scaling for 1 000+ concurrent bookings",
-  //       price: "POA",
-  //     },
-  //   ],
-  // },
+  {
+    id: 5,
+    service: "Custom",
+    headline: "Bespoke architecture for unique booking models",
+    desc: "For enterprise chains or complex use-cases—think 50+ locations, hybrid rentals, or regulated medical workflows—where off-the-shelf logic won’t cut it. Timeline and cost are scoped after a technical discovery sprint.",
+    descii:
+      "For large or regulated operations that need bespoke logic. We begin with a discovery sprint, then design custom architecture—HIPAA-ready intake, multi-tenant roles, enterprise hosting/SLAs, and deep ERP/CRM integrations. Includes monitoring and priority support; pricing is tailored to your scope.",
+    price: "",
+    servicesInclude: [
+      {
+        id: 5.1,
+        serviceName: "Discovery sprint",
+        description:
+          "Two-week deep dive into API landscape, compliance needs, and workflow mapping.",
+      },
+      {
+        id: 5.2,
+        serviceName: "Bespoke feature engineering",
+        description:
+          "Custom modules such as insurance underwriting, multi-tenant role layers, or HIPAA-secure intake forms.",
+      },
+      {
+        id: 5.3,
+        serviceName: "Dedicated SLA & hosting",
+        description:
+          "24-7 monitoring, 99.9 % uptime, and priority support response under 2 hours.",
+      },
+      {
+        id: 5.4,
+        serviceName: "Enterprise integrations",
+        description:
+          "Real-time data bridges to ERP, CRM, PMS, or proprietary internal systems.",
+      },
+    ],
+    addonSectionData: [
+      {
+        id: 5.01,
+        expansionblock: "Compliance Tier",
+        details: "SOC 2, HIPAA, or GDPR audit package",
+        price: "POA",
+      },
+      {
+        id: 5.02,
+        expansionblock: "Scalability Tier",
+        details: "Horizontal scaling for 1 000+ concurrent bookings",
+        price: "POA",
+      },
+    ],
+  },
 ] as const;
 
 // lib/data.ts (excerpt) — Route-aware FAQs

@@ -63,7 +63,8 @@ export default function ServiceDetails() {
                     <p className={styles.headline}>{x.desc}</p>
                   </div>
                   <h3 className={styles.price}>{x.price}</h3>
-                  <p className={styles.headline}>Per Month</p>
+                  {!x.price && <h3 className={styles.price}>$Custom</h3>}
+                  {x.price && <p className={styles.headline}>Per Month</p>}
 
                   <div className={styles.cardTopRight}>
                     <div className={styles.btnContainer}>
