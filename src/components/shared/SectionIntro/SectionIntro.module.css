@@ -17,15 +17,6 @@
   letter-spacing: 1px;
 }
 
-.icon {
-  color: var(--black);
-  background-color: var(--white);
-  border-radius: 50%;
-  padding: 0.3rem;
-  font-size: 2rem;
-  transform-origin: center center;
-}
-
 .borderColorBlack {
   border: 1px solid var(--gray);
 }

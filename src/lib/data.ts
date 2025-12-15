@@ -22,6 +22,21 @@ import ThunderProduct from "../../public/images/thunderProduct.png";
 import ThunderProductii from "../../public/images/thunderProductii.png";
 import ThunderAbout from "../../public/images/thunderAbout.png";
 
+export type SectionKey =
+  | "home"
+  | "pricing"
+  | "about"
+  | "work"
+  | "blog"
+  | "contact";
+
+export type QuestionItem = {
+  id: number;
+  question: string;
+  answer: string;
+  sections: SectionKey[]; // which routes this FAQ should appear on
+};
+
 export const process = [
   {
     id: 1,
@@ -757,20 +772,7 @@ export const pricingData = [
 
 // lib/data.ts (excerpt) — Route-aware FAQs
 
-export type SectionKey =
-  | "home"
-  | "pricing"
-  | "about"
-  | "work"
-  | "blog"
-  | "contact";
 
-export type QuestionItem = {
-  id: number;
-  question: string;
-  answer: string;
-  sections: SectionKey[]; // which routes this FAQ should appear on
-};
 
 export const questions: readonly QuestionItem[] = [
   {

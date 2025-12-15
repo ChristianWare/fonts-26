@@ -1,5 +1,4 @@
 import styles from "./SectionIntro.module.css";
-import Star from "../icons/Star/Star";
 
 interface Props {
   title: string;
@@ -14,7 +13,6 @@ export default function SectionIntro({
 }: Props) {
   return (
     <div className={`${styles.container} ${styles[borderColor]}`}>
-      <Star className={`${styles.icon} ${styles[color]}`} />
       <span className={`${styles.text} ${styles[color]}`}>{title}</span>
     </div>
   );

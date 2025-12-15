@@ -1,14 +1,26 @@
 .container {
-  background-color: var(--black);
-  padding: 1rem;
+  background-color: var(--white);
   padding: 10rem 0rem;
   padding-bottom: 0rem;
 }
 
-.top {
+.content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5rem;
+  grid-template-columns: 2fr 4fr;
+  grid-gap: 10rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  width: fit-content;
+  width: 100%;
 }
 
 .left {
@@ -20,15 +32,26 @@
   gap: 2rem;
 }
 
-.heading {
-  color: var(--tan);
-  font-size: 4rem;
-  letter-spacing: -1.5px;
-  line-height: 1.3;
-}
-
 .copy {
   color: var(--tan);
+  font-size: 2rem;
+}
+
+.tags {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--darkGray);
+  width: 100%;
+}
+
+.description {
+  color: var(--tan);
+
+  font-size: 1.6rem;
 }
 
 .btnContainer {
@@ -60,7 +83,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   gap: 1rem;
-  background-color: var(--lighterBlack);
+  background-color: var(--accentBlack);
   padding: 2rem;
   border-radius: 10px;
 }
@@ -89,13 +112,6 @@
   gap: 4rem;
 }
 
-.description {
-  color: var(--tan);
-  letter-spacing: normal;
-  font-family: var(--DotSansRegular);
-  font-size: 2.5rem;
-}
-
 .challengeHeading {
   color: var(--tan);
   font-size: 2rem;
@@ -109,7 +125,7 @@
 
 .images {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 7rem;
   margin-bottom: 5rem;
@@ -126,10 +142,9 @@
 }
 
 .box {
-  border: 1px solid var(--adminGray);
-  background-color: var(--lighterBlack);
+  background-color: var(--lightGray);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -254,18 +269,17 @@
   }
 }
 
-@media screen and (max-width: 1068px) {
-  .top {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-  }
-
-  .left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width: 1268px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
 
   .heading {
@@ -274,16 +288,14 @@
   }
 
   .copy {
-    width: 80%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .detailsBox {
-    margin-top: 2rem;
-  }
-
-  .imgContainer {
-    height: 400px;
+  .tags {
+    align-items: center;
+    justify-content: center;
   }
 }
 

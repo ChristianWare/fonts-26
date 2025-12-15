@@ -1,17 +1,18 @@
 "use client";
 
+import styles from "./WorkDetailsClient.module.css";
 import { useState, useRef, useEffect } from "react";
 import type { StaticImageData } from "next/image";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-import styles from "./WorkDetailsClient.module.css";
 import { projects } from "@/lib/data";
 import Link from "next/link";
-import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
+// import SectionIntroii from "@/components/shared/SectionIntroii/SectionIntroii";
 import Image from "next/image";
 import Button from "@/components/shared/Button/Button";
 import OurTeam from "@/components/AboutPage/OurTeam/OurTeam";
 import Chris from "../../../../../../public/images/chris.jpg";
 import Modal from "@/components/shared/Modal/Modal";
+import SectionIntro from "@/components/shared/SectionIntro/SectionIntro";
 // import Industries from "@/components/HomePage/Industries/Industries";
 
 type Project = (typeof projects)[number];
@@ -43,202 +44,209 @@ export default function WorkDetailsClient({ project }: { project: Project }) {
   return (
     <main className={styles.container}>
       <LayoutWrapper>
-        <div className={styles.top}>
+        <div className={styles.content}>
           <div className={styles.left}>
-            <SectionIntroii title='category here' color='tan' />
-            <h1 className={styles.heading}>{project.title}</h1>
-            <p className={styles.copy}>{project.h1}</p>
-            <div className={styles.btnContainer}>
-              <Button
-                href={project.href}
-                target='_blank'
-                btnType='accentOutline'
-                text='Live Website'
-              />
-            </div>
-            <div className={styles.detailsBox}>
-              <div className={styles.db1}>
-                <div className={styles.label}>Launch Date</div>
-                <div className={styles.value}>{project.year}</div>
+            <div className={styles.left}>
+              <h1 className={styles.heading}>{project.title}</h1>
+              <p className={styles.copy}>{project.h1}</p>
+              <div className={styles.tags}>
+                <SectionIntro title='Web Design' />
+                <SectionIntro title='Web Development' />
+                <SectionIntro title='Branding' />
               </div>
-              <div className={styles.db1}>
-                <div className={styles.label}>Platform</div>
-                <div className={styles.value}>{project.platform}</div>
-              </div>
-              <div className={styles.db1}>
-                <div className={styles.label}>Tech</div>
-                <div className={styles.value}>{project.tech}</div>
-              </div>
-              <div className={styles.db1}>
-                <div className={styles.label}>Tech</div>
-                <div className={styles.value}>{project.tech}</div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.right}>
-            <div className={styles.imgContainer}>
-              <Image
-                src={project.src}
-                alt={project.title}
-                fill
-                className={styles.img}
-              />
-            </div>
-          </div>
-        </div>
-
-        <section className={styles.introSection}>
-          <SectionIntroii title='Project details' color='tan' />
-          <h5 className={styles.description}>{project.description}</h5>
-          <div className={styles.challengeHeading}>The Challenge</div>
-          <div className={styles.challengBox}>
-            {project.challenge.map((item, index) => (
-              <p key={index} className={styles.challenge}>
-                {item.challengeDetail}
-              </p>
-            ))}
-          </div>
-        </section>
-
-        <div className={styles.images}>
-          <button
-            type='button'
-            className={styles.imgButtonReset}
-            onClick={() => openWith(project.src2)}
-            aria-label='Open Home Page expanded preview'
-          >
-            <div className={styles.box}>
-              <div className={styles.imgContainerii}>
-                <Image
-                  src={project.src2}
-                  alt={`${project.title} – Home Page`}
-                  fill
-                  className={styles.imgii}
-                  sizes='(max-width: 768px) 100vw, 50vw'
+              <p className={styles.description}>{project.description}</p>
+              <div className={styles.btnContainer}>
+                <Button
+                  href={project.href}
+                  target='_blank'
+                  btnType='black'
+                  text='Live Website'
                 />
               </div>
-              {/* <h3 className={styles.imgTitle}>Home Page</h3> */}
-              <SectionIntroii title='Home Page' color='tan' />
+              {/* <div className={styles.detailsBox}>
+                <div className={styles.db1}>
+                  <div className={styles.label}>Launch Date</div>
+                  <div className={styles.value}>{project.year}</div>
+                </div>
+                <div className={styles.db1}>
+                  <div className={styles.label}>Platform</div>
+                  <div className={styles.value}>{project.platform}</div>
+                </div>
+                <div className={styles.db1}>
+                  <div className={styles.label}>Tech</div>
+                  <div className={styles.value}>{project.tech}</div>
+                </div>
+                <div className={styles.db1}>
+                  <div className={styles.label}>Tech</div>
+                  <div className={styles.value}>{project.tech}</div>
+                </div>
+              </div> */}
             </div>
-          </button>
-
-          <button
-            type='button'
-            className={styles.imgButtonReset}
-            onClick={() => openWith(project.src3)}
-            aria-label='Open About Page expanded preview'
-          >
-            <div className={styles.box}>
-              <div className={styles.imgContainerii}>
+            {/* <div className={styles.right}>
+              <div className={styles.imgContainer}>
                 <Image
-                  src={project.src3}
-                  alt={`${project.title} – About Page`}
-                  fill
-                  className={styles.imgii}
-                />
-              </div>
-              {/* <h3 className={styles.imgTitle}>About Page</h3> */}
-              <SectionIntroii title='About Page' color='tan' />
-            </div>
-          </button>
-
-          <button
-            type='button'
-            className={styles.imgButtonReset}
-            onClick={() => openWith(project.src4)}
-            aria-label='Open Services Page expanded preview'
-          >
-            <div className={styles.box}>
-              <div className={styles.imgContainerii}>
-                <Image
-                  src={project.src4}
-                  alt={`${project.title} – Services Page`}
-                  fill
-                  className={styles.imgii}
-                />
-              </div>
-              {/* <h3 className={styles.imgTitle}>Services Page</h3> */}
-              <SectionIntroii title='Services Page' color='tan' />
-            </div>
-          </button>
-
-          <button
-            type='button'
-            className={styles.imgButtonReset}
-            onClick={() => openWith(project.src5)}
-            aria-label='Open Admin Dashboard expanded preview'
-          >
-            <div className={styles.box}>
-              <div className={styles.imgContainerii}>
-                <Image
-                  src={project.src5}
-                  alt={`${project.title} – Admin Dashboard`}
-                  fill
-                  className={styles.imgii}
-                />
-              </div>
-              {/* <SectionIntroii title='Admin Dashboard' color='tan' /> */}
-              <SectionIntroii title='more' color='tan' />
-            </div>
-          </button>
-        </div>
-
-        <section className={styles.introSection}>
-          <div className={styles.challengeHeading}>The Results</div>
-          <div className={styles.challengBox}>
-            {project.results.map((item, index) => (
-              <p key={index} className={styles.challenge}>
-                {item.resultDetail}
-              </p>
-            ))}
-          </div>
-        </section>
-
-        <br />
-        <br />
-        <br />
-
-        <OurTeam
-          text={project.testimonial}
-          src={project.src}
-          backgroundColor='black'
-          textColor='tan'
-        />
-
-        <section className={styles.introSection}>
-          <div className={styles.finalBox}>
-            <div className={styles.fb1}>
-              <div className={styles.imgContaineriv}>
-                <Image
-                  src={Chris}
+                  src={project.src}
                   alt={project.title}
                   fill
-                  className={styles.imgiv}
+                  className={styles.img}
                 />
               </div>
-            </div>
-            <div className={styles.fb2}>
-              <div className={styles.fb2a}>
-                <SectionIntroii title='Ready to start?' color='tan' />
-                <div className={styles.fb2Subheading}>
-                  Let’s make something that matters.
-                </div>
-                <p className={styles.fb2copy}>
-                  Chris is here to guide you every step of the way.
+            </div> */}
+          </div>
+
+          {/* <section className={styles.introSection}>
+            <SectionIntroii title='Project details'  />
+            <h5 className={styles.description}>{project.description}</h5>
+            <div className={styles.challengeHeading}>The Challenge</div>
+            <div className={styles.challengBox}>
+              {project.challenge.map((item, index) => (
+                <p key={index} className={styles.challenge}>
+                  {item.challengeDetail}
                 </p>
-              </div>
-              <div className={styles.fb2b}>
-                <div className={styles.btnContainer}>
-                  <Button
-                    href='/contact'
-                    btnType='greenOutline'
-                    text='Book a call Today'
+              ))}
+            </div>
+          </section> */}
+
+          <div className={styles.images}>
+            <button
+              type='button'
+              className={styles.imgButtonReset}
+              onClick={() => openWith(project.src2)}
+              aria-label='Open Home Page expanded preview'
+            >
+              <div className={styles.box}>
+                  {/* <SectionIntroii title='Home Page'   /> */}
+                <div className={styles.imgContainerii}>
+                  <Image
+                    src={project.src2}
+                    alt={`${project.title} – Home Page`}
+                    fill
+                    className={styles.imgii}
+                    sizes='(max-width: 768px) 100vw, 50vw'
                   />
                 </div>
+                {/* <h3 className={styles.imgTitle}>Home Page</h3> */}
               </div>
-            </div>
+            </button>
+
+            <button
+              type='button'
+              className={styles.imgButtonReset}
+              onClick={() => openWith(project.src3)}
+              aria-label='Open About Page expanded preview'
+            >
+              <div className={styles.box}>
+                <div className={styles.imgContainerii}>
+                  <Image
+                    src={project.src3}
+                    alt={`${project.title} – About Page`}
+                    fill
+                    className={styles.imgii}
+                  />
+                </div>
+                {/* <h3 className={styles.imgTitle}>About Page</h3> */}
+                {/* <SectionIntroii title='About Page'   /> */}
+              </div>
+            </button>
+
+            <button
+              type='button'
+              className={styles.imgButtonReset}
+              onClick={() => openWith(project.src4)}
+              aria-label='Open Services Page expanded preview'
+            >
+              <div className={styles.box}>
+                <div className={styles.imgContainerii}>
+                  <Image
+                    src={project.src4}
+                    alt={`${project.title} – Services Page`}
+                    fill
+                    className={styles.imgii}
+                  />
+                </div>
+                {/* <h3 className={styles.imgTitle}>Services Page</h3> */}
+                {/* <SectionIntroii title='Services Page'   /> */}
+              </div>
+            </button>
+
+            <button
+              type='button'
+              className={styles.imgButtonReset}
+              onClick={() => openWith(project.src5)}
+              aria-label='Open Admin Dashboard expanded preview'
+            >
+              <div className={styles.box}>
+                <div className={styles.imgContainerii}>
+                  <Image
+                    src={project.src5}
+                    alt={`${project.title} – Admin Dashboard`}
+                    fill
+                    className={styles.imgii}
+                  />
+                </div>
+                {/* <SectionIntroii title='Admin Dashboard'   /> */}
+                {/* <SectionIntroii title='more'   /> */}
+              </div>
+            </button>
+            <br />
+            <br />
+            <br />
+            <OurTeam
+              text={project.testimonial}
+              src={project.src}
+              backgroundColor='black'
+            />
+            <section className={styles.introSection}>
+              <div className={styles.finalBox}>
+                <div className={styles.fb1}>
+                  <div className={styles.imgContaineriv}>
+                    <Image
+                      src={Chris}
+                      alt={project.title}
+                      fill
+                      className={styles.imgiv}
+                    />
+                  </div>
+                </div>
+                <div className={styles.fb2}>
+                  <div className={styles.fb2a}>
+                    {/* <SectionIntroii title='Ready to start?' /> */}
+                    <div className={styles.fb2Subheading}>
+                      Let’s make something that matters.
+                    </div>
+                    <p className={styles.fb2copy}>
+                      Chris is here to guide you every step of the way.
+                    </p>
+                  </div>
+                  <div className={styles.fb2b}>
+                    <div className={styles.btnContainer}>
+                      <Button
+                        href='/contact'
+                        btnType='black'
+                        text='Book a call Today'
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
+
+          {/* <section className={styles.introSection}>
+            <div className={styles.challengeHeading}>The Results</div>
+            <div className={styles.challengBox}>
+              {project.results.map((item, index) => (
+                <p key={index} className={styles.challenge}>
+                  {item.resultDetail}
+                </p>
+              ))}
+            </div>
+          </section>
+
+          <br />
+          <br />
+          <br /> */}
+        </div>
       </LayoutWrapper>
 
       {/* <Industries excludeSlug={project.slug} /> */}
