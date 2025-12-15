@@ -49,27 +49,18 @@
   min-height: 250px;
   position: relative;
   background-color: var(--white);
+  border-radius: 2rem;
   /* border: 1px solid var(--gray); */
-}
-
-.card:nth-child(1) {
-  border-top-left-radius: 2rem;
-}
-
-.card:last-child {
-  border-bottom-right-radius: 2rem;
 }
 
 .card:nth-child(3) {
   grid-column: span 2;
   padding: 0rem;
-  border: none;
-  border-top-right-radius: 2rem;
+  /* border: none; */
 }
 
 .card:nth-child(4) {
   grid-column: span 2;
-  /* background-color: var(--accent); */
   padding: 0rem;
   background-color: transparent;
   border-bottom-left-radius: 2rem;
@@ -107,7 +98,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border-top-right-radius: 2rem;
+  border-radius: 2rem;
   overflow: hidden;
   grid-column: span 2;
   border: none;

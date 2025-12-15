@@ -91,16 +91,15 @@ export default function Nav({
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
-   const items = [
-    //  { text: "Services", href: "/services" },
+  const items = [
+    { text: "About", href: "/about" },
     { text: "Features", href: "/features" },
     { text: "Pricing", href: "/pricing" },
     { text: "Work", href: "/work" },
-    { text: "About", href: "/about" },
-     { text: "Blog", href: "/blog" },
-     { text: "Contact", href: "/contact" },
-     { text: "My Account", href: "/account" },
-   ];
+    { text: "Blog", href: "/blog" },
+    { text: "Contact", href: "/contact" },
+    { text: "My Account", href: "/account" },
+  ];
 
   return (
     <header
