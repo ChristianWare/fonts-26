@@ -1,0 +1,36 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--lighterBlack);
+  border-radius: 10px;
+  border: 1px solid var(--grayii);
+  padding: 2rem;
+}
+
+.label {
+  color: var(--gray);
+  font-size: 1.4rem;
+}
+
+.value {
+  font-size: 1.6rem;
+  font-family: var(--inter);
+  color: var(--tan);
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 1268px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 568px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

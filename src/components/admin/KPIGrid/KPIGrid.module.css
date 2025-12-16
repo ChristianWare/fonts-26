@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--darkerTan);
+  border-radius: 12px;
+  padding: 16px;
+}
+.kpiTitle {
+  color: var(--muted, #666);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.kpiValue {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+@media (max-width: 968px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 568px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

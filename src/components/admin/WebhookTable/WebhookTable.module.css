@@ -1,0 +1,59 @@
+/* src/components/admin/WebhookTable/WebhookTable.module.css */
+.wrap {
+  margin-top: 1.5rem;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: var(--darkerTan);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table th,
+.table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
+.badge {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.received {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+}
+.processed {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+.error {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+.pager {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--darkerTan);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.pageInfo {
+  font-size: 13px;
+  color: var(--muted, #666);
+}

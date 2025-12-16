@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--tan);
+  padding: 1rem;
+  background-image: radial-gradient(#efeded 2px, transparent 2px);
+  background-size: calc(10 * 2px) calc(10 * 2px);
+  padding: 10rem 0rem;
+}
+
+.heading {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}

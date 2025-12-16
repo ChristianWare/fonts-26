@@ -1,0 +1,109 @@
+.main {
+  background-color: var(--tan);
+  background-image: radial-gradient(#efeded 2px, transparent 2px);
+  background-size: calc(10 * 2px) calc(10 * 2px);
+}
+
+.container {
+  position: relative;
+}
+
+.imgOverlay {
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mainContent {
+  padding: 10rem 0rem;
+}
+
+.content {
+  padding: 3rem;
+  border-radius: 15px;
+  background-color: var(--tan);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.content h2 {
+  font-family: var(--DotSansMedium);
+  font-size: 2.1rem;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.content strong {
+  color: var(--grayii);
+  font-family: var(--inter);
+  font-weight: 600;
+}
+
+.content b {
+  font-family: var(--inter);
+  font-weight: 600;
+}
+
+.img2 {
+  object-fit: cover;
+}
+
+.heading {
+  z-index: 3;
+  color: var(--tan);
+  margin-bottom: 2rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.topCopy {
+  z-index: 3;
+  color: var(--tan);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 968px) {
+  .copy {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .copy {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    padding-top: 3rem;
+  }
+
+  .heading {
+    font-size: 5rem;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 5px;
+  }
+}

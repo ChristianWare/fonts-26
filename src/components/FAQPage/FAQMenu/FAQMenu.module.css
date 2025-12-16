@@ -1,0 +1,26 @@
+.container {
+  background-color: var(--tan);
+  margin-top: 3rem;
+  /* width: 100%; */
+}
+
+.mapDataContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 568px) {
+  .mapDataContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btnContainer {
+    display: grid;
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,188 @@
+.card {
+  background: var(--darkTan);
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm, 0 2px 10px rgba(0, 0, 0, 0.04));
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: var(--DotSansMedium);
+  letter-spacing: -1px;
+  margin: 0 0 12px;
+  color: var(--text, #111827);
+}
+
+.muted {
+  color: var(--muted, #6b7280);
+  /* font-size: 0.95rem; */
+  margin: 6px 0 0;
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid var(--gray);
+  background: var(--darkerTan);
+}
+
+/* Optional scrollbar polish */
+.tableWrap::-webkit-scrollbar {
+  height: 10px;
+}
+.tableWrap::-webkit-scrollbar-thumb {
+  background: var(--scrollbar, #c7c9cc);
+  border-radius: 999px;
+}
+.tableWrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* Header (desktop-first) */
+.table thead th {
+  text-align: left;
+  padding: 12px 16px;
+  color: var(--text-strong, #0f172a);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border, #e5e7eb);
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: 14px 16px;
+  border-top: 1px solid var(--border, #f0f2f4);
+  color: var(--text, #111827);
+  vertical-align: middle;
+}
+
+.table tbody tr:nth-child(odd) td {
+  background: var(--rowAlt, #fafafa);
+}
+
+.table tbody tr:hover td {
+  background: var(--rowHover, #f3f4f6);
+}
+
+/* Status cell */
+.status {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--status, #374151);
+}
+
+/* Links */
+.link {
+  color: var(--blue) !important;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.link:focus-visible {
+  outline: 2px dashed var(--link, #2563eb);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* === Tablet tuning (<= 1024px) === */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.25rem;
+  }
+  .table thead th,
+  .table tbody td {
+    padding: 12px;
+  }
+}
+
+/* === Mobile layout (<= 768px): turn rows into stacked cards === */
+@media (max-width: 768px) {
+  /* Remove horizontal scroll needs */
+  .tableWrap {
+    border-radius: 12px;
+    overflow: hidden; /* keep card edges clean */
+  }
+
+  /* Hide thead; we’ll show labels via data-label */
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  /* Each row becomes a card */
+  .table tr {
+    background: var(--darkerTan);
+    border-bottom: 1px solid var(--gray);
+    padding: 12px 12px 6px;
+  }
+
+  /* Cells stack with their label shown via ::before */
+  .table tbody td {
+    border: 0;
+    background: transparent !important;
+    padding: 8px 0;
+    display: grid;
+    grid-template-columns: 140px 1fr; /* label/value */
+    gap: 8px;
+    align-items: baseline;
+  }
+
+  .table tbody td::before {
+    content: attr(data-label);
+    color: var(--muted, #6b7280);
+    /* font-size: 0.9rem; */
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: none; /* readable labels */
+  }
+
+  /* First cell gets a bit more top spacing */
+  .table tbody td:first-child {
+    padding-top: 4px;
+  }
+
+  /* Tighter text sizes */
+  .status {
+    font-weight: 700;
+  }
+}
+
+/* === Small phones (<= 400px): narrower label column === */
+@media (max-width: 400px) {
+  .table tbody td {
+    grid-template-columns: 120px 1fr;
+  }
+}
+
+/* Motion-reduced polish */
+@media (prefers-reduced-motion: reduce) {
+  .table tbody tr:hover td {
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .table tr {
+    border-radius: 12px;
+    margin: 8px 8px 0;
+    border: 1px solid var(--gray);
+  }
+}

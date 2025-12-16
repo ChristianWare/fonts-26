@@ -1,0 +1,43 @@
+/* app/account/AccountLayout.module.css */
+.container {
+  background-color: var(--tan);
+  padding: 1rem;
+  background-image: radial-gradient(#efeded 2px, transparent 2px);
+  background-size: calc(10 * 2px) calc(10 * 2px);
+  padding: 10rem 0rem;
+  padding-bottom: 0rem;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 1.5fr 4.5fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 24px;
+}
+
+.content {
+  min-width: 0;
+}
+
+@media screen and (max-width: 1268px) {
+  .shell {
+    grid-template-columns: 1.5fr 4.5fr;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    top: auto;
+    /* margin-bottom: 2rem; */
+  }
+}

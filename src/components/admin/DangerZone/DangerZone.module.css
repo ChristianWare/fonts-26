@@ -1,0 +1,81 @@
+.card {
+  margin-top: 2rem;
+  background: var(--darkerTan);
+  border: 1px solid var(--gray);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+.title {
+  font-family: var(--DotSansMedium);
+  font-size: 1.5rem;
+  margin-bottom: .25rem;
+}
+.note {
+  color: var(--muted, #666);
+  margin-bottom: 1rem;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.block {
+  display: grid;
+  gap: .5rem;
+  background: #fffaf7;
+  border: 1px solid #f4e1d6;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.label {
+  font-size: .9rem;
+  color: #444;
+}
+.select {
+  padding: .55rem .7rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.btn {
+  appearance: none;
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  background: #f7f7f7;
+  font-weight: 600;
+  cursor: pointer;
+}
+.warnBtn {
+  appearance: none;
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  border: 1px solid #f5cf96;
+  background: #fff7e6;
+  color: #8a5a00;
+  font-weight: 700;
+  cursor: pointer;
+}
+.okBtn {
+  appearance: none;
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  border: 1px solid #bfe3c4;
+  background: #edf9ef;
+  color: #106a3b;
+  font-weight: 700;
+  cursor: pointer;
+}
+.dangerBtn {
+  appearance: none;
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  border: 1px solid #f3b0b0;
+  background: #fff1f1;
+  color: #b20000;
+  font-weight: 800;
+  cursor: pointer;
+}
+.help {
+  font-size: .8rem;
+  color: #6b7280;
+}

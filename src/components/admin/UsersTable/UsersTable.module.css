@@ -1,0 +1,195 @@
+.container {
+  padding: 5rem 0rem;
+}
+
+.heading {
+  font-family: var(--DotSansMedium);
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+}
+
+.tableWrap {
+  overflow: hidden; /* we’ll handle scroll on table for desktop only */
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--darkerTan);
+  margin-top: 2rem;
+}
+
+/* ========== Desktop table ========== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  vertical-align: top;
+}
+
+.table thead th {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted, #666);
+}
+
+.userCell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.email {
+  color: var(--muted, #666);
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actionLink {
+  color: var(--blue, #2563eb);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mutedText {
+  color: var(--muted, #888);
+}
+
+/* Badges */
+.badge {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+}
+
+.ok {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+.warn {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}
+.bad {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+.badgeMuted {
+  background: rgba(107, 114, 128, 0.15);
+  color: #6b7280;
+}
+
+.headerRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.viewAll {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--blue, #2563eb);
+}
+
+.userLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.userLink:hover .name {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 968px) {
+  .table {
+    display: block;
+  }
+  .table thead {
+    display: none;
+  }
+  .table tbody {
+    display: grid;
+    gap: 12px;
+    padding: 12px;
+  }
+  .table tr {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    background: color-mix(in oklab, var(--darkerTan) 92%, black 0%);
+    padding: 12px;
+  }
+  .table td {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 8px;
+    border: 0;
+    padding: 6px 0;
+  }
+  .table td::before {
+    content: attr(data-label);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted, #666);
+    font-weight: 600;
+  }
+  .table td:first-child {
+    grid-template-columns: 1fr;
+  }
+  .table td:first-child::before {
+    content: "User";
+    margin-bottom: 4px;
+  }
+
+  .userCell {
+    gap: 4px;
+  }
+
+  .actions {
+    gap: 6px;
+  }
+
+  .actionLink {
+    display: inline-block;
+    padding: 8px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.03);
+    text-align: center;
+  }
+
+  .badge {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 969px) and (max-width: 1024px) {
+  .tableWrap {
+    overflow: auto;
+  }
+  .table {
+    min-width: 800px;
+  }
+}

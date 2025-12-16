@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  gap: 16px;
+}
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.card {
+  background: var(--darkerTan);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 16px;
+}

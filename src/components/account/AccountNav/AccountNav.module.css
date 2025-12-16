@@ -1,0 +1,46 @@
+/* components/account/AccountNav/AccountNav.module.css */
+.nav {
+  background: var(--darkerTan);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--black);
+  transition: all 0.2s ease-in;
+  background-color: var(--tan);
+}
+
+.linkText {
+  font-family: var(--inter);
+}
+
+.active {
+  font-weight: 700;
+  background: #eef2ff;
+}
+
+.link:hover {
+  background: #f6f7f9;
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--black);
+}

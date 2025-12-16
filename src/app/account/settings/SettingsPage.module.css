@@ -1,0 +1,7 @@
+.title {
+  font-size: 3rem;
+  font-family: var(--DotSansMedium);
+  letter-spacing: -1px;
+  margin: 0 0 12px;
+  color: var(--text, #111827);
+}

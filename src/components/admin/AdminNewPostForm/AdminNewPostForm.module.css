@@ -1,0 +1,45 @@
+.heading {
+  font-size: 3rem;
+  letter-spacing: -1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-top: 5rem;
+  width: 100%;
+  background-color: var(--darkTan);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.input,
+.textarea {
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.editor {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
