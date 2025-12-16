@@ -1,13 +1,14 @@
 import styles from "./LoginPageIntro.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
-// import LoginSvg from "@/components/icons/LoginSvg/LoginSvg";
 import LoginForm from "@/components/auth/LoginForm/LoginForm";
 import Image from "next/image";
 import Img1 from '../../../../public/images/loginii.jpg'
 
+
 export default function LoginPageIntro() {
   return (
-    <section className={styles.container}>
+    <section className={styles.parent}>
+    <div className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
@@ -26,6 +27,8 @@ export default function LoginPageIntro() {
           </div>
         </div>
       </LayoutWrapper>
+         
+    </div>
     </section>
   );
 }

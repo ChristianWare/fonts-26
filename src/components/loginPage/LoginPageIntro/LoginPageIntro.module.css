@@ -1,10 +1,13 @@
-.container {
-  background-color: var(--tan);
+.parent {
   padding: 1rem;
-  background-image: radial-gradient(#efeded 2px, transparent 2px);
-  background-size: calc(10 * 2px) calc(10 * 2px);
+  padding-bottom: 0rem;
+}
+
+.container {
+  background-color: var(--lightGray);
   padding: 10rem 0rem;
   padding-bottom: 20rem;
+  border-radius: 20px;
 }
 
 .content {
@@ -28,13 +31,12 @@
 
 .img {
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .heading {
-  /* color: var(--white); */
   font-size: 3rem;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .copy {
