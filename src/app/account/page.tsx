@@ -10,13 +10,13 @@ import Stripe from "stripe";
 // import BillingZone from "@/components/account/BillingZone/BillingZone";
 import ChargesTable from "@/components/account/ChargesTable/ChargesTable";
 import { AccountKPIGrid } from "@/components/account/AccountKPIGrid/AccountKPIGrid";
-import UserButton from "@/components/dashboard/UserButton/UserButton";
+// import UserButton from "@/components/dashboard/UserButton/UserButton";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-08-27.basil",
+  apiVersion: "2025-11-17.clover",
 });
 
 function readSubField<T = unknown>(
@@ -292,27 +292,25 @@ export default async function AccountPage() {
             <Detail label='Renews' value={renews} />
           </div>
         ) : (
-          <p className={styles.muted}>
-            You don’t have a subscription yet. Choose a plan to get started.
-          </p>
-        )}
-      </section>
-      <section className={styles.card}>
-        {sub || live ? (
           <>
-            {/* Only first 5 + link to full history */}
-            <ChargesTable limit={5} showViewAllLink />
+            <p className={styles.muted}>
+              You don’t have a subscription yet. Choose a plan to get started.
+            </p>
+            {sub || live ? (
+              <>
+                {/* Only first 5 + link to full history */}
+                <ChargesTable limit={5} showViewAllLink />
+              </>
+            ) : (
+              <Link href='/pricing' className={styles.primaryLink}>
+                View plans
+              </Link>
+            )}
           </>
-        ) : (
-          <Link href='/pricing' className={styles.primaryLink}>
-            View plans
-          </Link>
         )}
       </section>
 
-      <section className={styles.card}>
-        <UserButton />
-      </section>
+     
     </div>
   );
 }

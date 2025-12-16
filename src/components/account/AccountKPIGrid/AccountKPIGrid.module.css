@@ -5,22 +5,21 @@
 }
 
 .card {
-  background: var(--lighterBlack);
+  background: var(--lightestGray);
   border-radius: 10px;
-  border: 1px solid var(--grayii);
+  /* border: 1px solid var(--darkGray); */
   padding: 2rem;
 }
 
 .label {
   color: var(--gray);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-family: var(--SuisseIntlMedium);
 }
 
 .value {
   font-size: 1.6rem;
-  font-family: var(--inter);
   color: var(--tan);
-  font-weight: 600;
   margin-top: 6px;
 }
 

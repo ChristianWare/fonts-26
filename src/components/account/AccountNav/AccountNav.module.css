@@ -1,9 +1,13 @@
 /* components/account/AccountNav/AccountNav.module.css */
 .nav {
-  background: var(--darkerTan);
-  border: 1px solid var(--border, #e5e7eb);
+  border: 2px solid var(--lightGray);
   border-radius: 16px;
   padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .list {
@@ -11,36 +15,45 @@
   padding: 0;
   margin: 0;
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 4px;
+  width: 100%;
 }
 
 .link {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 2rem;
   padding: 10px 12px;
   border-radius: 10px;
   text-decoration: none;
   color: var(--black);
   transition: all 0.2s ease-in;
   background-color: var(--tan);
+  width: 100%;
 }
 
 .linkText {
   font-family: var(--inter);
+  font-family: var(--SuisseIntlRegular);
 }
 
 .active {
-  font-weight: 700;
-  background: #eef2ff;
+  font-family: var(--SuisseIntlMedium);
+  background: var(--lightGray);
 }
 
 .link:hover {
-  background: #f6f7f9;
+  background: var(--lightGray);
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--black);
+}
+
+.btnContainer {
+  display: grid;
+  width: 100%;
 }

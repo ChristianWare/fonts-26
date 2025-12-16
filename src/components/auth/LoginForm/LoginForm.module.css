@@ -45,9 +45,8 @@
 
 .footerText {
   color: var(--black);
-  /* margin-left: auto;
-  margin-right: auto;
-  text-align: center; */
+  font-size: 1.6rem;
+  font-family: var(--SuisseIntlMedium);
 }
 
 .link {

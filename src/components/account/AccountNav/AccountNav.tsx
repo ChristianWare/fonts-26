@@ -8,6 +8,7 @@ import House from "@/components/shared/icons/House/House";
 import Cog from "@/components/shared/icons/Cog/Cog";
 import Analytics from "@/components/shared/icons/Analytics/Analytics";
 import Payment from "@/components/shared/icons/Payment/Payment";
+import UserButton from "@/components/dashboard/UserButton/UserButton";
 
 export default function AccountNav() {
   const pathname = usePathname();
@@ -62,6 +63,9 @@ export default function AccountNav() {
           );
         })}
       </ul>
+      <section className={styles.btnContainer}>
+        <UserButton />
+      </section>
     </nav>
   );
 }
