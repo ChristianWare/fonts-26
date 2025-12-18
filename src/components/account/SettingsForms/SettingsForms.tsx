@@ -81,8 +81,8 @@ export default function SettingsForms() {
         className={styles.card}
         onSubmit={openNameModal}
       >
-        <h3 className={styles.heading}>Display name</h3>
         <div className={styles.inputLabelBox}>
+          <h3 className={styles.heading}>Display name</h3>
           <input type='hidden' name='action' value='update_name' />
           {/* <label className={styles.label} htmlFor='settings-name'>
             Name
@@ -138,7 +138,6 @@ export default function SettingsForms() {
         </div>
       </form>
 
-      {/* Password */}
       <form
         ref={passwordFormRef}
         method='POST'
@@ -146,42 +145,44 @@ export default function SettingsForms() {
         className={styles.card}
         onSubmit={openPasswordModal}
       >
-        <h3 className={styles.heading}>Password</h3>
-        <input type='hidden' name='action' value='change_password' />
-        <label className={styles.label} htmlFor='current'>
-          Current password
-        </label>
-        <input
-          className={styles.input}
-          id='current'
-          type='password'
-          name='current'
-        />
-        <label className={styles.label} htmlFor='next'>
-          New password
-        </label>
-        <input
-          className={styles.input}
-          id='next'
-          type='password'
-          name='next'
-          required
-        />
-        <label className={styles.label} htmlFor='confirm'>
-          Confirm new password
-        </label>
-        <input
-          className={styles.input}
-          id='confirm'
-          type='password'
-          name='confirm'
-          required
-        />
-        <button className={styles.warnBtn} type='submit' disabled={pending}>
-          {pending && modalType === "password"
-            ? "Updating…"
-            : "Update Password"}
-        </button>
+        <div className={styles.inputLabelBox}>
+          <h3 className={styles.heading}>Password</h3>
+          <input type='hidden' name='action' value='change_password' />
+          <label className={styles.label} htmlFor='current'>
+            Current password
+          </label>
+          <input
+            className={styles.input}
+            id='current'
+            type='password'
+            name='current'
+          />
+          <label className={styles.label} htmlFor='next'>
+            New password
+          </label>
+          <input
+            className={styles.input}
+            id='next'
+            type='password'
+            name='next'
+            required
+          />
+          <label className={styles.label} htmlFor='confirm'>
+            Confirm new password
+          </label>
+          <input
+            className={styles.input}
+            id='confirm'
+            type='password'
+            name='confirm'
+            required
+          />
+          <button className={styles.warnBtn} type='submit' disabled={pending}>
+            {pending && modalType === "password"
+              ? "Updating…"
+              : "Update Password"}
+          </button>
+        </div>
       </form>
 
       {/* Billing / Payment Method (Stripe Portal) */}
@@ -192,20 +193,22 @@ export default function SettingsForms() {
         className={styles.card}
         onSubmit={openBillingModal}
       >
-        <h3 className={styles.heading}>Payment method</h3>
-        <p className={styles.help}>
-          Securely update your card on file through Stripe.
-        </p>
-        <input type='hidden' name='flow' value='payment_method_update' />
-        <button
-          className={styles.secondaryBtn}
-          type='submit'
-          disabled={pending}
-        >
-          {pending && modalType === "billing"
-            ? "Opening…"
-            : "Manage payment method"}
-        </button>
+        <div className={styles.inputLabelBox}>
+          <h3 className={styles.heading}>Payment method</h3>
+          <p className={styles.help}>
+            Securely update your card on file through Stripe.
+          </p>
+          <input type='hidden' name='flow' value='payment_method_update' />
+          <button
+            className={styles.secondaryBtn}
+            type='submit'
+            disabled={pending}
+          >
+            {pending && modalType === "billing"
+              ? "Opening…"
+              : "Manage payment method"}
+          </button>
+        </div>
       </form>
 
       {/* Shared confirm modal */}

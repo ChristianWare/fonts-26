@@ -20,7 +20,8 @@
   width: 100%;
 }
 
-.link {
+.link,
+.signOutBtn {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -32,9 +33,11 @@
   transition: all 0.2s ease-in;
   background-color: var(--tan);
   width: 100%;
+  white-space: nowrap;
 }
 
-.linkText {
+.linkText,
+.btnText {
   font-family: var(--SuisseIntlRegular);
 }
 
@@ -47,20 +50,54 @@
   background: var(--lightGray);
 }
 
-.icon {
+.icon,
+.iconii {
   font-size: 2.5rem;
   color: var(--black);
 }
 
-.btnContainer {
-  display: grid;
-  width: 100%;
+.signOutBtn {
+  background-color: var(--black);
+}
+
+.btnText {
+  color: var(--accent);
+}
+
+.iconii {
+  color: var(--accent);
 }
 
 @media screen and (max-width: 1068px) {
   .nav {
     min-height: auto;
+    flex-direction: row;
     gap: 3rem;
+    padding: 1rem;
   }
-  
+
+  .list {
+    display: flex;
+  }
+
+  .link {
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .linkText {
+    display: none;
+  }
+
+  .signOutBtn {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .btnText {
+    display: none;
+  }
 }

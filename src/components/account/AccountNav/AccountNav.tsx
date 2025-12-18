@@ -8,7 +8,9 @@ import House from "@/components/shared/icons/House/House";
 import Cog from "@/components/shared/icons/Cog/Cog";
 import Analytics from "@/components/shared/icons/Analytics/Analytics";
 import Payment from "@/components/shared/icons/Payment/Payment";
-import UserButton from "@/components/dashboard/UserButton/UserButton";
+
+import { signOut } from "next-auth/react";
+import LogoutSvg from "@/components/shared/icons/LogoutSvg/LogoutSvg";
 
 export default function AccountNav() {
   const pathname = usePathname();
@@ -63,9 +65,10 @@ export default function AccountNav() {
           );
         })}
       </ul>
-      <section className={styles.btnContainer}>
-        <UserButton />
-      </section>
+      <button className={styles.signOutBtn} onClick={() => signOut()}>
+        <LogoutSvg className={styles.iconii} />
+        <span className={styles.btnText}>Sign Out</span>
+      </button>
     </nav>
   );
 }

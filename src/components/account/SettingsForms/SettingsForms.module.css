@@ -41,7 +41,13 @@
   border-radius: 5px;
   padding: 10px 12px;
   font: inherit;
+  width: 100%;
 }
+
+.input::placeholder {
+  color: var(--gray);
+}
+
 .primaryBtn {
   background: #111827;
   color: #fff;
@@ -52,22 +58,25 @@
   height: 100%;
   width: 100%;
 }
+
 .warnBtn {
   background: #b91c1c;
   color: #fff;
   border: none;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 1rem;
+  border-radius: 5px;
   cursor: pointer;
 }
+
 .secondaryBtn {
   background: #eef2ff;
   color: #1e40af;
   border: none;
-  padding: 10px 12px;
-  border-radius: 10px;
+  padding: 1rem;
+  border-radius: 5px;
   cursor: pointer;
 }
+
 .help {
   color: #6b7280;
   margin: 0;
