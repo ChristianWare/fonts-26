@@ -68,7 +68,7 @@ export default function ServiceDetails() {
 
                   <div className={styles.cardTopRight}>
                     <div className={styles.btnContainer}>
-                      <Button href={href} btnType='lightGray' text={btnText} />
+                      <Button href={href} btnType='accentii' text={btnText} />
                     </div>
                   </div>
                 </div>

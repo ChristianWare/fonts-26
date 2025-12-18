@@ -4,7 +4,7 @@ import styles from "./AdminNav.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import House from "@/components/shared/icons/House/House";
-import Cog from "@/components/shared/icons/Cog/Cog";
+// import Cog from "@/components/shared/icons/Cog/Cog";
 import Analytics from "@/components/shared/icons/Analytics/Analytics";
 import Payment from "@/components/shared/icons/Payment/Payment";
 import { signOut } from "next-auth/react";
@@ -15,30 +15,30 @@ export default function AdminNav() {
 
   const items = [
     {
-      href: "/account",
+      href: "/admin",
       label: "Overview",
       icon: <House className={styles.icon} />,
-      isActive: (p: string) => p === "/account",
+      isActive: (p: string) => p === "/admin",
     },
     {
-      href: "/account/plan",
-      label: "My Plan",
+      href: "/admin/billing/subscriptions/",
+      label: "Subscriptions",
       icon: <Analytics className={styles.icon} />,
       isActive: (p: string) => p.startsWith("/account/plan"),
     },
     {
-      href: "/account/billing/history",
-      label: "Billing History",
+      href: "/admin/users",
+      label: "Users",
       icon: <Payment className={styles.icon} />,
-      isActive: (p: string) => p.startsWith("/account/billing/history"),
+      isActive: (p: string) => p.startsWith("/admin/users"),
     },
-    {
-      href: "/account/settings",
-      label: "Account Settings",
-      icon: <Cog className={styles.icon} />,
-      isActive: (p: string) =>
-        p === "/account/settings" || p.startsWith("/account/settings/"),
-    },
+    // {
+    //   href: "/account/settings",
+    //   label: "Account Settings",
+    //   icon: <Cog className={styles.icon} />,
+    //   isActive: (p: string) =>
+    //     p === "/account/settings" || p.startsWith("/account/settings/"),
+    // },
   ];
 
   return (

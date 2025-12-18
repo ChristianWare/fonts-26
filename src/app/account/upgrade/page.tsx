@@ -4,7 +4,7 @@ import { auth } from "../../../../auth";
 import styles from "./Upgrade.module.css";
 import { pricingData } from "@/lib/data";
 import Link from "next/link";
-import Features from "@/components/HomePage/Features/Features";
+// import Features from "@/components/HomePage/Features/Features";
 import Button from "@/components/shared/Button/Button";
 
 export const runtime = "nodejs";
@@ -108,7 +108,7 @@ export default async function UpgradePage({
           </form>
         </section>
       </section>
-      <Features />
+      {/* <Features /> */}
     </main>
   );
 }
