@@ -6,6 +6,7 @@ import { pricingData } from "@/lib/data";
 import Link from "next/link";
 // import Features from "@/components/HomePage/Features/Features";
 import Button from "@/components/shared/Button/Button";
+import Check from "@/components/shared/icons/Check/Check";
 
 export const runtime = "nodejs";
 
@@ -59,10 +60,9 @@ export default async function UpgradePage({
     <main>
       <section className={styles.container}>
         <div className={styles.top}>
-          <div className={styles.topLeft}>
-            <h1 className={styles.heading}>{data!.service} — Subscribe</h1>
-            <p className={styles.planDesc}>{data!.desc}</p>
-          </div>
+          <h1 className={styles.heading}>{data!.service} — Subscribe</h1>
+          <p className={styles.copy}>{data!.desc}</p>
+
           <Link href='/pricing' className={styles.backLink}>
             ← Change plan
           </Link>
@@ -76,8 +76,9 @@ export default async function UpgradePage({
           <div className={styles.features}>
             {data!.servicesInclude.map((f) => (
               <div key={f.serviceName} className={styles.featureItem}>
-                <span className={styles.check}>✓</span>
-                <div>
+                {/* <span className={styles.check}>✓</span> */}
+                <Check className={styles.icon} />
+                <div className={styles.featureInfo}>
                   <div className={styles.featureName}>{f.serviceName}</div>
                   <div className={styles.featureDesc}>{f.description}</div>
                 </div>
@@ -86,9 +87,15 @@ export default async function UpgradePage({
           </div>
 
           <div className={styles.notice}>
-            <strong>Billing:</strong> You’ll pay a one-time{" "}
-            <strong>$500 setup fee</strong> today. Your monthly plan (
-            {data!.price}) will start on the <strong>1st of next month</strong>.
+            <strong>Billing:</strong>
+            <br />
+            <br />
+            You’ll pay a one-time <strong>$500 setup fee</strong> when you sign
+            up. Your monthly plan{" "}
+            <strong>
+              ({data!.service} - {data!.price}){" "}
+            </strong>
+            will start on the <strong>1st of the following month</strong>.
           </div>
 
           <form
@@ -100,7 +107,7 @@ export default async function UpgradePage({
             <div className={styles.btnContainer}>
               <Button
                 type='submit'
-                btnType='accent'
+                btnType='black'
                 text='Pay $500 setup & continue'
               />
             </div>
