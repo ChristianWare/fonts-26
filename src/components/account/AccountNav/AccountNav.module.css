@@ -3,7 +3,7 @@
   border: 2px solid var(--lightGray);
   border-radius: 16px;
   padding: 16px;
-  height: 100%;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -35,7 +35,6 @@
 }
 
 .linkText {
-  font-family: var(--inter);
   font-family: var(--SuisseIntlRegular);
 }
 
@@ -56,4 +55,12 @@
 .btnContainer {
   display: grid;
   width: 100%;
+}
+
+@media screen and (max-width: 1068px) {
+  .nav {
+    min-height: auto;
+    gap: 3rem;
+  }
+  
 }

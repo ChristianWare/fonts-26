@@ -1,16 +1,16 @@
 // components/account/ChargesTable/ChargesTable.tsx
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import styles from "./ChargesTable.module.css";
 import Stripe from "stripe";
 import { auth } from "../../../../auth";
 import { db } from "@/lib/db";
-import styles from "./ChargesTable.module.css";
 import { format } from "date-fns";
 import Link from "next/link";
 
 export const runtime = "nodejs";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-08-27.basil",
+  apiVersion: "2025-11-17.clover",
 });
 
 function currency(cents?: number | null, code = "USD") {
@@ -126,7 +126,9 @@ export default async function ChargesTable({
 
   return (
     <section>
-        <h2 className={styles.title}>Billing history</h2>
+      <div className={styles.top}>
+        <h2 className={styles.heading}>Billing history</h2>
+      </div>
       <div className={styles.card}>
         {rows.length === 0 ? (
           <p className={styles.muted}>No invoices yet.</p>

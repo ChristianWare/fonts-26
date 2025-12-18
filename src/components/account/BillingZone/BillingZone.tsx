@@ -66,12 +66,14 @@ export default function BillingZone({
   }
 
   return (
-    <div>
-      <h2 className={styles.title}>Manage your subscription</h2>
-      <p className={styles.note}>
-        Update your plan or cancel renewal at period end. These actions
-        immediately affect your subscription.
-      </p>
+    <section className={styles.container}>
+      <div className={styles.top}>
+        <h2 className={styles.heading}>Manage your subscription</h2>
+        <p className={styles.copy}>
+          Update your plan or cancel renewal at period end. These actions
+          immediately affect your subscription.
+        </p>
+      </div>
       <br />
       <br />
       <section className={styles.card}>
@@ -192,6 +194,6 @@ export default function BillingZone({
           </div>
         </div>
       </Modal>
-    </div>
+    </section>
   );
 }

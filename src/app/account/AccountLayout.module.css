@@ -1,7 +1,6 @@
 /* app/account/AccountLayout.module.css */
 .container {
-  padding: 10rem 0rem;
-  padding-bottom: 0rem;
+  padding-top: 5rem;
 }
 
 .shell {

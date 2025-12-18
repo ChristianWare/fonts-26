@@ -30,10 +30,6 @@
 }
 
 .card {
-  /* background-color: var(--lightGray); */
-  /* border: 1px solid var(--gray); */
-  /* border-top: none; */
-  /* padding: 2rem; */
   border-bottom: 2px solid var(--lightGray);
   padding-bottom: 1rem;
 }

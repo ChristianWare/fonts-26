@@ -13,12 +13,12 @@ export default async function SettingsPage() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>Settings</h1>
-        <p className={styles.sub}>Manage your profile and security.</p>
+      <header className={styles.top}>
+        <h1 className={styles.heading}>Settings</h1>
+        <p className={styles.copy}>Manage your profile and security.</p>
       </header>
-<br />
-<br />
+      <br />
+      <br />
       <SettingsForms />
     </div>
   );

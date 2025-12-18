@@ -1,8 +1,8 @@
 // components/account/SettingsForms/SettingsForms.tsx
 "use client";
 
-import { useRef, useState } from "react";
 import styles from "./SettingsForms.module.css";
+import { useRef, useState } from "react";
 import Modal from "@/components/shared/Modal/Modal";
 
 type ModalType = "name" | "email" | "password" | "billing" | null;
@@ -82,21 +82,27 @@ export default function SettingsForms() {
         onSubmit={openNameModal}
       >
         <h3 className={styles.heading}>Display name</h3>
-        <input type='hidden' name='action' value='update_name' />
-        <label className={styles.label} htmlFor='settings-name'>
-          Name
-        </label>
-        <input
-          ref={nameInputRef}
-          id='settings-name'
-          className={styles.input}
-          name='name'
-          placeholder='Your name'
-          required
-        />
-        <button className={styles.primaryBtn} type='submit' disabled={pending}>
-          {pending && modalType === "name" ? "Saving…" : "Save"}
-        </button>
+        <div className={styles.inputLabelBox}>
+          <input type='hidden' name='action' value='update_name' />
+          {/* <label className={styles.label} htmlFor='settings-name'>
+            Name
+          </label> */}
+          <input
+            ref={nameInputRef}
+            id='settings-name'
+            className={styles.input}
+            name='name'
+            placeholder='Your name'
+            required
+          />
+          <button
+            className={styles.primaryBtn}
+            type='submit'
+            disabled={pending}
+          >
+            {pending && modalType === "name" ? "Updating…" : "Update"}
+          </button>
+        </div>
       </form>
 
       {/* Email */}
@@ -107,23 +113,29 @@ export default function SettingsForms() {
         className={styles.card}
         onSubmit={openEmailModal}
       >
-        <h3 className={styles.heading}>Email</h3>
-        <input type='hidden' name='action' value='update_email' />
-        <label className={styles.label} htmlFor='settings-email'>
-          Email
-        </label>
-        <input
-          ref={emailInputRef}
-          id='settings-email'
-          className={styles.input}
-          type='email'
-          name='email'
-          placeholder='you@example.com'
-          required
-        />
-        <button className={styles.primaryBtn} type='submit' disabled={pending}>
-          {pending && modalType === "email" ? "Saving…" : "Save"}
-        </button>
+        <div className={styles.inputLabelBox}>
+          <h3 className={styles.heading}>Email</h3>
+          <input type='hidden' name='action' value='update_email' />
+          {/* <label className={styles.label} htmlFor='settings-email'>
+            Email
+          </label> */}
+          <input
+            ref={emailInputRef}
+            id='settings-email'
+            className={styles.input}
+            type='email'
+            name='email'
+            placeholder='you@example.com'
+            required
+          />
+          <button
+            className={styles.primaryBtn}
+            type='submit'
+            disabled={pending}
+          >
+            {pending && modalType === "email" ? "Saving…" : "Save"}
+          </button>
+        </div>
       </form>
 
       {/* Password */}

@@ -1,9 +1,9 @@
 // app/account/billing/history/page.tsx
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import styles from "./BillingHistoryPage.module.css";
 import Stripe from "stripe";
 import { auth } from "../../../../../auth";
 import { db } from "@/lib/db";
-import styles from "./BillingHistoryPage.module.css";
 import { format } from "date-fns";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2025-08-27.basil",
+  apiVersion: "2025-11-17.clover",
 });
 
 function currency(cents?: number | null, code = "USD") {
@@ -66,9 +66,9 @@ export default async function BillingHistoryPage({
   });
   if (!user?.stripeCustomerId) {
     return (
-      <section className={styles.card}>
-        <h1 className={styles.title}>Billing history</h1>
-        <p className={styles.muted}>No Stripe customer found.</p>
+      <section className={styles.top}>
+        <h1 className={styles.heading}>Billing history</h1>
+        <p className={styles.copy}>No Stripe customer found.</p>
       </section>
     );
   }
@@ -125,10 +125,12 @@ export default async function BillingHistoryPage({
 
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>Billing history</h1>
+      <div className={styles.top}>
+        <h1 className={styles.heading}>Billing history</h1>
+      </div>
       <div className={styles.card}>
         {rows.length === 0 ? (
-          <p className={styles.muted}>No invoices yet.</p>
+          <p className={styles.copy}>No invoices yet.</p>
         ) : (
           <>
             <div className={styles.tableWrap}>
