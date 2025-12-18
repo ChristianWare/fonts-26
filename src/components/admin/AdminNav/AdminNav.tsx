@@ -1,7 +1,6 @@
-// components/account/AccountNav/AccountNav.tsx
 "use client";
 
-import styles from "./AccountNav.module.css";
+import styles from "./AdminNav.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import House from "@/components/shared/icons/House/House";
@@ -11,7 +10,7 @@ import Payment from "@/components/shared/icons/Payment/Payment";
 import { signOut } from "next-auth/react";
 import LogoutSvg from "@/components/shared/icons/LogoutSvg/LogoutSvg";
 
-export default function AccountNav() {
+export default function AdminNav() {
   const pathname = usePathname();
 
   const items = [

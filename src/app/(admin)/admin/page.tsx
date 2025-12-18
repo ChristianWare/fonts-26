@@ -21,26 +21,28 @@ export default async function AdminPage() {
   return (
     <main className={styles.container}>
       <div className={styles.content}>
-        <div className={styles.headerRow}>
-          <h1 className={styles.heading}>Admin Dashboard</h1>
+        <div className={styles.top}>
+          <div className={styles.headerRow}>
+            <h1 className={styles.heading}>Admin Dashboard</h1>
 
-          <div className={styles.actions}>
-            <Link
-              href='/admin/billing/subscriptions'
-              className={styles.linkBtn}
-            >
-              Billing & Subscriptions →
-            </Link>
-            <Link href='/admin/billing/webhooks' className={styles.linkBtn}>
-              Webhook Events →
-            </Link>
-            <RefreshButton />
+            <div className={styles.actions}>
+              <Link
+                href='/admin/billing/subscriptions'
+                className={styles.linkBtn}
+              >
+                Billing & Subscriptions →
+              </Link>
+              {/* <Link href='/admin/billing/webhooks' className={styles.linkBtn}>
+                Webhook Events →
+              </Link> */}
+              <RefreshButton />
+            </div>
           </div>
-        </div>
 
         <Suspense fallback={<div>Loading metrics…</div>}>
           <KPIGrid />
         </Suspense>
+        </div>
 
         <section className={styles.section}>
           <Suspense fallback={<div>Loading users…</div>}>

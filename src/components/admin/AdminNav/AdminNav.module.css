@@ -1,4 +1,4 @@
-/* components/account/AccountNav/AccountNav.module.css */
+
 .nav {
   border: 2px solid var(--lightGray);
   border-radius: 16px;
@@ -58,11 +58,6 @@
 
 .signOutBtn {
   background-color: var(--black);
-  cursor: pointer;
-}
-
-.signOutBtn:hover {
-  background-color: var(--darkGray);
 }
 
 .btnText {

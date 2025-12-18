@@ -1,13 +1,33 @@
-.content {
+.container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 3rem;
+  grid-gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.top {
+  background-color: var(--lightGray);
+  padding: 3rem;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
 }
 
 .heading {
-  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-family: var(--SuisseIntlMedium);
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: normal;
 }
 
+.copy {
+  font-family: var(--SuisseIntlRegular);
+  color: var(--darkGray);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
 .btnContainer {
   display: flex;
   align-items: center;

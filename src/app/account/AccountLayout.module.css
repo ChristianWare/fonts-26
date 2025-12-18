@@ -20,12 +20,6 @@
   min-width: 0;
 }
 
-/* @media screen and (max-width: 1268px) {
-  .shell {
-    grid-template-columns: 1.5fr 4.5fr;
-  }
-} */
-
 @media screen and (max-width: 1068px) {
   .shell {
     grid-template-columns: 1fr;

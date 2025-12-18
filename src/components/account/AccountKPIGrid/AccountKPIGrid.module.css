@@ -1,13 +1,12 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 5px;
 }
 
 .card {
   background: var(--lightestGray);
   border-radius: 10px;
-  /* border: 1px solid var(--darkGray); */
   padding: 2rem;
 }
 
@@ -19,7 +18,6 @@
 
 .value {
   font-size: 1.6rem;
-  color: var(--tan);
   margin-top: 6px;
 }
 

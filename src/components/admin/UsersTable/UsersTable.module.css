@@ -3,20 +3,20 @@
 }
 
 .heading {
-  font-family: var(--DotSansMedium);
-  font-size: 2.5rem;
-  letter-spacing: -1px;
+  font-size: 3rem;
+  font-family: var(--SuisseIntlMedium);
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: normal;
 }
 
 .tableWrap {
-  overflow: hidden; /* we’ll handle scroll on table for desktop only */
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border-bottom: 1px solid var(--darkGray);
   background: var(--darkerTan);
   margin-top: 2rem;
 }
 
-/* ========== Desktop table ========== */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -32,7 +32,7 @@
 }
 
 .table thead th {
-  font-size: 12px;
+  font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--muted, #666);
@@ -128,7 +128,7 @@
   .table tbody {
     display: grid;
     gap: 12px;
-    padding: 12px;
+    /* padding: 12px; */
   }
   .table tr {
     display: grid;
@@ -137,7 +137,7 @@
     border: 1px solid rgba(0, 0, 0, 0.06);
     border-radius: 12px;
     background: color-mix(in oklab, var(--darkerTan) 92%, black 0%);
-    padding: 12px;
+    /* padding: 12px; */
   }
   .table td {
     display: grid;

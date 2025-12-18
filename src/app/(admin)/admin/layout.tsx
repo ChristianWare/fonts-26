@@ -6,6 +6,7 @@ import { auth } from "../../../../auth";
 import Nav from "@/components/shared/Nav/Nav";
 import FinalCTAMain from "@/components/shared/FinalCTAMain/FinalCTAMain";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
+import AdminNav from "@/components/admin/AdminNav/AdminNav";
 
 export const runtime = "nodejs";
 
@@ -27,9 +28,15 @@ export default async function AdminLayout({
     <main className={styles.container}>
       <Nav />
       <LayoutWrapper>
-        <div className={styles.content}>{children}</div>
+        <div className={styles.shell}>
+          <aside className={styles.sidebar}>
+            <AdminNav />
+          </aside>
+          <div className={styles.content}>{children}</div>
+        </div>
       </LayoutWrapper>
       <FinalCTAMain />
     </main>
   );
 }
+  
