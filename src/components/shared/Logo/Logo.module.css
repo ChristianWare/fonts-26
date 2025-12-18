@@ -1,6 +1,6 @@
 .text {
   font-family: var(--SuisseIntlCondBold);
-  color: var(--white);
+  color: var(--primary);
   padding: 0rem 1.5rem;
   text-align: center;
   text-transform: uppercase;
