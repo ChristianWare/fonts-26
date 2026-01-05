@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 import styles from "./Button.module.css";
-import Arrow from "../icons/Arrow/Arrow";
+// import Arrow from "../icons/Arrow/Arrow";
 import Image from "next/image";
 import ChrisImg from "../../../../public/images/chris.jpg";
 
@@ -52,7 +52,7 @@ export default function Button({
           </span>
         )}
         {content}
-        <Arrow className={styles.arrow} />
+        {/* <Arrow className={styles.arrow} /> */}
       </Link>
     );
   }
@@ -71,7 +71,7 @@ export default function Button({
         </span>
       )}
       {content}
-      <Arrow className={styles.arrow} />
+      {/* <Arrow className={styles.arrow} /> */}
     </button>
   );
 }

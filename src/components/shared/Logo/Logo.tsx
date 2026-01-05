@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href='/' className={styles.text}>
+    <Link href='/' className={styles.container}>
       {/* Fonts & Footers */}
-      <SectionIntroii title='Fonts & Footers' color='white' />
+      <SectionIntroii title='Fonts & Footers' dot={false}  />
     </Link>
   );
 };
